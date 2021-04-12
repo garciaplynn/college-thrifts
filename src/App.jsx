@@ -1,9 +1,12 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
 
 const App = () => (
-  <p>hello</p>
+  <div>
+    <Navbar />
+  </div>
 );
 
 export default App;

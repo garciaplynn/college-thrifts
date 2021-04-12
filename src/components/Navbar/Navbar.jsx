@@ -1,12 +1,12 @@
-import React from "react";
-import styles from "./Navbar.module.scss";
+import React from 'react';
+// import styles from './Navbar.module.scss';
 
-const Navbar = () => {
-  return <nav>
-    <a href="" className={styles.homeIcon}>home</a>
-    <a href="" className={styles.profileIcon}>profile</a>
-    <a href="" className={styles.messageIcon}>message</a>
+const Navbar = () => (
+  <nav>
+    <a href="https://google.com">Home</a>
+    <p>Profile</p>
+    <p>Message</p>
   </nav>
-};
+);
 
 export default Navbar;
