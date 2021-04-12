@@ -25,7 +25,10 @@
       "react-app/jest",
       "airbnb",
       "airbnb/hooks"
-    ]
+    ],
+    "rules": {
+      "linebreak-style": 0
+    }
   },
   "eslintIgnore": [
     "*.test.js",
