@@ -4,14 +4,18 @@ import styles from "./ClothingCard.modules.scss"
 
 
 const ClothingCard = () => {
-  return <div>
-    <img src="" alt=""/>
-    <h2>Gear Name</h2>
-    <p>Price</p>
-    <p>Size</p>
-    <p>Verified</p>
 
+
+return (
+  <div>
+   <img src={strImage} alt="Clothing Image" />
+   <section className={styles.clothingCard}>
+    
+
+   </section>
   </div>
-}
+
+)};
+
 
 export default ClothingCard 
