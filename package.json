@@ -27,7 +27,10 @@
       "airbnb/hooks"
     ]
   },
-  "eslintIgnore": ["*.test.js", "*.spec.js"],
+  "eslintIgnore": [
+    "*.test.js",
+    "*.spec.js"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
