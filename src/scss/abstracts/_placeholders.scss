@@ -1,0 +1,46 @@
+@import "./variables";
+
+// TYPOGRAPHY: 
+//H2
+%big-heading {
+    font-size: 32px;
+    font-weight: 800;
+  }
+  
+  //H3
+  %medium-heading {
+    font-size: 21px;
+    font-weight: 800;
+  }
+  
+  //P
+  %body-font {
+    font-size: 14px;
+    font-weight: 400px;
+  }
+  
+  
+  
+  // NAVBAR BUTTONS
+  %nav-button {
+    border-radius: 100%;
+    background-color: $white;
+  }
+  
+  %nav-button-active {
+    @extend %nav-button;
+    background-color: $grey-primary;
+  }
+  
+  
+  
+  //CLOTHES RAIL CARDS
+  %clothes-card {
+    border-radius: 13px;
+  }
+  
+  
+  //PROFILE IMAGE
+  %profile-image {
+    border-radius: 100%;
+  }
