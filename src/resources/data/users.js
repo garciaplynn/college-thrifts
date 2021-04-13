@@ -7,6 +7,7 @@ const tim = {
   university: {
     name: 'Trinity College Dublin',
     abbreviation: 'TCD',
+    primaryColor: '#F47321',
   },
   socials: [
     {

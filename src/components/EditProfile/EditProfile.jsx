@@ -18,11 +18,16 @@ const EditProfile = ({ user }) => {
   return (
     <main className={styles.editProfile}>
       <header>
-        <section>
-          {/* IMG COMPONENT WILL GO HERE */}
-          <h2>Profile</h2>
-          <h3>{name}</h3>
-          <p>{`${university.name} ${university.abbreviation} '${year}`}</p>
+        <h2>Profile</h2>
+        <section
+          className={styles.headerContainer}
+          style={{ backgroundColor: university.primaryColor }}
+        >
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png" alt="a sponge" />
+          <article className={styles.headerInfo}>
+            <h3>{name}</h3>
+            <p>{`${university.name} ${university.abbreviation} '${year}`}</p>
+          </article>
         </section>
 
         <section>
@@ -31,16 +36,16 @@ const EditProfile = ({ user }) => {
         </section>
       </header>
       <section>
-        <h3>About</h3>
-        <h4>Full Name</h4>
+        <h3 className={styles.about}>About</h3>
+        <h4 className={styles.subtitles}>Full Name</h4>
         <p>{name}</p>
-        <h4>Email</h4>
+        <h4 className={styles.subtitles}>Email</h4>
         <p>{email}</p>
-        <h4>Following</h4>
+        <h4 className={styles.subtitles}>Following</h4>
         <p>{following}</p>
-        <h4>Followers</h4>
+        <h4 className={styles.subtitles}>Followers</h4>
         <p>{followers}</p>
-        <h4>Social URLs</h4>
+        <h4 className={styles.subtitles}>Social URLs</h4>
         <ul>
           {socials.map((social) => (
             <li>{social.url}</li>

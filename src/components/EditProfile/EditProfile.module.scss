@@ -5,9 +5,46 @@
   margin: 0;
   padding: 0;
   font-family: $font;
+  color: $black;
 }
 
 .editProfile {
   min-height: 90vh;
   margin-bottom: 10vh;
+}
+
+h2 {
+  @extend %big-heading;
+}
+
+h3 {
+  @extend %medium-heading;
+}
+
+h4 {
+  @extend %body-font;
+}
+
+.about {
+  color: $red;
+
+  .subtitles {
+    color: $grey-primary;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  height: 81px;
+  border-radius: 13px;
+
+    .headerInfo {
+      width: 80%;
+    }
+
+    img {
+      width: 20%;
+      height: 80%;
+    }
 }
