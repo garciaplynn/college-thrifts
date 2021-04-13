@@ -1,31 +1,14 @@
 import React from 'react';
 // import styles from './App.module.scss';
+import users from './resources/data/users';
 
 import EditProfile from './components/EditProfile';
 
-const App = () => {
-  const mockUser = {
-    name: 'Tim',
-    email: 'timstarr14@gmail.com',
-    following: 3,
-    followers: 100000000,
-    classOf: 2016,
-    university: {
-      name: 'Trinity College Dublin',
-      abbreviation: 'TCD',
-    },
-    socials: [
-      {
-        url: 'instagram.com/tim.starrr',
-        username: 'tim.starrr',
-      },
-    ],
-  };
-  return (
-    <div className="App">
-      <EditProfile user={mockUser} />
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <EditProfile user={users[0]} />
+    <EditProfile user={users[1]} />
+  </div>
+);
 
 export default App;

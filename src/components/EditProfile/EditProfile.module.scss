@@ -1,0 +1,13 @@
+@import '../../scss/abstracts/variables';
+@import '../../scss/abstracts/placeholders';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+}
+
+.editProfile {
+  min-height: 90vh;
+  margin-bottom: 10vh;
+}

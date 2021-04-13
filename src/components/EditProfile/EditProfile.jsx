@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './EditProfile.module.scss';
+
 const EditProfile = ({ user }) => {
   const {
     name,
@@ -10,9 +12,11 @@ const EditProfile = ({ user }) => {
     followers,
     socials,
   } = user;
+
   const year = String(classOf).slice(2);
+
   return (
-    <>
+    <main className={styles.editProfile}>
       <header>
         <section>
           {/* IMG COMPONENT WILL GO HERE */}
@@ -34,16 +38,16 @@ const EditProfile = ({ user }) => {
         <p>{email}</p>
         <h4>Following</h4>
         <p>{following}</p>
-        <h4>Follower</h4>
+        <h4>Followers</h4>
         <p>{followers}</p>
-        <h4>Social URL</h4>
+        <h4>Social URLs</h4>
         <ul>
           {socials.map((social) => (
             <li>{social.url}</li>
           ))}
         </ul>
       </section>
-    </>
+    </main>
   );
 };
 
