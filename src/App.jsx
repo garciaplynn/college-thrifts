@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import LikeButton from './components/LikeButton';
 // import styles from './App.module.scss';
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
+        <LikeButton />
         Learn React
       </a>
     </header>
