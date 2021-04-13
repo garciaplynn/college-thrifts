@@ -1,5 +1,25 @@
+.ClothingCards {
+ display: grid; 
+ height: 100vh;
 
+ .ImageCard {
+   border:5px solid red;
+ }
 
-.clothing-card{
-
+ img {
+   position: relative;
+   left: 25px;
+   height: 75%;
+   width: 90%;
+   grid-row: 2 / 3;
+   justify-content: center;
+   align-items: center;
+   border: 5px solid red;
+  }
+  
+h2 {
+  color:blue;
+  grid-row: 3 / 4;
+  }
+ 
 }

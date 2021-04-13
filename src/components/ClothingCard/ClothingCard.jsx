@@ -10,9 +10,11 @@ const ClothingCard = (props) => {
   } = clothingItem;
 
   return (
-    <div>
-      <img src={strImage} alt="Clothing" />
-      <section className={styles.clothingCard}>
+    <div className="ClothingCards">
+      <div className={styles.ImageCard}>
+        <img src={strImage} alt="Clothing" />
+      </div>
+      <section className={styles.clothingSection}>
         <div>
           <h3>{strType}</h3>
           <p>{strSize}</p>
