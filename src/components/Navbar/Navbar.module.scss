@@ -1,6 +1,6 @@
 @import '../../scss/abstracts/variables';
 
-.navBar {
+.Navbar {
   position: absolute;
   bottom: 0;
   display: flex;
@@ -10,7 +10,7 @@
   padding-top: 15px;
   border: 0.2px solid $grey-secondary;
   
-  .navbtn {
+  .navBtn {
     border: none;
     border-radius: 100%;
     width: 42px;
