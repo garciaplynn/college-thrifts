@@ -3,13 +3,23 @@ import React from "react"
 import styles from "./ClothingCard.modules.scss"
 
 
-const ClothingCard = () => {
+const ClothingCard = (props) => {
+  const {strImage, strPrice, strSize, strType} = props.fake-data
 
 
 return (
   <div>
    <img src={strImage} alt="Clothing Image" />
    <section className={styles.clothingCard}>
+     
+     <div>
+     <h3>{strType}</h3>
+     <p>{strSize}</p>
+     </div>
+     <div>
+     <h2>{strPrice}</h2>
+     </div>
+
     
 
    </section>
