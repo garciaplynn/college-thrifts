@@ -1,28 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import LikeButton from './components/LikeButton';
+import Button from './components/Button';
 // import styles from './App.module.scss';
 
 const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit
-        <code>src/App.js</code>
-        and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <LikeButton />
-        Learn React
-      </a>
-    </header>
-  </div>
+  <>
+    <Button />
+    <Button />
+    <Button />
+    <Button />
+  </>
 );
 
 export default App;
