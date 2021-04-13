@@ -1,11 +1,12 @@
 import React from 'react';
 // import styles from './App.module.scss';
 
-import EditProfile from './components/EditProfile';
+// import EditProfile from './components/EditProfile';
 
 const App = () => (
   <div className="App">
-    <EditProfile />
+    {/* <EditProfile user={{ user: 'Tim' }} /> */}
+
   </div>
 );
 
