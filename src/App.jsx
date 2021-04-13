@@ -1,9 +1,13 @@
 import React from 'react';
-//  import styles from './App.module.scss';
+import GradientHeader from './components/GradientHeader';
+import styles from './App.module.scss';
 import Navbar from './components/Navbar';
 
 const App = () => (
   <>
+    <div className={styles.headerContainer}>
+      <GradientHeader />
+    </div>
     <Navbar />
   </>
 );
