@@ -1,11 +1,11 @@
 import React from 'react';
-// import styles from './Navbar.module.scss';
+import styles from './Navbar.module.scss';
 
 const Navbar = () => (
-  <nav>
+  <nav className={styles.navBar}>
     <a href="https://google.com">Home</a>
-    <p>Profile</p>
-    <p>Message</p>
+    <a href="https://google.com">Profile</a>
+    <a href="https://google.com">Message</a>
   </nav>
 );
 
