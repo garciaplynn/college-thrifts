@@ -15,9 +15,13 @@ const ClothingCard = (props) => {
         <img src={strImage} alt="Clothing" />
       </div>
       <section className={styles.clothingSection}>
-        <div>
+        <div className={styles.clothingInfo}>
           <h3>{strType}</h3>
-          <p>{strSize}</p>
+          <p>
+            Size:
+            <> </>
+            {strSize}
+          </p>
         </div>
         <div>
           <h2>{strPrice}</h2>
