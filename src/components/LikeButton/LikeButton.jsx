@@ -1,8 +1,6 @@
-import React from "react";
-import styles from "./LikeButton.module.scss";
+import React from 'react';
+// import styles from './LikeButton.module.scss';
 
-const LikeButton = () => {
-  return <p>working</p>
-}
+const LikeButton = () => (<p>hi</p>);
 
 export default LikeButton;
