@@ -1,6 +1,11 @@
 import React from 'react';
-// import styles from './LikeButton.module.scss';
+import styles from './Button.module.scss';
 
-const Button = () => <button type="button">working</button>;
+const Button = (props) => {
+  const { icon } = props;
 
+  return (
+    <button className={styles.likeButton} type="button">{icon}</button>
+  );
+};
 export default Button;
