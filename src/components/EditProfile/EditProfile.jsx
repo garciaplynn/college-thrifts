@@ -32,7 +32,7 @@ const EditProfile = ({ user }) => {
           />
           <article className={styles.headerInfo}>
             <h3>{name}</h3>
-            <p>{`${university.name} ${university.abbreviation} '${year}`}</p>
+            <p>{`${university.name} (${university.abbreviation}) '${year}`}</p>
           </article>
         </section>
 
@@ -51,22 +51,37 @@ const EditProfile = ({ user }) => {
           </h3>
         </section>
       </header>
-      <section>
-        <h3 className={styles.about}>About</h3>
-        <h4 className={styles.subtitles}>Full Name</h4>
-        <p>{name}</p>
-        <h4 className={styles.subtitles}>Email</h4>
-        <p>{email}</p>
-        <h4 className={styles.subtitles}>Following</h4>
-        <p>{following}</p>
-        <h4 className={styles.subtitles}>Followers</h4>
-        <p>{followers}</p>
-        <h4 className={styles.subtitles}>Social URLs</h4>
-        <ul>
-          {socials.map((social) => (
-            <li>{social.url}</li>
-          ))}
-        </ul>
+
+      <section className={styles.about}>
+        <h3 className={styles.aboutTitle}>About</h3>
+        <section className={styles.aboutContainer}>
+          <h4 className={styles.aboutSubtitle}>Full Name</h4>
+          <p>{name}</p>
+        </section>
+        <section className={styles.aboutContainer}>
+          <h4 className={styles.aboutSubtitle}>Email</h4>
+          <p>{email}</p>
+        </section>
+        <section
+          className={`${styles.aboutContainer} ${styles.aboutContainerFlex}`}
+        >
+          <div>
+            <h4 className={styles.aboutSubtitle}>Following</h4>
+            <p>{`${following} friends`}</p>
+          </div>
+          <div>
+            <h4 className={styles.aboutSubtitle}>Followers</h4>
+            <p>{`${followers} friends`}</p>
+          </div>
+        </section>
+        <section className={styles.aboutContainer}>
+          <h4 className={styles.aboutSubtitle}>Social URLs</h4>
+          <ul>
+            {socials.map((social) => (
+              <li>{social.url}</li>
+            ))}
+          </ul>
+        </section>
       </section>
     </main>
   );

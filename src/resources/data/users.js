@@ -31,6 +31,8 @@ const charlie = {
   university: {
     name: 'Brunel University London',
     abbreviation: 'BUL',
+    primaryColor: 'darkblue',
+    secondaryColor: 'yellow',
   },
   socials: [
     {
