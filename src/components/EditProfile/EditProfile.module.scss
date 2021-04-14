@@ -5,13 +5,18 @@
   margin: 0;
   padding: 0;
   font-family: $font;
-  color: $black;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
 }
 
 .editProfile {
   min-height: 90vh;
   margin-bottom: 10vh;
   padding: 0.75rem;
+  color: $black;
 }
 
 h2 {
@@ -30,9 +35,10 @@ p {
 .about {
   color: $red;
 
-  .subtitles {
-    color: $grey-primary;
-  }
+}
+
+.subtitles {
+  color: $grey-primary;
 }
 
 .headerContainer {
@@ -41,14 +47,11 @@ p {
   height: 81px;
   border-radius: 13px;
   padding: 0.5rem;
+  margin-bottom: 2rem; 
 
   .headerInfo {
     flex-grow: 1;
     text-align: center;
-    color: inherit;
-    * {
-      color: inherit;
-    }
   }
 
   img {

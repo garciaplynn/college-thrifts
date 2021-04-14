@@ -36,9 +36,19 @@ const EditProfile = ({ user }) => {
           </article>
         </section>
 
-        <section className={styles.headerContainer}>
-          <a href="google.co.uk">Likes</a>
-          <a href="google.co.uk">Selling</a>
+        <section
+          className={styles.headerContainer}
+          style={{
+            backgroundColor: university.secondaryColor,
+            color: university.primaryColor,
+          }}
+        >
+          <h3>
+            <a href="google.co.uk">Likes</a>
+          </h3>
+          <h3>
+            <a href="google.co.uk">Selling</a>
+          </h3>
         </section>
       </header>
       <section>
