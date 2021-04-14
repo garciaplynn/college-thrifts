@@ -1,0 +1,50 @@
+@import "../../scss/abstracts/placeholders";
+@import "../../scss/abstracts/variables";
+
+.ClothingCards {
+ display: flex; 
+ height: 100vh;
+ justify-content: center;
+ align-items: center;
+
+ .ImageCard {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 10px;
+ }
+
+ img {
+   height: 350px;
+   width: 300px;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+  }
+  
+ h2 {
+  color:$black;
+  padding: 15px;
+
+  margin: 0px;
+  }
+
+ h3 {
+  margin: 2px;
+  color: $black;
+}
+
+ p {
+  margin: 2px;
+  color: $grey-primary;
+ }
+
+ .clothingSection {
+  display: flex;
+  justify-content: space-between;
+  background-color:$grey-secondary;
+  border-radius: 10px;
+ }
+ 
+}
