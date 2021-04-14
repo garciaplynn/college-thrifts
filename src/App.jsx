@@ -1,6 +1,6 @@
 import React from 'react';
 //  import styles from './App.module.scss';
-import library from './data/fa-library';
+import './data/fa-library';
 
 import ClothingCard from './components/ClothingCard';
 import fakeClothingData from './resources/data/fake-data';
@@ -10,9 +10,11 @@ import Button from './components/Button';
 
 const App = () => (
   <>
-    <Button />
     <div className={styles.ClothingCards}>
       <ClothingCard clothingItem={fakeClothingData[0]} />
+    </div>
+    <div className={styles.ButtonRow}>
+      <Button />
     </div>
     <Navbar />
   </>
