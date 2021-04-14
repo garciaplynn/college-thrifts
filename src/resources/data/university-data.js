@@ -5,7 +5,7 @@ const universities = [
     colour2: '#0021A5',
   },
   {
-    title: 'Florida State',
+    title: 'Florida State University',
     colour1: '#782F40',
     colour2: '#CEB888',
   },

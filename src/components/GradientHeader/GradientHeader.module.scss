@@ -7,9 +7,9 @@
   border-radius: 0 0 40px 40px;
   h2 {
     @extend %big-heading;
+    padding-left: 11%;
     color: $white;
-    text-align: center;
-    padding-top: 20px;
+    padding-top: 40px;
   }
 }
 
