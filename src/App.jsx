@@ -1,15 +1,15 @@
 import React from 'react';
 
+import users from './resources/data/users';
+import EditProfile from './components/EditProfile';
 import ClothingCard from './components/ClothingCard';
 import fakeClothingData from './resources/data/fake-data';
-import styles from './components/ClothingCard/ClothingCard.module.scss';
 import Navbar from './components/Navbar';
 
 const App = () => (
   <>
-    <div className={styles.ClothingCards}>
-      <ClothingCard clothingItem={fakeClothingData[0]} />
-    </div>
+    <ClothingCard clothingItem={fakeClothingData[0]} />
+    <EditProfile user={users[0]} />
     <Navbar />
   </>
 );
