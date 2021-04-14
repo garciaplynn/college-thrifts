@@ -7,7 +7,6 @@ import EditProfile from './components/EditProfile';
 const App = () => (
   <div className="App">
     <EditProfile user={users[0]} />
-    <EditProfile user={users[1]} />
   </div>
 );
 
