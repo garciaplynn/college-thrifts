@@ -21,16 +21,22 @@ const EditProfile = ({ user }) => {
         <h2>Profile</h2>
         <section
           className={styles.headerContainer}
-          style={{ backgroundColor: university.primaryColor }}
+          style={{
+            backgroundColor: university.primaryColor,
+            color: university.secondaryColor,
+          }}
         >
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png" alt="a sponge" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png"
+            alt="a sponge"
+          />
           <article className={styles.headerInfo}>
             <h3>{name}</h3>
             <p>{`${university.name} ${university.abbreviation} '${year}`}</p>
           </article>
         </section>
 
-        <section>
+        <section className={styles.headerContainer}>
           <a href="google.co.uk">Likes</a>
           <a href="google.co.uk">Selling</a>
         </section>

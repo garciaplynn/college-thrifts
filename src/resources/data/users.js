@@ -1,5 +1,5 @@
 const tim = {
-  name: 'Tim',
+  name: 'Tim Starr',
   email: 'timstarr14@gmail.com',
   following: 3,
   followers: 100000000,
@@ -8,6 +8,7 @@ const tim = {
     name: 'Trinity College Dublin',
     abbreviation: 'TCD',
     primaryColor: '#F47321',
+    secondaryColor: '#005030',
   },
   socials: [
     {
@@ -22,7 +23,7 @@ const tim = {
 };
 
 const charlie = {
-  name: 'Charlie',
+  name: 'Charlie Dodds',
   email: 'charlesgdodds@hotmail.co.uk',
   following: 100000,
   followers: 100000,

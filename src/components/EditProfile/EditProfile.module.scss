@@ -11,6 +11,7 @@
 .editProfile {
   min-height: 90vh;
   margin-bottom: 10vh;
+  padding: 0.75rem;
 }
 
 h2 {
@@ -21,7 +22,8 @@ h3 {
   @extend %medium-heading;
 }
 
-h4 {
+h4,
+p {
   @extend %body-font;
 }
 
@@ -38,13 +40,21 @@ h4 {
   align-items: center;
   height: 81px;
   border-radius: 13px;
+  padding: 0.5rem;
 
-    .headerInfo {
-      width: 80%;
+  .headerInfo {
+    flex-grow: 1;
+    text-align: center;
+    color: inherit;
+    * {
+      color: inherit;
     }
+  }
 
-    img {
-      width: 20%;
-      height: 80%;
-    }
+  img {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+  }
 }
