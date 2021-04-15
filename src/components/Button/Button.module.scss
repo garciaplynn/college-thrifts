@@ -1,6 +1,33 @@
 @import "../../scss/abstracts/placeholders";
 @import "../../scss/abstracts/variables";
 
-.likeButton {
-    color: $pink-gradient;
+.faButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: -500vh;
+    flex-direction: row;
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        height: 47px;
+        width: 47px;
+        border-color: $white;
+        border-radius: 50%;
+        padding: 40px;
+        background-color: $white;
+        box-shadow: $shadow;
+    }
+    .times {
+        color: $grey-primary;
+        }
+    .star {
+        color: #007ae1;
+        }
+    .heart {
+        color:  #FF375F; 
+        }
 }

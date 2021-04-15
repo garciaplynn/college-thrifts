@@ -13,9 +13,7 @@ const App = () => (
     <div className={styles.ClothingCards}>
       <ClothingCard clothingItem={fakeClothingData[0]} />
     </div>
-    <div className={styles.ButtonRow}>
-      <Button />
-    </div>
+    <Button />
     <Navbar />
   </>
 );
