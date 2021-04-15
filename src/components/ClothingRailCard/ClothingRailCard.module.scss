@@ -1,0 +1,13 @@
+@import '../../scss/abstracts/placeholders';
+@import '../../scss/abstracts/variables';
+
+.clothingRail {
+  position: relative;
+
+  .headerContainer {
+    position: absolute;
+    height: 344px;
+    width: 100%;
+    z-index: -1;
+  }
+}

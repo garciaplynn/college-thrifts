@@ -1,22 +1,13 @@
 import React from 'react';
-import ClothingCard from '../ClothingCard';
-import fakeClothingData from '../../resources/data/fake-data';
-import clothingStyles from '../ClothingCard/ClothingCard.module.scss';
-import GradientHeader from '../GradientHeader';
-// import uniData from '../../resources/data/university-data';
-import styles from './ClothingRail.module.scss';
+import uniData from '../../resources/data/university-data';
+import ClothingRailCard from '../ClothingRailCard';
 
-const ClothingRail = (props) => {
-  const { uniData } = props;
+const ClothingRail = () => {
+  const uniCards = uniData.map((uniClothingCard) => <ClothingRailCard uniData={uniClothingCard} />);
   return (
-    <section className={styles.clothingRail}>
-      <div className={styles.headerContainer}>
-        <GradientHeader uni={uniData} />
-      </div>
-      <div className={clothingStyles.ClothingCards}>
-        <ClothingCard clothingItem={fakeClothingData[0]} />
-      </div>
-    </section>
+    <>
+      {uniCards}
+    </>
   );
 };
 

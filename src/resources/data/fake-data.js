@@ -5,6 +5,7 @@ const fakeData = [
     strSize: 'Medium',
     strType: 'FS Red Crewneck',
   },
+
 ];
 
 export default fakeData;
