@@ -22,13 +22,15 @@
             background-color: hsl(122, 39%, 99%);
             border: 1px solid $grey-primary;
         }
-
-
         &:active {
         background-color: $grey-secondary;
         box-shadow: 0 5px #666;
         transform: translateY(4px);
         } 
+        &:focus {
+            border: 2px solid darkgrey;
+            box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
+        }
     }
     .thumbsUp {
         color: $green-primary;
