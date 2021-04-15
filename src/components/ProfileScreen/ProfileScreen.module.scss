@@ -1,2 +1,20 @@
 @import '../../scss/abstracts/variables';
 @import '../../scss/abstracts/placeholders';
+
+
+.ClothingImagePage {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+
+  img {
+    width: 40px;
+    height: 60px;
+  }
+   
+   }
+
+   .ClothingImage {
+     grid-row: 2/3;
+   
+   }
