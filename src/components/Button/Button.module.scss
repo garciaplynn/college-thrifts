@@ -9,18 +9,31 @@
     flex-direction: row;
     button {
         margin: 5px;
-        font-size: 18px;
+        font-size: 40px;
         height: 65px;
-        width: 250px;
+        width: 150px;
         border-radius: 10px;
         border: $grey-secondary, 0.5px;
         box-shadow: $shadow;
         background: $white;
-         cursor: pointer;
+        cursor: pointer;
+
+        &:hover {
+            background-color: hsl(122, 39%, 99%);
+            border: 1px solid $grey-primary;
+        }
+
+
+        &:active {
+        background-color: $grey-secondary;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+        } 
     }
     .thumbsUp {
-        color: #007ae1;
-        }
+        color: $green-primary;
+
+    }
     .heart {
         color:  #FF375F; 
         }
