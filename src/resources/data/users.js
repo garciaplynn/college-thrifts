@@ -10,6 +10,7 @@ const tim = {
     primaryColor: '#F47321',
     secondaryColor: '#005030',
   },
+  greek: 'Tri Delta (3 triangles)',
   socials: [
     {
       url: 'instagram.com/tim.starrr',

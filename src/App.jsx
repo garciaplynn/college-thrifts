@@ -13,7 +13,7 @@ const App = () => (
     <ClothingRail uniData={uniData[1]} />
     <ClothingCard clothingItem={fakeClothingData[0]} />
     <EditProfile user={users[0]} />
-    <ProfileTop uni={uniData[2]} />
+    <ProfileTop user={users[0]} uni={uniData[2]} />
     <Navbar />
   </>
 );
