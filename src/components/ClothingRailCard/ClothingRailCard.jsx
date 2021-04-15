@@ -9,7 +9,7 @@ import styles from './ClothingRailCard.module.scss';
 const ClothingRailCard = (props) => {
   const { uniData } = props;
   return (
-    <section className={styles.clothingRail}>
+    <section className={styles.clothingRailCard}>
       <div className={styles.headerContainer}>
         <GradientHeader uni={uniData} />
       </div>
