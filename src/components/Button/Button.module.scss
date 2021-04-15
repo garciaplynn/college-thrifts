@@ -4,27 +4,21 @@
 .faButton {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
-    height: -500vh;
     flex-direction: row;
     button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 50px;
-        height: 47px;
-        width: 47px;
-        border-color: $white;
-        border-radius: 50%;
-        padding: 40px;
-        background-color: $white;
+        margin: 5px;
+        font-size: 18px;
+        height: 65px;
+        width: 250px;
+        border-radius: 10px;
+        border: $grey-secondary, 0.5px;
         box-shadow: $shadow;
+        background: $white;
+         cursor: pointer;
     }
-    .times {
-        color: $grey-primary;
-        }
-    .star {
+    .thumbsUp {
         color: #007ae1;
         }
     .heart {

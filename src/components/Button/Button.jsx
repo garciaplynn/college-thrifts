@@ -4,8 +4,7 @@ import styles from './Button.module.scss';
 
 const Button = () => (
   <div className={styles.faButton}>
-    <button className={styles.times} type="button" aria-label="times"><FontAwesomeIcon icon="times" /></button>
-    <button className={styles.star} type="button" aria-label="star"><FontAwesomeIcon icon="star" /></button>
+    <button className={styles.thumbsUp} type="button" aria-label="thumbsup"><FontAwesomeIcon icon="thumbs-up" /></button>
     <button className={styles.heart} type="button" aria-label="heart"><FontAwesomeIcon icon="heart" /></button>
   </div>
 );
