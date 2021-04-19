@@ -2,6 +2,7 @@ import React from 'react';
 // import ClothingRailCard from './components/ClothingRailCard';
 import ClothingRail from './components/ClothingRail';
 import users from './resources/data/users';
+import './data/fa-library';
 import EditProfile from './components/EditProfile';
 import Navbar from './components/Navbar';
 // import uniData from './resources/data/university-data';
@@ -14,6 +15,7 @@ const App = () => (
     {/* <ClothingRailCard uniData={uniData[4]} /> */}
     <ClothingRail />
     <EditProfile user={users[0]} />
+    <ProfileTop user={users[0]} uni={uniData[2]} />
     <Navbar />
   </>
 );
