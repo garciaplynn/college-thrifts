@@ -24,7 +24,6 @@ const EditProfileInfo = ({ user }) => {
   return (
     <main className={styles.editProfile}>
       <section className={styles.about}>
-        <h3 className={styles.aboutTitle}>About</h3>
         <section className={styles.aboutContainer}>
           <h4 className={styles.aboutSubtitle}>Full Name</h4>
           <input type="text" name="name" value={inputValues.name} onChange={handleChange} />

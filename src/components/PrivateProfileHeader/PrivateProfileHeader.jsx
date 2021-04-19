@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './PrivateProfileHeader.module.scss';
 
-const PrivateProfileHeader = ({ user }) => {
+const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
   const { name, university, classOf } = user;
 
   const year = String(classOf).slice(2);
@@ -25,6 +25,10 @@ const PrivateProfileHeader = ({ user }) => {
           <p>{`${university.name} (${university.abbreviation}) '${year}`}</p>
         </article>
       </section>
+      <div className={styles.aboutWrapper}>
+        <h3 className={styles.aboutTitle}>About</h3>
+        <button type="button" onClick={toggleIsEditing}>Edit profile</button>
+      </div>
     </header>
   );
 };
