@@ -1,12 +1,17 @@
 import React from 'react';
-import PrivateProfileHeader from '../PrivateProfileHeader';
 import styles from './DisplayProfileInfo.module.scss';
 
-const DisplayProfileInfo = ({ user }) => (
+const DisplayProfileInfo = ({ user }) => {
+  const {
+    name,
+    email,
+    following,
+    followers,
+    socials,
+  } = user;
+
+  return (
     <main className={styles.editProfile}>
-
-      <PrivateProfileHeader />
-
       <section className={styles.about}>
         <h3 className={styles.aboutTitle}>About</h3>
         <section className={styles.aboutContainer}>
@@ -40,5 +45,5 @@ const DisplayProfileInfo = ({ user }) => (
       </section>
     </main>
   );
-
+};
 export default DisplayProfileInfo;
