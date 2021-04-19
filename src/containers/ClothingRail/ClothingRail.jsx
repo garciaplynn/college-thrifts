@@ -1,11 +1,15 @@
 import React from 'react';
+import TinderCard from 'react-tinder-card';
 import uniData from '../../resources/data/university-data';
-import ClothingRailCard from '../ClothingRailCard';
+import ClothingRailCard from '../../components/ClothingRailCard';
+
 import styles from './ClothingRail.module.scss';
 
 const ClothingRail = () => {
   const uniCards = uniData.map((uniClothingCard) => (
-    <ClothingRailCard className={styles.uniClothingRailCard} uniData={uniClothingCard} />
+    <TinderCard preventSwipe={['down']}>
+      <ClothingRailCard className={styles.uniClothingRailCard} uniData={uniClothingCard} />
+    </TinderCard>
   ));
 
   return (
