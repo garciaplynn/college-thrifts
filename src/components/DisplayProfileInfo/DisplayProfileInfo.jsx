@@ -1,8 +1,7 @@
 import React from 'react';
+import styles from './DisplayProfileInfo.module.scss';
 
-import styles from './EditProfile.module.scss';
-
-const EditProfile = ({ user }) => {
+const DisplayProfileInfo = ({ user }) => {
   const {
     name,
     university,
@@ -36,20 +35,6 @@ const EditProfile = ({ user }) => {
           </article>
         </section>
 
-        <section
-          className={styles.headerContainer}
-          style={{
-            backgroundColor: university.secondaryColor,
-            color: university.primaryColor,
-          }}
-        >
-          <h3>
-            <a href="google.co.uk">Likes</a>
-          </h3>
-          <h3>
-            <a href="google.co.uk">Selling</a>
-          </h3>
-        </section>
       </header>
 
       <section className={styles.about}>
@@ -87,4 +72,4 @@ const EditProfile = ({ user }) => {
   );
 };
 
-export default EditProfile;
+export default DisplayProfileInfo;
