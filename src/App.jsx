@@ -1,6 +1,6 @@
 import React from 'react';
 // import ClothingRailCard from './components/ClothingRailCard';
-import ClothingRail from './components/ClothingRail';
+import ClothingRail from './containers/ClothingRail';
 import users from './resources/data/users';
 import './data/fa-library';
 import EditProfile from './components/EditProfile';
