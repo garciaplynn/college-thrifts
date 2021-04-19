@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import uniData from './resources/data/university-data';
 import ProfileTop from './components/ProfileTop';
 import Button from './components/Button';
+
 const App = () => (
   <>
     <Button />
