@@ -15,7 +15,7 @@ const App = () => (
     {/* <ClothingRailCard uniData={uniData[4]} /> */}
     <ClothingRail />
     <EditProfile user={users[0]} />
-    <ProfileTop user={users[0]} uni={uniData[2]} />
+    {/* <ProfileTop user={users[0]} uni={uniData[2]} /> */}
     <Navbar />
   </>
 );
