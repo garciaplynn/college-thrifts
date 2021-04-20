@@ -2,8 +2,6 @@
 @import '../../scss/abstracts/placeholders';
 
 * {
-  margin: 0;
-  padding: 0;
   font-family: $font;
   color: inherit;
 }
@@ -12,11 +10,8 @@ a {
   text-decoration: none;
 }
 
-.editProfile {
-  min-height: 90vh;
-  margin-bottom: 10vh;
+.header {
   padding: 1rem;
-  color: $black;
 }
 
 h2 {
@@ -86,6 +81,5 @@ li {
 
 .aboutWrapper {
   display: flex;
-  margin: 1rem;
   justify-content: space-between;
 }

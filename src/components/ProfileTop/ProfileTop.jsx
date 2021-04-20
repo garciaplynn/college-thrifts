@@ -15,7 +15,7 @@ const ProfileTop = ({ uni, user }) => {
   return (
     <article className={styles.ProfileTop}>
       <GradientHeader uni={uni} />
-      <h2 className={styles.title}>Profile</h2>
+      <h2>Profile</h2>
       <section className={styles.imgContainer}>
         <img
           className={styles.profilePic}

@@ -7,7 +7,7 @@ const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
   const year = String(classOf).slice(2);
 
   return (
-    <header>
+    <header className={styles.header}>
       <h2>Profile</h2>
       <section
         className={styles.headerContainer}
