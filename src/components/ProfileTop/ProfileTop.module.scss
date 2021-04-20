@@ -9,8 +9,7 @@
   color: $white;
   justify-content: space-evenly;
 
-  .title {
-    @extend %big-heading;
+  h2 {
     margin: 2rem;
   }
 
