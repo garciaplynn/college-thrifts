@@ -4,6 +4,10 @@
 .clothingRail {
   position: relative;
 
+  FontAwesomeIcon {
+    font-size: 100px;
+    z-index: 2;
+  }
   .headerContainer {
     position: absolute;
     height: 344px;

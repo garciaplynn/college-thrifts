@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ClothingCard from '../ClothingCard';
 import fakeClothingData from '../../resources/data/fake-data';
 import clothingStyles from '../ClothingCard/ClothingCard.module.scss';
@@ -12,6 +13,7 @@ const ClothingRail = (props) => {
     <section className={styles.clothingRail}>
       <div className={styles.headerContainer}>
         <GradientHeader uni={uniData} />
+        
       </div>
       <div className={clothingStyles.ClothingCards}>
         <ClothingCard clothingItem={fakeClothingData[0]} />
