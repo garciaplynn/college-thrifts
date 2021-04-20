@@ -10,6 +10,7 @@ const ClothingCard = (props) => {
     strPrice,
     strSize,
     strType,
+    strCondition,
   } = clothingItem;
 
   return (
@@ -23,6 +24,9 @@ const ClothingCard = (props) => {
             <h3>{strType}</h3>
             <p>
               {`Size: ${strSize}`}
+            </p>
+            <p>
+              {`Condition: ${strCondition}`}
             </p>
           </div>
           <div>

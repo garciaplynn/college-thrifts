@@ -3,8 +3,7 @@
 
 .ClothingCards {
  display: flex; 
-//  flex-direction: column;
-//  height: 93vh;
+ 
  justify-content: center;
  align-items: center;
 
@@ -19,7 +18,7 @@
  img {
    height: 350px;
    width: 300px;
-   margin-top: 22vh;
+   margin-top: 15vh;
    justify-content: center;
    align-items: center;
    border-radius: 10px;
