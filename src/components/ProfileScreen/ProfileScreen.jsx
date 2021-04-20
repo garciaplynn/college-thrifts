@@ -11,12 +11,18 @@ const ProfileScreen = (props) => {
 
   const checked = isChecked ? <input type="checkbox" checked /> : <input type="checkbox" />;
 
+  const showSelling = isChecked ? styles.displayNone : styles.BuyClothingImage;
+
+  const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
+
   return (
     <>
       <section className={styles.profilePage}>
-        <article>
+
+        <article className={styles.iconBar}>
           <a href="google.co.uk">
             <FontAwesomeIcon icon={faHeart} />
+            <> </>
             Likes
           </a>
           <section className={styles.switch} onClick={() => setIsChecked(!isChecked)} onKeyDown={() => setIsChecked(!isChecked)} role="button" tabIndex="0">
@@ -25,14 +31,34 @@ const ProfileScreen = (props) => {
           </section>
           <a href="google.co.uk">
             <FontAwesomeIcon icon={faTag} />
+            <> </>
             Selling
           </a>
           <a href="google.co.uk">
             <FontAwesomeIcon icon={faCog} />
+            <> </>
             Settings
           </a>
         </article>
-        <div className={styles.ClothingImage}>
+        <div className={showBuying}>
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+        </div>
+
+        <div className={showSelling}>
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
+          <img src={strImage} alt="jumper" />
           <img src={strImage} alt="jumper" />
         </div>
       </section>
