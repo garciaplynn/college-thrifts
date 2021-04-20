@@ -4,7 +4,7 @@ import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './ProfileBottom.module.scss';
 
 const ProfileBottom = (props) => {
-  const { clothingItem } = props;
+  const { clothingItem, user } = props;
   const { strImage } = clothingItem;
 
   const [isChecked, setIsChecked] = useState(false);
@@ -14,6 +14,8 @@ const ProfileBottom = (props) => {
   const showSelling = isChecked ? styles.displayNone : styles.BuyClothingImage;
 
   const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
+  console.log(user);
+  const likeItems = user.likes.map((item) => <img src={item.strImage} alt={item.strType} />);
 
   return (
     <>
@@ -41,6 +43,7 @@ const ProfileBottom = (props) => {
           </a>
         </article>
         <div className={showBuying}>
+          {likeItems}
           <img src={strImage} alt="jumper" />
           <img src={strImage} alt="jumper" />
           <img src={strImage} alt="jumper" />
@@ -48,18 +51,11 @@ const ProfileBottom = (props) => {
           <img src={strImage} alt="jumper" />
           <img src={strImage} alt="jumper" />
           <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
+
         </div>
 
         <div className={showSelling}>
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
+          {likeItems}
         </div>
       </section>
     </>

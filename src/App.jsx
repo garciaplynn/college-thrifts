@@ -16,7 +16,7 @@ const App = () => (
     <ClothingCard clothingItem={fakeClothingData[0]} />
     <PrivateProfilePage user={users[0]} />
     <ProfileTop user={users[0]} uni={uniData[2]} />
-    <ProfileBottom clothingItem={fakeClothingData[0]} />
+    <ProfileBottom clothingItem={fakeClothingData[0]} user={users[0]} />
     <Navbar />
   </>
 );
