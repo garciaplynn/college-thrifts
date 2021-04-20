@@ -40,7 +40,7 @@ const ClothingRail = () => {
       <div className={styles.headerContainer}>
         <GradientHeader uni={uniData[index]} />
       </div>
-      <div className={`${uniData.ClothingCards} clothingCard`} ref={handlers.ref}>
+      <div className={`${uniData.ClothingCards} ${styles.clothingCardContainer}`} ref={handlers.ref}>
         <ClothingCard clothingItem={fakeClothingData[index]} />
       </div>
     </section>
