@@ -1,0 +1,91 @@
+@import '../../scss/abstracts/variables';
+@import '../../scss/abstracts/placeholders';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.editProfile {
+  min-height: 90vh;
+  margin-bottom: 10vh;
+  padding: 1rem;
+  color: $black;
+}
+
+h2 {
+  @extend %big-heading;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  @extend %medium-heading;
+}
+
+h4,
+p,
+li {
+  @extend %body-font;
+}
+
+.about {
+  .aboutTitle {
+    color: $red;
+    margin-bottom: 1.5rem;
+  }
+  .aboutContainer {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $grey-primary-transparent;
+
+    &.aboutContainerFlex {
+      display: flex;
+      div {
+        margin-right: 7rem;
+      }
+    }
+
+    .aboutSubtitle {
+      color: $grey-primary;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 81px;
+  border-radius: 13px;
+  padding: 0.5rem;
+  margin-bottom: 4rem;
+
+  .headerInfo {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  & > h3 {
+    margin: 0 5rem;
+  }
+}
+
+.aboutWrapper {
+  display: flex;
+  margin: 1rem;
+  justify-content: space-between;
+}
