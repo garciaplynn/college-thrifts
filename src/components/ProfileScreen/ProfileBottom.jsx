@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
-import styles from './ProfileScreen.module.scss';
+import styles from './ProfileBottom.module.scss';
 
-const ProfileScreen = (props) => {
+const ProfileBottom = (props) => {
   const { clothingItem } = props;
   const { strImage } = clothingItem;
 
@@ -66,4 +66,4 @@ const ProfileScreen = (props) => {
   );
 };
 
-export default ProfileScreen;
+export default ProfileBottom;
