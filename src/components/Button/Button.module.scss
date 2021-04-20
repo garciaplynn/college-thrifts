@@ -14,10 +14,7 @@
         width: 100px;
         border-radius: 10px;
         border: $grey-secondary, 0.5px;
-        box-shadow: $shadow;
         background: $white;
-        cursor: pointer;
-        
 
         &:hover {
             background-color: hsl(122, 39%, 99%);
