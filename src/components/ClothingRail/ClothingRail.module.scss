@@ -1,5 +1,6 @@
 @import '../../scss/abstracts/placeholders';
 @import '../../scss/abstracts/variables';
+@import '../../index.css';
 
 .clothingRail {
   position: relative;
@@ -9,5 +10,14 @@
     height: 344px;
     width: 100%;
     z-index: -1;
+
   }
+  
+  h2 {
+    position: relative;
+    top: 50px;
+    left: 39px;
+    color: $white;
+    font-size: 2.4rem;
+  } 
 }

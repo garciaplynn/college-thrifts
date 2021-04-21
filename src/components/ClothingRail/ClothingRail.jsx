@@ -18,8 +18,8 @@ const ClothingRail = (props) => {
     <section className={styles.clothingRail}>
       <div className={styles.headerContainer}>
         <GradientHeader uni={uniData} />
+        <h2>{uniData.title}</h2>
       </div>
-      <h2>{uniData.title}</h2>
       <div className={clothingStyles.ClothingCards}>
         <ClothingCard clothingItem={clothingItem} />
       </div>
