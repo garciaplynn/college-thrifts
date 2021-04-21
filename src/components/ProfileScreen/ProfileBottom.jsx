@@ -14,7 +14,6 @@ const ProfileBottom = (props) => {
   const showSelling = isChecked ? styles.displayNone : styles.BuyClothingImage;
 
   const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
-  console.log(user);
   const likeItems = user.likes.map((item) => <img src={item.strImage} alt={item.strType} />);
 
   return (
