@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
-import filter from "./filter";
+import filter from './Filter';
 
 describe("filter tests", () => {
   it("should render", () => {
