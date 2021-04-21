@@ -1,44 +1,45 @@
 import React from 'react';
+import { Link } from '@reach/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => (
   <nav className={styles.Navbar}>
-    <a
+    <Link
       id={styles.shoppingButton}
       className={styles.navBtn}
-      href="https://google.com"
+      to="clothing-rail"
     >
       <FontAwesomeIcon icon="tag" label="shoppingButton" />
-    </a>
-    <a
+    </Link>
+    <Link
       id={styles.messageButton}
       className={styles.navBtn}
-      href="https://google.com"
+      to="message-inbox"
     >
       <FontAwesomeIcon icon="comments" label="messageButton" />
-    </a>
-    <a
+    </Link>
+    <Link
       id={styles.cameraButton}
       className={styles.navBtn}
-      href="https://google.com"
+      to="upload-picture"
     >
       <FontAwesomeIcon icon="camera" label="cameraButton" />
-    </a>
-    <a
+    </Link>
+    <Link
       id={styles.carbonFootprintButton}
       className={styles.navBtn}
-      href="https://google.com"
+      to="carbon-footprint"
     >
       <FontAwesomeIcon icon="globe" label="carbonFootprintButton" />
-    </a>
-    <a
+    </Link>
+    <Link
       id={styles.profileButton}
       className={styles.navBtn}
-      href="https://google.com"
+      to="profile"
     >
       <FontAwesomeIcon icon="user-circle" label="profileButton" />
-    </a>
+    </Link>
   </nav>
 );
 
