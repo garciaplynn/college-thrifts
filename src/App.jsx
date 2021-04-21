@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 // import uniData from './resources/data/university-data';
 // import ProfileTop from './components/ProfileTop';
 import Button from './components/Button';
+import Routes from './containers/Routes';
 
 const App = () => (
   <>
@@ -21,6 +22,7 @@ const App = () => (
     {/* <ProfileTop user={users[0]} uni={uniData[2]} /> */}
     {/* <ProfileBottom clothingItem={fakeClothingData[0]} /> */}
     <Navbar />
+    <Routes />
   </>
 );
 
