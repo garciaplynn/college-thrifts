@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './Filter.module.scss';
+import styles from './FilterButton.module.scss';
 
-const Filter = () => (
+const Filter = () => {
+  const [isToggled, setisToggled] = useState(false);
+  const  toggleFilter = () => {
+
+
+  }
+return (
   <section className={styles.container}>
     <div className={styles.Filter}>
       <FontAwesomeIcon icon="sort-down" className={styles.icon} />
@@ -97,4 +103,5 @@ const Filter = () => (
     </div>
   </section>
 );
+};
 export default Filter;

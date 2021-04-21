@@ -3,7 +3,7 @@ import ClothingCard from '../ClothingCard';
 import fakeClothingData from '../../resources/data/fake-data';
 import clothingStyles from '../ClothingCard/ClothingCard.module.scss';
 import GradientHeader from '../GradientHeader';
-import Filter from '../Filter';
+import Filter from '../FilterButton';
 // import uniData from '../../resources/data/university-data';
 import styles from './ClothingRail.module.scss';
 
