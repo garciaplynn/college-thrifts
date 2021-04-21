@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
-// import SwipeListener from 'swipe-listener';
 import uniData from '../../resources/data/university-data';
 import fakeClothingData from '../../resources/data/fake-data';
 import GradientHeader from '../../components/GradientHeader';
@@ -11,27 +10,30 @@ import styles from './ClothingRail.module.scss';
 
 const ClothingRail = () => {
   const [index, updateIndex] = useState(0);
+  let swipeDir = '';
 
   const handlers = useSwipeable({
     onSwipedLeft: (eventData) => {
       console.log('user swiped', eventData.dir);
+      swipeDir = `${styles.swipeLeft}`;
       if (index === uniData.length - 1) {
-        updateIndex(0);
+        setTimeout(() => updateIndex(0), 1000);
       } else {
-        updateIndex(index + 1);
+        setTimeout(() => updateIndex(index + 1), 1000);
       }
     },
     onSwipedRight: (eventData) => {
       console.log('user swiped', eventData.dir);
+      swipeDir = `${styles.swipeRight}`;
       if (index === 0) {
-        updateIndex(uniData.length - 1);
+        setTimeout(() => updateIndex(uniData.length - 1), 1000);
       } else {
-        updateIndex(index - 1);
+        setTimeout(() => updateIndex(index - 1), 1000);
       }
     },
     onSwipedUp: (eventData) => {
       console.log('user swiped', eventData.dir);
-      alert('you swiped up!');
+      swipeDir = `${styles.swipeUp}`;
     },
   });
 
@@ -40,8 +42,8 @@ const ClothingRail = () => {
       <div className={styles.headerContainer}>
         <GradientHeader uni={uniData[index]} />
       </div>
-      <div className={`${uniData.ClothingCards} ${styles.clothingCardContainer}`} ref={handlers.ref}>
-        <ClothingCard clothingItem={fakeClothingData[index]} />
+      <div className={`${uniData.ClothingCards} ${styles.clothingCardContainer} ${styles.card}`} ref={handlers.ref}>
+        <ClothingCard clothingItem={fakeClothingData[index]} className={swipeDir} />
       </div>
     </section>
   );

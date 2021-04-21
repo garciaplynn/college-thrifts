@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router } from '@reach/router';
-import ClothingRail from '../../components/ClothingRail';
+import ClothingRail from '../ClothingRail';
 import users from '../../resources/data/users';
 import ProfileTop from '../../components/ProfileTop';
 import CarbonFootprint from '../CarbonFootprint';
