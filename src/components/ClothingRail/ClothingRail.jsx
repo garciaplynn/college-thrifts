@@ -11,7 +11,7 @@ const ClothingRail = (props) => {
   const { uniData, user } = props;
   const clothingItem = fakeClothingData[0];
   const handleLike = () => {
-    user.likes.push(fakeClothingData[0]);
+    user.likes.push(clothingItem);
   };
 
   return (

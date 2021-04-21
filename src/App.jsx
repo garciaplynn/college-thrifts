@@ -14,7 +14,7 @@ const App = () => (
     <ClothingRail user={users[0]} uniData={uniData[1]} />
     <PrivateProfilePage user={users[0]} />
     <ProfileTop user={users[0]} uni={uniData[2]} />
-    <ProfileBottom clothingItem={fakeClothingData[0]} />
+    <ProfileBottom clothingItem={fakeClothingData[0]} user={users[0]} />
     <Navbar />
   </>
 );
