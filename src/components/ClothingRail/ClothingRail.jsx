@@ -8,7 +8,7 @@ import Button from '../Button';
 import styles from './ClothingRail.module.scss';
 
 const ClothingRail = (props) => {
-  const { uniData, user } = props;
+  const { user, uniData } = props;
   const clothingItem = fakeClothingData[0];
   const handleLike = () => {
     user.likes.push(clothingItem);
@@ -19,6 +19,7 @@ const ClothingRail = (props) => {
       <div className={styles.headerContainer}>
         <GradientHeader uni={uniData} />
       </div>
+      <h2>{uniData.title}</h2>
       <div className={clothingStyles.ClothingCards}>
         <ClothingCard clothingItem={clothingItem} />
       </div>
