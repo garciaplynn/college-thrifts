@@ -1,10 +1,11 @@
 import React from 'react';
-import './MessageInbox.module.scss';
+import styles from './MessageInbox.module.scss';
+import image from './message.svg';
 
 const MessageInbox = () => (
   <>
     <p>MessageInbox works</p>
-    <img src="../../resources/MessageList.jpg" alt="" />
+    <img className={styles.image} src={image} alt="" />
   </>
 );
 
