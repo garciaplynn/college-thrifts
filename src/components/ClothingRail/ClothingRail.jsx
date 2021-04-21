@@ -13,7 +13,6 @@ const ClothingRail = (props) => {
     <section className={styles.clothingRail}>
       <div className={styles.headerContainer}>
         <GradientHeader uni={uniData} />
-        
       </div>
       <div className={clothingStyles.ClothingCards}>
         <ClothingCard clothingItem={fakeClothingData[0]} />
