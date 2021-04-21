@@ -6,8 +6,11 @@
   height: 40vh;
   display: flex;
   flex-direction: column;
-  color: $white;
   justify-content: space-evenly;
+
+  * {
+    color: $white;
+  }
 
   h2 {
     margin: 2rem;
