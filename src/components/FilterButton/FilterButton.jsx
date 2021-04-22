@@ -6,15 +6,6 @@ const Filter = () => {
   const [isToggled, setIsToggled] = useState(false);
   const showContainer = isToggled ? styles.displayNone : styles.form;
 
-  // const toggleFilter = (e) => {
-  //   e.stopPropagation();
-  //   if(setIsToggled === true) {
-  //     return setIsToggled
-  //   };
-  // };
-
-  // const FontAwesomeIcon = isToggled ? ["sort-down"] : null;
-
   return (
     <section className={styles.container}>
       <div className={styles.Filter}>
