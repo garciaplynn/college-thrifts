@@ -13,7 +13,13 @@ const ClothingRail = () => {
   const [index, updateIndex] = useState(0);
   const [wasSwiped, setWasSwiped] = useState(false);
 
-  let swipeDir = '';
+  // State of direction
+  // Style setter function :+1:
+  // State in the if statements instead
+
+  let right = false;
+  let left = false;
+  let up = false;
 
   const defaultStyle = {
     opacity: 1,
@@ -21,27 +27,69 @@ const ClothingRail = () => {
     transition: '0.5s',
   }
 
-  let swipedStyle = {};
+  // let swipedStyleLeft = {
+  //   transition: '0.5s',
+  //   opacity: 0.5,
+  //   zIndex: 10,
+  //   transform: 'translateX(-250px)',
+  //   WebkitTransform: 'translateX(-250px)',
+  //   MozTransform: 'translateX(-250px)',
+  // };
 
+  // const styleSetter = () => {
+  //   let swipedStyle = {};
+  //   if (left) {
+  //     swipedStyle = {
+  //       transition: '0.5s',
+  //       opacity: 0.5,
+  //       zIndex: 10,
+  //       transform: 'translateX(-250px)',
+  //       WebkitTransform: 'translateX(-250px)',
+  //       MozTransform: 'translateX(-250px)',
+  //     };
+  //   } else if (right) {
+  //    swipedStyle = {
+  //       transition: '0.5s',
+  //       opacity: 0.5,
+  //       zIndex: 10,
+  //       transform: 'translateX(250px)',
+  //       WebkitTransform: 'translateX(250px)',
+  //       MozTransform: 'translateX(250px)',
+  //     };
+  //   } else if (up) {
+  //      swipedStyle = {
+  //       transition: '0.5s',
+  //       opacity: 0.5,
+  //       zIndex: 10,
+  //       transform: 'translateY(250px)',
+  //       WebkitTransform: 'translateY(250px)',
+  //       MozTransform: 'translateY(250px)',
+  //     } else {
+  //   }
+  //   return swipedStyle;
+  // };
+
+  const swipedStyle = {
+    transition: '0.5s',
+    opacity: 0.5,
+    zIndex: 10,
+    transform: 'translateX(250px)',
+    WebkitTransform: 'translateX(250px)',
+    MozTransform: 'translateX(250px)',
+  }
+  
   useEffect(() => {
     setWasSwiped(false);
+    // Reset direction state back to ""
   }, [index]);
 
   const handlers = useSwipeable({
     onSwipedLeft: (eventData) => {
+      left = true;
       console.log('user swiped', eventData.dir);
       setWasSwiped(true);
-
-      swipedStyle = {
-        transition: '0.5s',
-        opacity: 0.5,
-        zIndex: 10,
-        transform: 'translateX(-250px)',
-        WebkitTransform: 'translateX(-250px)',
-        MozTransform: 'translateX(-250px)',
-      }
       //new
-      swipeDir = wasSwiped ? 'swipeLeft' : '';
+      // swipeDir = wasSwiped ? 'swipeLeft' : '';
       if (index === uniData.length - 1) {
         setTimeout(() => {
           updateIndex(0);
@@ -53,20 +101,11 @@ const ClothingRail = () => {
       }
     },
     onSwipedRight: (eventData) => {
+      right = true;
       console.log('user swiped', eventData.dir);
       //new
-      swipeDir = wasSwiped ? 'swipeRight' : '';
+      // swipeDir = wasSwiped ? 'swipeRight' : '';
       setWasSwiped(true);
-
-      swipedStyle = {
-        transition: '0.5s',
-        opacity: 0.5,
-        zIndex: 10,
-        transform: 'translateX(250px)',
-        WebkitTransform: 'translateX(250px)',
-        MozTransform: 'translateX(250px)',
-      }
-
       if (index === 0) {
         setTimeout(() => {
           updateIndex(uniData.length - 1);
@@ -78,18 +117,11 @@ const ClothingRail = () => {
       }
     },
     onSwipedUp: (eventData) => {
+      up = true;
       console.log('user swiped', eventData.dir);
       //new
-      swipeDir = wasSwiped ? 'swipeUp' : '';
+      // swipeDir = wasSwiped ? 'swipeUp' : '';
       setWasSwiped(true);
-      swipedStyle = {
-        transition: '0.5s',
-        opacity: 0.5,
-        zIndex: 10,
-        transform: 'translateY(250px)',
-        WebkitTransform: 'translateY(250px)',
-        MozTransform: 'translateY(250px)',
-      }
       setTimeout(() => setWasSwiped(false), 500);
     },
   });
