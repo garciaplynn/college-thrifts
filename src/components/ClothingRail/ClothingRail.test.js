@@ -33,4 +33,8 @@ describe('University Name tests', () => {
   it('should render a title', () => {
     expect(component.find('h2')).toBeTruthy();
   });
+
+  it('should match the university name with the header', () => {
+    expect(component.find('h2').text()).toBe('University of Florida');
+  });
 })
