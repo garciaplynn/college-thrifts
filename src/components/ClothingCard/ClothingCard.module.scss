@@ -46,3 +46,42 @@
  }
  
 }
+
+.swipeLeft {
+  // transform: rotate(30deg) scale(0.8);
+  transition: 0.5s;
+  // margin-left: 400px;
+  cursor: e-resize;
+  opacity: 0;
+  z-index: 10;
+  transform: translateX(-30px);
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  transition: 1s;
+}
+
+.swipeRight {
+  // transform: rotate(30deg) scale(0.8);
+  transition: 1s;
+  // margin-left: 400px;
+  cursor: e-resize;
+  opacity: 0;
+  z-index: 10;
+  transform: translateX(30px) rotate(-30deg);
+  -webkit-transform: translateX(-30px) rotate(-30deg);
+  -moz-transform: translateX(-30px) rotate(-30deg);
+  transition: 1s;
+}
+
+.swipeUp {
+  // transform: rotate(30deg) scale(0.8);
+  transition: 1s;
+  // margin-left: 400px;
+  cursor: e-resize;
+  opacity: 0;
+  z-index: 10;
+  transform: translateX(-30px) rotate(-30deg);
+  -webkit-transform: translateX(-30px) rotate(-30deg);
+  -moz-transform: translateX(-30px) rotate(-30deg);
+  transition: 1s;
+}

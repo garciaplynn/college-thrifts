@@ -1,16 +1,9 @@
 .card {
-  transform-origin: 50% 100%;
-  transition: transform 0.3s;
-  
-  .swipeLeft {
-    transform: translateX(-30rem) rotate(-30deg);
-  }
-  
-  .swipeRight {
-    
-  }
-  
-  .swipeUP {
-    
-  }
+  position: relative;
+  // -webkit-touch-callout: none;
+  // -webkit-user-select: none;
+  // -khtml-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
 }
