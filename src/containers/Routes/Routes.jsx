@@ -8,6 +8,7 @@ import MessageInbox from '../MessageInbox';
 import UploadPicture from '../UploadPicture';
 import uniData from '../../resources/data/university-data';
 import data from '../../resources/data/fake-data';
+import PrivateProfile from '../PrivateProfile';
 
 const Routes = () => (
   <Router>
@@ -16,6 +17,7 @@ const Routes = () => (
     <UploadPicture path="upload-picture" />
     <CarbonFootprint path="carbon-footprint" />
     <ProfilePage path="profile" user={users[0]} uni={uniData[2]} clothingItem={data[0]} />
+    <PrivateProfile path="private-profile" />
   </Router>
 );
 
