@@ -4,6 +4,6 @@ import PrivateProfile from "./PrivateProfile";
 
 describe("PrivateProfile tests", () => {
   it("should render", () => {
-    expect(render(<PrivateProfile />)).toBeTruthy();
+    expect(render(<PrivateProfile user={user} toggleIsEditing={toggleIsEditing} />)).toBeTruthy();
   });
 });
