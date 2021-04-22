@@ -42,7 +42,8 @@
   },
   "eslintIgnore": [
     "*.test.js",
-    "*.spec.js"
+    "*.spec.js",
+    "setupTests.js"
   ],
   "browserslist": {
     "production": [
