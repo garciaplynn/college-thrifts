@@ -22,3 +22,19 @@ describe('Like button tests', () => {
     expect(users[0].likes.length).toBe(1);
   });
 });
+
+describe('University Name tests', () => {
+  let component;
+
+  beforeEach(() => {
+    component = shallow(<ClothingRail user={users[0]} uniData={uniData[0]} />);
+  });
+
+  it('should render a title', () => {
+    expect(component.find('h2')).toBeTruthy();
+  });
+
+  it('should match the university name with the header', () => {
+    expect(component.find('h2').text()).toBe('University of Florida');
+  });
+})
