@@ -1,6 +1,6 @@
 /*eslint-disable*/
 import React, { useState, useEffect } from 'react';
-import { useSwipeable } from 'react-swipeable';
+import { LEFT, useSwipeable } from 'react-swipeable';
 import uniData from '../../resources/data/university-data';
 import fakeClothingData from '../../resources/data/fake-data';
 import GradientHeader from '../../components/GradientHeader';
@@ -16,17 +16,12 @@ const ClothingRail = () => {
   let swipeDir = '';
 
   const defaultStyle = {
-    position: 'relative'
+    opacity: 1,
+	  animation: 'fadeInOpacity',
+    transition: '0.5s',
   }
 
-  const swipedStyle = {
-    transition: '0.5s',
-    opacity: 0.5,
-    zIndex: 10,
-    transform: 'translateX(-250px)',
-    WebkitTransform: 'translateX(-250px)',
-    MozTransform: 'translateX(-250px)',
-  };
+  let swipedStyle = {};
 
   useEffect(() => {
     setWasSwiped(false);
@@ -36,6 +31,15 @@ const ClothingRail = () => {
     onSwipedLeft: (eventData) => {
       console.log('user swiped', eventData.dir);
       setWasSwiped(true);
+
+      swipedStyle = {
+        transition: '0.5s',
+        opacity: 0.5,
+        zIndex: 10,
+        transform: 'translateX(-250px)',
+        WebkitTransform: 'translateX(-250px)',
+        MozTransform: 'translateX(-250px)',
+      }
       //new
       swipeDir = wasSwiped ? 'swipeLeft' : '';
       if (index === uniData.length - 1) {
@@ -53,6 +57,16 @@ const ClothingRail = () => {
       //new
       swipeDir = wasSwiped ? 'swipeRight' : '';
       setWasSwiped(true);
+
+      swipedStyle = {
+        transition: '0.5s',
+        opacity: 0.5,
+        zIndex: 10,
+        transform: 'translateX(250px)',
+        WebkitTransform: 'translateX(250px)',
+        MozTransform: 'translateX(250px)',
+      }
+
       if (index === 0) {
         setTimeout(() => {
           updateIndex(uniData.length - 1);
@@ -68,13 +82,21 @@ const ClothingRail = () => {
       //new
       swipeDir = wasSwiped ? 'swipeUp' : '';
       setWasSwiped(true);
+      swipedStyle = {
+        transition: '0.5s',
+        opacity: 0.5,
+        zIndex: 10,
+        transform: 'translateY(250px)',
+        WebkitTransform: 'translateY(250px)',
+        MozTransform: 'translateY(250px)',
+      }
       setTimeout(() => setWasSwiped(false), 500);
     },
   });
 
   const cardsJSX = (
     <section className={styles.clothingRailCard}>
-      <div className={styles.headerContainer}>
+      <div style={defaultStyle} className={styles.headerContainer}>
         <GradientHeader uni={uniData[index]} />
       </div>
       <div style={wasSwiped ? swipedStyle : defaultStyle} ref={handlers.ref}>
