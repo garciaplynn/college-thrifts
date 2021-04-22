@@ -4,6 +4,7 @@ const fakeData = [
     strPrice: '$15',
     strSize: 'Medium',
     strType: 'FS Red Crewneck',
+    strCondition: 'With Tags',
   },
 ];
 

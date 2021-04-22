@@ -2,9 +2,6 @@
 @import '../../scss/abstracts/placeholders';
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: $font;
   color: inherit;
 }
 
@@ -20,16 +17,10 @@ a {
 }
 
 h2 {
-  @extend %big-heading;
   margin-bottom: 1rem;
 }
 
-h3 {
-  @extend %medium-heading;
-}
-
 h4,
-p,
 li {
   @extend %body-font;
 }

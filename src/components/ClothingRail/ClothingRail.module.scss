@@ -1,12 +1,11 @@
 @import '../../scss/abstracts/placeholders';
 @import '../../scss/abstracts/variables';
+@import '../../index.css';
 
 .clothingRail {
-  position: relative;
-
-  .headerContainer {
-    position: absolute;
-    height: 344px;
-    width: 100%;
-  }
+  .title {
+    margin: 3rem 0 0 3.8rem;
+    color: $white;
+    font-size: 2.4rem;
+  } 
 }

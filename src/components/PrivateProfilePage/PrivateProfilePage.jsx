@@ -6,7 +6,7 @@ import EditProfileInfo from '../EditProfileInfo';
 // import styles from './PrivateProfilePage.module.scss';
 
 const EditProfile = ({ user }) => {
-  const [isEditing, setIsEditing] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
 
   const toggleIsEditing = () => {
     setIsEditing(!isEditing);
