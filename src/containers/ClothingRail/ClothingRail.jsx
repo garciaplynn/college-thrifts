@@ -1,7 +1,6 @@
 /*eslint-disable*/
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import Draggable from 'react-draggable';
 import uniData from '../../resources/data/university-data';
 import fakeClothingData from '../../resources/data/fake-data';
 import GradientHeader from '../../components/GradientHeader';
@@ -24,11 +23,15 @@ const ClothingRail = () => {
     transition: '0.5s',
     opacity: 0,
     zIndex: 10,
-    transform: 'translateX(-30px) rotate(-30deg)',
-    WebkitTransform: 'translateX(-30px) rotate(-30deg)',
-    MozTransform: 'translateX(-30px) rotate(-30deg)',
+    transform: 'translateX(-30px)',
+    WebkitTransform: 'translateX(-30px)',
+    MozTransform: 'translateX(-30px)',
     transition: '1s',
   };
+
+  useEffect(() => {
+    setWasSwiped(false);
+  }, [index]);
 
   const handlers = useSwipeable({
     onSwipedLeft: (eventData) => {
@@ -36,15 +39,13 @@ const ClothingRail = () => {
       setWasSwiped(true);
       //new
       swipeDir = wasSwiped ? 'swipeLeft' : '';
-      if (wasSwiped && index === uniData.length - 1) {
+      if (index === uniData.length - 1) {
         setTimeout(() => {
           updateIndex(0);
-          setWasSwiped(false);
         }, 1000);
-      } else if (wasSwiped) {
+      } else {
         setTimeout(() => {
           updateIndex(index + 1);
-          setWasSwiped(false);
         }, 1000);
       }
     },
@@ -53,15 +54,13 @@ const ClothingRail = () => {
       //new
       swipeDir = wasSwiped ? 'swipeRight' : '';
       setWasSwiped(true);
-      if (wasSwiped && index === 0) {
+      if (index === 0) {
         setTimeout(() => {
           updateIndex(uniData.length - 1);
-          setWasSwiped(false);
         }, 1000);
-      } else if (wasSwiped){
+      } else {
         setTimeout(() => {
           updateIndex(index - 1);
-          setWasSwiped(false);
         }, 1000);
       }
     },
@@ -70,7 +69,7 @@ const ClothingRail = () => {
       //new
       swipeDir = wasSwiped ? 'swipeUp' : '';
       setWasSwiped(true);
-      setTimeout(()=>setWasSwiped(false), 1500);
+      setTimeout(() => setWasSwiped(false), 1000);
     },
   });
 
