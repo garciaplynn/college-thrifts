@@ -8,6 +8,16 @@ import {
   faGlobe,
   faHeart,
   faThumbsUp,
+  faSortDown,
 } from '@fortawesome/free-solid-svg-icons';
 
-export default library.add(faHeart, faThumbsUp, faTag, faCamera, faUserCircle, faComments, faGlobe);
+export default library.add(
+  faHeart,
+  faThumbsUp,
+  faTag,
+  faCamera,
+  faUserCircle,
+  faComments,
+  faGlobe,
+  faSortDown,
+);
