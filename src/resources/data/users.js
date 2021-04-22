@@ -1,6 +1,7 @@
 const tim = {
   name: 'Tim Starr',
   email: 'timstarr14@gmail.com',
+  likes: [],
   following: 3,
   followers: 100000000,
   classOf: 2016,
@@ -26,6 +27,7 @@ const tim = {
 const charlie = {
   name: 'Charlie Dodds',
   email: 'charlesgdodds@hotmail.co.uk',
+  likes: [],
   following: 100000,
   followers: 100000,
   classOf: 2015,
