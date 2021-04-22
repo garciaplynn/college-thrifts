@@ -21,12 +21,11 @@ const ClothingRail = () => {
 
   const swipedStyle = {
     transition: '0.5s',
-    opacity: 0,
+    opacity: 0.5,
     zIndex: 10,
-    transform: 'translateX(-30px)',
-    WebkitTransform: 'translateX(-30px)',
-    MozTransform: 'translateX(-30px)',
-    transition: '1s',
+    transform: 'translateX(-250px)',
+    WebkitTransform: 'translateX(-250px)',
+    MozTransform: 'translateX(-250px)',
   };
 
   useEffect(() => {
@@ -42,11 +41,11 @@ const ClothingRail = () => {
       if (index === uniData.length - 1) {
         setTimeout(() => {
           updateIndex(0);
-        }, 1000);
+        }, 500);
       } else {
         setTimeout(() => {
           updateIndex(index + 1);
-        }, 1000);
+        }, 500);
       }
     },
     onSwipedRight: (eventData) => {
@@ -57,11 +56,11 @@ const ClothingRail = () => {
       if (index === 0) {
         setTimeout(() => {
           updateIndex(uniData.length - 1);
-        }, 1000);
+        }, 500);
       } else {
         setTimeout(() => {
           updateIndex(index - 1);
-        }, 1000);
+        }, 500);
       }
     },
     onSwipedUp: (eventData) => {
@@ -69,7 +68,7 @@ const ClothingRail = () => {
       //new
       swipeDir = wasSwiped ? 'swipeUp' : '';
       setWasSwiped(true);
-      setTimeout(() => setWasSwiped(false), 1000);
+      setTimeout(() => setWasSwiped(false), 500);
     },
   });
 
