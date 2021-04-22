@@ -10,18 +10,23 @@
     font-size: 30px;
   }
 
-  form {
-    position: relative;
-    background-color: $white;
-    z-index: 3;
-    width: 30vw;
-    border-radius: 8px;
-    box-shadow: $shadow;
-    padding: 1rem;
+  .form {
+    visibility: hidden;
 
     .heading {
       font-weight: bold;
       padding: 0.5rem;
+    }
+
+    .form.active {
+      visibility: visible;
+      position: relative;
+      background-color: $white;
+      z-index: 3;
+      width: 30vw;
+      border-radius: 8px;
+      box-shadow: $shadow;
+      padding: 1rem;
     }
 
     label {
@@ -31,7 +36,7 @@
       input {
         justify-content: space-evenly;
         margin-left: 1rem;
-        margin: .5rem;
+        margin: 0.5rem;
       }
     }
   }
