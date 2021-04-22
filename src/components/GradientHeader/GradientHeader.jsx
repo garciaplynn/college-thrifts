@@ -11,7 +11,11 @@ const GradientHeader = (props) => {
     background: getGradient(colour1, colour2),
   };
 
-  return <header style={headerStyle} className={styles.gradientHeader} />;
+  return (
+    <>
+      <header style={headerStyle} className={styles.gradientHeader} />
+    </>
+  );
 };
 
 export default GradientHeader;
