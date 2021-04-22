@@ -1,5 +1,5 @@
 import React from 'react';
-import './data/fa-library';
+import './resources/data/fa-library';
 import Navbar from './components/Navbar';
 import Routes from './containers/Routes';
 
