@@ -10,7 +10,7 @@ import uniData from '../../resources/data/university-data';
 
 const Routes = () => (
   <Router>
-    <ClothingRail path="clothing-rail" uniData={uniData[1]} />
+    <ClothingRail path="clothing-rail" uniArray={uniData} user={users[0]} />
     <MessageInbox path="message-inbox" />
     <UploadPicture path="upload-picture" />
     <CarbonFootprint path="carbon-footprint" />

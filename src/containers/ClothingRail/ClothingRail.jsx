@@ -1,95 +1,68 @@
-/*eslint-disable*/
 import React, { useState, useEffect } from 'react';
-import { LEFT, useSwipeable } from 'react-swipeable';
-import uniData from '../../resources/data/university-data';
+import { useSwipeable } from 'react-swipeable';
 import fakeClothingData from '../../resources/data/fake-data';
 import GradientHeader from '../../components/GradientHeader';
 import ClothingCard from '../../components/ClothingCard';
+import Button from '../../components/Button';
+import uniData from '../../resources/data/university-data';
 // import ClothingRailCard from '../../components/ClothingRailCard';
 
 import styles from './ClothingRail.module.scss';
 
-const ClothingRail = () => {
+const ClothingRail = (props) => {
+  const { user } = props;
   const [index, updateIndex] = useState(0);
   const [wasSwiped, setWasSwiped] = useState(false);
+  const handleLike = () => {
+    user.likes.push(fakeClothingData[index]);
+  };
 
-  // State of direction
-  // Style setter function :+1:
-  // State in the if statements instead
+  const styleSetter = () => {
+    let swipedStyle = {};
+    if (wasSwiped === 'left') {
+      swipedStyle = {
+        transition: '0.5s',
+        opacity: 0.5,
+        zIndex: 10,
+        transform: 'translateX(-250px)',
+        WebkitTransform: 'translateX(-250px)',
+        MozTransform: 'translateX(-250px)',
+      };
+    } else if (wasSwiped === 'right') {
+      swipedStyle = {
+        transition: '0.5s',
+        opacity: 0.5,
+        zIndex: 10,
+        transform: 'translateX(250px)',
+        WebkitTransform: 'translateX(250px)',
+        MozTransform: 'translateX(250px)',
+      };
+    } else if (wasSwiped === 'up') {
+      swipedStyle = {
+        transition: '0.5s',
+        opacity: 0.5,
+        zIndex: 10,
+        transform: 'translateY(-250px)',
+        WebkitTransform: 'translateY(-250px)',
+        MozTransform: 'translateY(-250px)',
+      };
+    } else {
+      swipedStyle = {
+        opacity: 1,
+        animation: 'fadeInOpacity',
+        transition: '0.5s',
+      };
+    }
+    return swipedStyle;
+  };
 
-  let right = false;
-  let left = false;
-  let up = false;
-
-  const defaultStyle = {
-    opacity: 1,
-	  animation: 'fadeInOpacity',
-    transition: '0.5s',
-  }
-
-  // let swipedStyleLeft = {
-  //   transition: '0.5s',
-  //   opacity: 0.5,
-  //   zIndex: 10,
-  //   transform: 'translateX(-250px)',
-  //   WebkitTransform: 'translateX(-250px)',
-  //   MozTransform: 'translateX(-250px)',
-  // };
-
-  // const styleSetter = () => {
-  //   let swipedStyle = {};
-  //   if (left) {
-  //     swipedStyle = {
-  //       transition: '0.5s',
-  //       opacity: 0.5,
-  //       zIndex: 10,
-  //       transform: 'translateX(-250px)',
-  //       WebkitTransform: 'translateX(-250px)',
-  //       MozTransform: 'translateX(-250px)',
-  //     };
-  //   } else if (right) {
-  //    swipedStyle = {
-  //       transition: '0.5s',
-  //       opacity: 0.5,
-  //       zIndex: 10,
-  //       transform: 'translateX(250px)',
-  //       WebkitTransform: 'translateX(250px)',
-  //       MozTransform: 'translateX(250px)',
-  //     };
-  //   } else if (up) {
-  //      swipedStyle = {
-  //       transition: '0.5s',
-  //       opacity: 0.5,
-  //       zIndex: 10,
-  //       transform: 'translateY(250px)',
-  //       WebkitTransform: 'translateY(250px)',
-  //       MozTransform: 'translateY(250px)',
-  //     } else {
-  //   }
-  //   return swipedStyle;
-  // };
-
-  const swipedStyle = {
-    transition: '0.5s',
-    opacity: 0.5,
-    zIndex: 10,
-    transform: 'translateX(250px)',
-    WebkitTransform: 'translateX(250px)',
-    MozTransform: 'translateX(250px)',
-  }
-  
   useEffect(() => {
     setWasSwiped(false);
-    // Reset direction state back to ""
   }, [index]);
 
   const handlers = useSwipeable({
-    onSwipedLeft: (eventData) => {
-      left = true;
-      console.log('user swiped', eventData.dir);
-      setWasSwiped(true);
-      //new
-      // swipeDir = wasSwiped ? 'swipeLeft' : '';
+    onSwipedLeft: () => {
+      setWasSwiped('left');
       if (index === uniData.length - 1) {
         setTimeout(() => {
           updateIndex(0);
@@ -100,12 +73,8 @@ const ClothingRail = () => {
         }, 500);
       }
     },
-    onSwipedRight: (eventData) => {
-      right = true;
-      console.log('user swiped', eventData.dir);
-      //new
-      // swipeDir = wasSwiped ? 'swipeRight' : '';
-      setWasSwiped(true);
+    onSwipedRight: () => {
+      setWasSwiped('right');
       if (index === 0) {
         setTimeout(() => {
           updateIndex(uniData.length - 1);
@@ -116,24 +85,22 @@ const ClothingRail = () => {
         }, 500);
       }
     },
-    onSwipedUp: (eventData) => {
-      up = true;
-      console.log('user swiped', eventData.dir);
-      //new
-      // swipeDir = wasSwiped ? 'swipeUp' : '';
-      setWasSwiped(true);
+    onSwipedUp: () => {
+      setWasSwiped('up');
       setTimeout(() => setWasSwiped(false), 500);
     },
   });
 
   const cardsJSX = (
-    <section className={styles.clothingRailCard}>
-      <div style={defaultStyle} className={styles.headerContainer}>
+    <section>
+      <div>
         <GradientHeader uni={uniData[index]} />
+        <h2 className={styles.title}>{uniData[index].title}</h2>
       </div>
-      <div style={wasSwiped ? swipedStyle : defaultStyle} ref={handlers.ref}>
+      <div style={styleSetter()} ref={handlers.ref}>
         <ClothingCard clothingItem={fakeClothingData[index]} />
       </div>
+      <Button handleLike={handleLike} />
     </section>
   );
 
@@ -145,4 +112,3 @@ const ClothingRail = () => {
 };
 
 export default ClothingRail;
-// onMouseDown={getHTML} role="button" tabIndex="0
