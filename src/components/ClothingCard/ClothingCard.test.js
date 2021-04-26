@@ -18,7 +18,19 @@ describe("Clothing Card tests", () => {
     expect(component.find("img").prop("strImage"));
   });
 
-  it("It should render the correct name for the item", () => {
+  it("It should render the price for the item", () => {
     expect(component.find("h2").prop("strPrice"));
   });
+
+  it("Should render the size of the item", () => {
+    expect(component.find('p').at(0).prop('strType'));
+  })
+
+  it("Should render the name of the item", () => {
+    expect(component.find('h3').prop("strType"));
+  })
+
+  it("Should render the condition of the item", () => {
+    expect(component.find('p').at(1).prop('strCondition'))
+  })
 });
