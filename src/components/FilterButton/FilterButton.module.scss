@@ -1,0 +1,49 @@
+@import '../../scss/abstracts/variables';
+@import '../../scss/abstracts/placeholders';
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+  align-items: flex-end;
+  height: 12vh;
+  padding-right: 19px;
+.filterContainer {
+  display: flex;
+  justify-content: center;
+}
+
+  .icon {
+    font-size: 30px;
+  }
+
+  .form {
+        position: absolute;
+        background-color: $white;
+        z-index: 3;
+        width: 30vw;
+        border-radius: 8px;
+        box-shadow: $shadow;
+       padding: 1rem;
+       margin-right: 10rem;
+      }
+
+  .displayNone {
+  display: none;
+}
+    .heading {
+      font-weight: bold;
+      padding: 0.5rem;
+    }
+    label {
+      display: flex;
+      align-items: center;
+
+      input {
+        justify-content: space-evenly;
+        margin-left: 1rem;
+        margin: 0.5rem;
+      }
+    }
+  }
+
