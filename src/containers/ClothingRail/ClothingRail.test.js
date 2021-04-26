@@ -12,8 +12,4 @@ describe("ClothingRail tests", () => {
   it("should render", () => {
     expect(component).toBeTruthy();
   });
-
-  it("should swipe", () => {
-
-  });
 });
