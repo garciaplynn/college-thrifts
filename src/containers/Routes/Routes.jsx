@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router } from '@reach/router';
-import ClothingRail from '../../components/ClothingRail';
+import ClothingRail from '../ClothingRail';
 import users from '../../resources/data/users';
 import ProfilePage from '../ProfilePage';
 import CarbonFootprint from '../CarbonFootprint';
@@ -11,7 +11,7 @@ import data from '../../resources/data/fake-data';
 
 const Routes = () => (
   <Router>
-    <ClothingRail path="clothing-rail" uniData={uniData[1]} />
+    <ClothingRail path="clothing-rail" uniArray={uniData} user={users[0]} />
     <MessageInbox path="message-inbox" />
     <UploadPicture path="upload-picture" />
     <CarbonFootprint path="carbon-footprint" />
