@@ -11,6 +11,6 @@ describe("Navbar tests", () => {
 
   it('should render', () => {
     expect(component).toBeTruthy();
-  })
+  });
 
 });
