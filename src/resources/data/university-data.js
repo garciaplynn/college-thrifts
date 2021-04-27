@@ -3,7 +3,7 @@ const universities = [
     title: 'University of Florida',
     colour1: '#FA4616',
     colour2: '#0021A5',
-    mascot:  'Gators',
+    mascot: 'Gators',
     logo: 'https://s3-alpha-sig.figma.com/img/6119/2ef1/506e606237f37ada0168eb311d22d9b3?Expires=1619395200&Signature=Ht2Z10FZCjgcMbSvCNWm2ciDQCo2Ew3VAHkghMK0bsnFpHWjlXL62vx9HYtn1ZwVqbnd2TUWTg3VAC8q9TqbvE3qK-~KC99lmTRK~L-382x8K4cMaqEizNHSxZUT6vU09bUjvHKLTdAYet6v3Euuf3APStMN4EcCMA7Lcsl67zZAAKWVe49raduJ06BqLWZZCIHdQJ2M-PtYGB4MC3~~SVvDeQ6L7dyBDdv-LL2ffHgWW60zfNGiK5lVTsESN0DL4FVNbUhb5vhUFJJXSkxEpDs7IbtnE7I5yDVeK~KHf6pMgWDRUcmX8ahoNLu1diCLyc5O0EKwsOqKODLM6olZ4g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
   },
   {
@@ -94,7 +94,6 @@ const universities = [
     colour2: '#13294B',
     mascot: 'Tar Heels',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d7/North_Carolina_Tar_Heels_logo.svg',
-    
   },
   // {
   //   title: 'Sigma Kappa',
@@ -164,8 +163,8 @@ const universities = [
     colour1: '#0C2340',
     colour2: '#AE9142',
     mascot: 'Fighting Irish',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f5/Notre_Dame_Fighting_Irish_logo.svg'
-  }, 
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f5/Notre_Dame_Fighting_Irish_logo.svg',
+  },
   {
     title: 'University of Tenessee Knoxville',
     colour1: '#FE8100',
