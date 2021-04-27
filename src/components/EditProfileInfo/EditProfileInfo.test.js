@@ -28,4 +28,20 @@ describe('EditProfileInfo tests', () => {
       'timstarr14@gmail.com'
     );
   });
+
+  it('should change the input when the value is changed', () => {
+    component
+      .find('input')
+      .at(0)
+      .simulate('change', { target: { name: 'name', value: 'Charlie Dodds' } });
+      expect(component.find('input').at(0).prop('value')).toBe('Charlie Dodds');
+  });
+
+  it('should change the input when the value is changed', () => {
+    component
+      .find('input')
+      .at(1)
+      .simulate('change', { target: { name: 'email', value: 'charliedodds@gmail.com' } });
+      expect(component.find('input').at(1).prop('value')).toBe('charliedodds@gmail.com');
+  });
 });
