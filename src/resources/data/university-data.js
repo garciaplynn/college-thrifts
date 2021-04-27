@@ -186,7 +186,7 @@ const universities = [
     colour1: '#8C6D2C',
     colour2: '#252525',
     mascot: 'Demon Deacons',
-    logo: 'https://prod.wp.cdn.aws.wfu.edu/sites/73/2017/04/WFU_Univ_H_RGB.jpg';
+    logo: 'https://prod.wp.cdn.aws.wfu.edu/sites/73/2017/04/WFU_Univ_H_RGB.jpg',
   },
   {
     title: 'University of Texas Austin',
