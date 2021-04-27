@@ -1,6 +1,6 @@
-import ClothingRail from '../ClothingRail';
-import { shallow } from 'enzyme';
-import users from '../../resources/data/users';
+import ClothingRail from "../ClothingRail";
+import { shallow } from "enzyme";
+import users from "../../resources/data/users";
 
 describe("ClothingRail tests", () => {
   let component;
@@ -11,5 +11,9 @@ describe("ClothingRail tests", () => {
 
   it("should render", () => {
     expect(component).toBeTruthy();
+  });
+
+  it("should render title", () => {
+    expect(component.find("h2")).toBeTruthy();
   });
 });
