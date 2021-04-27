@@ -2,13 +2,17 @@
 @import '../../scss/abstracts/variables';
 @import '../../index.css';
 
-.clothingRail {
-  
-  
-  
-  .title {
+.title {
     margin: 3rem 0 0 3.8rem;
     color: $white;
     font-size: 2.4rem;
-  } 
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
