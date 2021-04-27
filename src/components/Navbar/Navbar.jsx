@@ -31,7 +31,7 @@ const Navbar = () => (
       className={styles.navBtn}
       to="carbon-footprint"
     >
-      <FontAwesomeIcon icon="globe" label="carbonFootprintButton" />
+      <FontAwesomeIcon icon="globe-americas" label="carbonFootprintButton" />
     </Link>
     <Link
       id={styles.profileButton}

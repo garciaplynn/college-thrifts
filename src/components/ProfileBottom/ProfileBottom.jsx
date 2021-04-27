@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from '@reach/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './ProfileBottom.module.scss';
@@ -35,11 +36,14 @@ const ProfileBottom = (props) => {
             <> </>
             Selling
           </a>
-          <a href="google.co.uk">
+          <Link
+            id={styles.settingsButton}
+            to="private-profile"
+          >
             <FontAwesomeIcon icon={faCog} />
             <> </>
             Settings
-          </a>
+          </Link>
         </article>
         <div className={showBuying}>
           {likeItems}
