@@ -10,39 +10,44 @@ const ProfileBottom = (props) => {
 
   const [isChecked, setIsChecked] = useState(false);
 
-  const checked = isChecked ? <input type="checkbox" checked /> : <input type="checkbox" />;
+  const checked = isChecked ? (
+    <input type="checkbox" checked />
+  ) : (
+    <input type="checkbox" />
+  );
 
   const showSelling = isChecked ? styles.displayNone : styles.BuyClothingImage;
 
   const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
-  const likeItems = user.likes.map((item) => <img src={item.strImage} alt={item.strType} />);
+  const likeItems = user.likes.map((item) => (
+    <img src={item.strImage} alt={item.strType} />
+  ));
 
   return (
     <>
       <section className={styles.profilePage}>
-
         <article className={styles.iconBar}>
           <a href="google.co.uk">
             <FontAwesomeIcon icon={faHeart} />
             <> </>
-            Likes
           </a>
-          <section className={styles.switch} onClick={() => setIsChecked(!isChecked)} onKeyDown={() => setIsChecked(!isChecked)} role="button" tabIndex="0">
+          <section
+            className={styles.switch}
+            onClick={() => setIsChecked(!isChecked)}
+            onKeyDown={() => setIsChecked(!isChecked)}
+            role="button"
+            tabIndex="0"
+          >
             {checked}
             <span className={styles.slider} />
           </section>
           <a href="google.co.uk">
             <FontAwesomeIcon icon={faTag} />
             <> </>
-            Selling
           </a>
-          <Link
-            id={styles.settingsButton}
-            to="private-profile"
-          >
+          <Link id={styles.settingsButton} to="private-profile">
             <FontAwesomeIcon icon={faCog} />
             <> </>
-            Settings
           </Link>
         </article>
         <div className={showBuying}>
@@ -54,12 +59,9 @@ const ProfileBottom = (props) => {
           <img src={strImage} alt="jumper" />
           <img src={strImage} alt="jumper" />
           <img src={strImage} alt="jumper" />
-
         </div>
 
-        <div className={showSelling}>
-          {likeItems}
-        </div>
+        <div className={showSelling}>{likeItems}</div>
       </section>
     </>
   );
