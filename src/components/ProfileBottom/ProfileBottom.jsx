@@ -5,7 +5,7 @@ import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './ProfileBottom.module.scss';
 
 const ProfileBottom = (props) => {
-  const { clothingItem, user } = props;
+  const { clothingItem, user, clickedFunction } = props;
   const { strImage } = clothingItem;
 
   const [isChecked, setIsChecked] = useState(false);
@@ -15,7 +15,14 @@ const ProfileBottom = (props) => {
   const showSelling = isChecked ? styles.displayNone : styles.BuyClothingImage;
 
   const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
-  const likeItems = user.likes.map((item) => <img src={item.strImage} alt={item.strType} />);
+  const likeItems = user.likes.map((item) => (
+    <button type="button" onClick={() => clickedFunction(item.id)}>
+      <img
+        src={item.strImage}
+        alt={item.strType}
+      />
+    </button>
+  ));
 
   return (
     <>
