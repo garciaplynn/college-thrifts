@@ -5,7 +5,7 @@ import {
   faCamera,
   faUserCircle,
   faComments,
-  faGlobe,
+  faGlobeAmericas,
   faHeart,
   faThumbsUp,
   faSortDown,
@@ -18,6 +18,6 @@ export default library.add(
   faCamera,
   faUserCircle,
   faComments,
-  faGlobe,
+  faGlobeAmericas,
   faSortDown,
 );
