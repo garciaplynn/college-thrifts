@@ -27,27 +27,22 @@ const ProfileBottom = (props) => {
     <>
       <section className={styles.profilePage}>
         <article className={styles.iconBar}>
-          <a href="google.co.uk">
-            <FontAwesomeIcon icon={faHeart} />
-            <> </>
-          </a>
-          <section
-            className={styles.switch}
-            onClick={() => setIsChecked(!isChecked)}
-            onKeyDown={() => setIsChecked(!isChecked)}
-            role="button"
-            tabIndex="0"
-          >
-            {checked}
-            <span className={styles.slider} />
+          <section className={styles.toggleContainer}>
+            <FontAwesomeIcon icon={faHeart} className={styles.icon} />
+            <section
+              className={styles.switch}
+              onClick={() => setIsChecked(!isChecked)}
+              onKeyDown={() => setIsChecked(!isChecked)}
+              role="button"
+              tabIndex="0"
+            >
+              {checked}
+              <span className={styles.slider} />
+            </section>
+            <FontAwesomeIcon icon={faTag} className={styles.icon} />
           </section>
-          <a href="google.co.uk">
-            <FontAwesomeIcon icon={faTag} />
-            <> </>
-          </a>
           <Link id={styles.settingsButton} to="private-profile">
-            <FontAwesomeIcon icon={faCog} />
-            <> </>
+            <FontAwesomeIcon icon={faCog} className={styles.cogIcon} />
           </Link>
         </article>
         <div className={showBuying}>

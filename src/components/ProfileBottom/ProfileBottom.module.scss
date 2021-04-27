@@ -21,9 +21,25 @@
   
   height: 5vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   font-size: 20px;
+  margin: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+
+  .cogIcon {
+    margin-right: 1.5rem;
+  }
+
+  .toggleContainer {
+    display: flex;
+    justify-content: space-between;
+
+    & > .icon {
+      margin: 0 1rem;
+    }
+  }
 
 }
 
