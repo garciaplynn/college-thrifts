@@ -22,7 +22,17 @@ describe("profile top tests", () => {
   it('should display whether or not it is a Greek university', () => {
     component.find('p').at(0).prop('greek');
   })
+
+  it('should display the university name', () => {
+    component.find('p').at(1).prop('name');
+  })
+
+  it('should display the university abbreviation', () => {
+    component.find('p').at(1).prop('abbreviation');
+  })
+
   it('should display the university year', () => {
     component.find('p').at(1).prop('year');
   })
+
 })
