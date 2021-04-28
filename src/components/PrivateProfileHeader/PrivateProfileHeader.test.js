@@ -23,7 +23,7 @@ describe('PrivateProfileHeader tests', () => {
 
   it('should display the university name, abbreviation and year of graduation', () => {
     expect(component.find('p').at(0).text()).toBe(
-      "Trinity College Dublin (TCD) '16"
+      "University of Miami (UM) '16"
     );
   });
 
