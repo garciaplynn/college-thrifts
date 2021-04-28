@@ -7,6 +7,18 @@ const tim = {
     strPrice: '$15',
     strSize: 'Medium',
     strType: 'Harvard Crewneck 2',
+  },
+  {
+    strImage: 'https://i.etsystatic.com/16218713/r/il/db754c/2952250961/il_570xN.2952250961_ndez.jpg',
+    strPrice: '$15',
+    strSize: 'Medium',
+    strType: 'Harvard Crewneck 2',
+  },
+  {
+    strImage: 'https://cdn.shopify.com/s/files/1/1267/5625/products/3020NA046927-1_2_360x.jpg?v=1527490224',
+    strPrice: '$15',
+    strSize: 'Medium',
+    strType: 'Columbia Crewneck 3',
   }],
   following: 3,
   followers: 100000000,
