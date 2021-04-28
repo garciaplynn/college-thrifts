@@ -24,10 +24,12 @@ const tim = {
   followers: 100000000,
   classOf: 2016,
   university: {
-    name: 'Trinity College Dublin',
-    abbreviation: 'TCD',
-    primaryColor: '#F47321',
-    secondaryColor: '#005030',
+    title: 'University of Miami',
+    colour1: '#005030',
+    colour2: '#F47321',
+    abbreviation: 'UM',
+    mascot: 'Hurricances',
+    logo: 'https://cdn.miami.edu/_assets-common/images/system/um-logo-gray-bg.png',
   },
   greek: 'Tri Delta (3 triangles)',
   socials: [
