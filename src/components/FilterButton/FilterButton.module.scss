@@ -21,11 +21,13 @@
         position: absolute;
         background-color: $white;
         z-index: 3;
-        width: 30vw;
+        width: 37vw;
         border-radius: 8px;
         box-shadow: $shadow;
        padding: 1rem;
        margin-right: 10rem;
+       height: 40vh;
+       overflow:scroll;
       }
 
   .displayNone {

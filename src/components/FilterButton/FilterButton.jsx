@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './FilterButton.module.scss';
 
 const Filter = () => {
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggled, setIsToggled] = useState(true);
   const showContainer = isToggled ? styles.displayNone : styles.form;
 
   return (
@@ -42,6 +42,15 @@ const Filter = () => {
               Womens
             </label>
             <p className={styles.heading}>Condition:</p>
+            <label htmlFor="new-with-tags">
+              <input
+                type="checkbox"
+                name="condition"
+                value="new-with-tags"
+                id="new-with-tags"
+              />
+              New with tags
+            </label>
             <label htmlFor="as-new">
               <input
                 type="checkbox"
@@ -50,6 +59,15 @@ const Filter = () => {
                 id="as-new"
               />
               As new
+            </label>
+            <label htmlFor="good">
+              <input
+                type="checkbox"
+                name="condition"
+                value="good"
+                id="good"
+              />
+              Good
             </label>
             <label htmlFor="used">
               <input
@@ -70,32 +88,32 @@ const Filter = () => {
               />
               Vintage
             </label>
-            <p className={styles.heading}>Style:</p>
-            <label htmlFor="style">
+            <p className={styles.heading}>Type:</p>
+            <label htmlFor="Type">
               <input
                 className={styles.input}
                 type="checkbox"
-                name="style"
+                name="Type"
                 value="crewneck"
                 id="crewneck"
               />
               Crewneck
             </label>
-            <label htmlFor="style">
+            <label htmlFor="Type">
               <input
                 className={styles.input}
                 type="checkbox"
-                name="style"
+                name="Type"
                 value="hoodie"
                 id="hoodie"
               />
               Hoodie
             </label>
-            <label htmlFor="style">
+            <label htmlFor="Type">
               <input
                 className={styles.input}
                 type="checkbox"
-                name="style"
+                name="Type"
                 value="jersey"
                 id="jersey"
               />
@@ -110,6 +128,171 @@ const Filter = () => {
                 id="jacket"
               />
               Jacket
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="flag"
+                id="flag"
+              />
+              Flag
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="footwear"
+                id="footwear"
+              />
+              Footwear
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="headgear"
+                id="headgear"
+              />
+              Headgear
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="longsleeve"
+                id="longsleeve"
+              />
+              Longsleeve
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="shortsleeve"
+                id="shortsleeve"
+              />
+              Shortsleeve
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="shorts"
+                id="shorts"
+              />
+              Shorts
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="sporting-equipment"
+                id="sporting-equipment"
+              />
+              Sporting equipment
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="tshirt"
+                id="tshirt"
+              />
+              T-Shirt
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="tank-top"
+                id="tank-top"
+              />
+              Tank top
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="zipped"
+                id="zipped"
+              />
+              Zipped
+            </label>
+            <label htmlFor="style">
+              <input
+                className={styles.input}
+                type="checkbox"
+                name="style"
+                value="miscallaneous"
+                id="miscellaneous"
+              />
+              Miscellaneous
+            </label>
+            <p className={styles.heading}>Sizing:</p>
+            <label htmlFor="sizing">
+              <input
+                type="checkbox"
+                name="sizing"
+                value="x-small"
+                id="x-small"
+              />
+              X-small
+            </label>
+            <label htmlFor="sizing">
+              <input
+                type="checkbox"
+                name="sizing"
+                value="small"
+                id="small"
+              />
+              Small
+            </label>
+            <label htmlFor="sizing">
+              <input
+                type="checkbox"
+                name="sizing"
+                value="medium"
+                id="medium"
+              />
+              Medium
+            </label>
+            <label htmlFor="sizing">
+              <input
+                type="checkbox"
+                name="sizing"
+                value="large"
+                id="large"
+              />
+              Large
+            </label>
+            <label htmlFor="sizing">
+              <input
+                type="checkbox"
+                name="sizing"
+                value="x-large"
+                id="x-large"
+              />
+              X-Large
+            </label>
+            <label htmlFor="sizing">
+              <input
+                type="checkbox"
+                name="sizing"
+                value="oversized"
+                id="oversized"
+              />
+              Oversized
             </label>
           </form>
         </section>
