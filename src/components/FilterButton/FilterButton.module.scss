@@ -1,20 +1,12 @@
 @import '../../scss/abstracts/variables';
 @import '../../scss/abstracts/placeholders';
 
-.container {
-  display: flex;
-  justify-content: flex-end;
-  margin: 10px;
-  align-items: flex-end;
-  height: 12vh;
-  padding-right: 19px;
-.filterContainer {
-  display: flex;
-  justify-content: center;
-}
-
   .icon {
     font-size: 30px;
+    box-shadow: $shadow;
+    color: $grey-secondary;
+    background-color: rgba(211, 211, 211, 0.288);
+    padding: 1px;
   }
 
   .form {
@@ -45,5 +37,5 @@
         margin: 0.5rem;
       }
     }
-  }
+
 

@@ -150,5 +150,4 @@ const fakeData = [
     strType: 'FS Red Crewneck 4',
   },
 ];
-
 export default fakeData;
