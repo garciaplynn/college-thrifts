@@ -11,9 +11,11 @@ const ProfilePage = (props) => {
 
   return (
     <>
-      <ProfilePopup clickedItemId={clickedItemId} />
-      <ProfileTop user={user} uni={uni} />
-      <ProfileBottom user={user} clothingItem={clothingItem} setClickedItemId={setClickedItemId} />
+     <div className={StyleSheet.popup}>
+       {!clickedItemId ? null : <ProfilePopup clickedItemId={clickedItemId} />}
+     </div>
+     <ProfileTop user={user} uni={uni} />
+     <ProfileBottom user={user} clothingItem={clothingItem} setClickedItemId={setClickedItemId} />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import fakeData from '../../resources/data/fake-data';
-// import styles from "./ProfilePopup.module.scss";
+import styles from './ProfilePopup.module.scss';
 
 const ProfilePopup = (props) => {
   const { clickedItemId } = props;
@@ -10,9 +10,12 @@ const ProfilePopup = (props) => {
   console.log(itemToDisplay);
 
   return (
-    <>
-      <p>ProfilePopup works</p>
-    </>
+    <div className={styles.popup}>
+      <img src={itemToDisplay[0].strImage} alt={itemToDisplay[0].strType} />
+      <h2>{itemToDisplay[0].strType}</h2>
+      <p>{itemToDisplay[0].strPrice}</p>
+      <p>{itemToDisplay[0].strSize}</p>
+    </div>
   );
 };
 
