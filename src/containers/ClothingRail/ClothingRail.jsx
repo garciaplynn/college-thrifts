@@ -3,7 +3,7 @@ import { useSwipeable } from 'react-swipeable';
 import fakeClothingData from '../../resources/data/fake-data';
 import GradientHeader from '../../components/GradientHeader';
 import ClothingCard from '../../components/ClothingCard';
-import Filter from '../../components/FilterButton';
+import FilterButton from '../../components/FilterButton';
 import Button from '../../components/Button';
 import uniData from '../../resources/data/university-data';
 // import ClothingRailCard from '../../components/ClothingRailCard';
@@ -95,8 +95,8 @@ const ClothingRail = (props) => {
   const cardsJSX = (
     <section>
       <GradientHeader uni={uniData[index]} />
-      <div>
-        <Filter />
+      <div className={styles.header}>
+        <FilterButton />
         <h2 className={styles.title}>{uniData[index].title}</h2>
       </div>
       <div style={styleSetter()} ref={handlers.ref}>
