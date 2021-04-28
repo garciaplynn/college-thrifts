@@ -34,4 +34,8 @@ describe("profile top tests", () => {
     component.find('p').at(1).prop('year');
   })
 
+  it('should display the university logo', () => {
+    expect(component.find('img').at(1)).toBeTruthy();
+  })
+
 })
