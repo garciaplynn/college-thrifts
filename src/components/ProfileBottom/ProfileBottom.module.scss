@@ -43,23 +43,12 @@
 
 }
 
-.SellClothingImage {
+.ClothingImage {
   height: 45vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr) ;
   grid-template-rows: repeat(3, 1fr);
   
-}
-
-.BuyClothingImage {
-  height: 45vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) ;
-  grid-template-rows: repeat(3, 1fr);
-}
-
-.displayNone {
-  display: none;
 }
 
 .switch {
