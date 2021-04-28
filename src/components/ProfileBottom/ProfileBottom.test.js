@@ -11,11 +11,7 @@ describe("profile bottom tests", () => {
   });
 
   it("should render selling by default", () => {
-
+    expect(component.find('.ClothingImage').children().length).toBe(3)
   });
-
-  it('should show 3 items of clothing', () => {
-    
-  })
 
 });
