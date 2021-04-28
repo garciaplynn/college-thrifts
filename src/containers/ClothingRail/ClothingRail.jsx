@@ -94,8 +94,8 @@ const ClothingRail = (props) => {
 
   const cardsJSX = (
     <section>
+      <GradientHeader uni={uniData[index]} />
       <div>
-        <GradientHeader uni={uniData[index]} />
         <Filter />
         <h2 className={styles.title}>{uniData[index].title}</h2>
       </div>
