@@ -35,5 +35,4 @@ describe('Navbar tests', () => {
   it('must show profile icon for first icon', () => {
     expect(component.find(FontAwesomeIcon).at(4).prop('icon')).toBe('user-circle')
   })
-
-  });
+});
