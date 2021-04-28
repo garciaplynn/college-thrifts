@@ -9,6 +9,7 @@ import {
   faHeart,
   faThumbsUp,
   faSortDown,
+  faTimesCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 export default library.add(
@@ -20,4 +21,5 @@ export default library.add(
   faComments,
   faGlobeAmericas,
   faSortDown,
+  faTimesCircle,
 );
