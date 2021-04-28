@@ -20,7 +20,7 @@ const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
           />
           <article className={styles.headerInfo}>
             <h3>{name}</h3>
-            <p>{`${university.name} (${university.abbreviation}) '${year}`}</p>
+            <p>{`${university.title} (${university.abbreviation}) '${year}`}</p>
           </article>
         </section>
         <div className={styles.aboutWrapper}>
