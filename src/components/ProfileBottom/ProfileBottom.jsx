@@ -15,9 +15,9 @@ const ProfileBottom = (props) => {
     <input type="checkbox" />
   );
 
-  const showSelling = isChecked ? styles.displayNone : styles.BuyClothingImage;
+  const showBuying = isChecked ? styles.displayNone : styles.BuyClothingImage;
 
-  const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
+  const showSelling = !isChecked ? styles.displayNone : styles.SellClothingImage;
 
   const likedItems = user.likes.map((item) => (
     <img src={item.strImage} alt={item.strType} />
@@ -52,7 +52,9 @@ const ProfileBottom = (props) => {
         <div className={showBuying}>
           {likedItems}
         </div>
-        <div className={showSelling}>{sellingItems}</div>
+        <div className={showSelling}>
+          {sellingItems}
+        </div>
       </section>
     </>
   );

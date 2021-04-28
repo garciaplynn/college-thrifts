@@ -2,7 +2,12 @@ const tim = {
   name: 'Tim Starr',
   email: 'timstarr14@gmail.com',
   likes: [],
-  selling: [],
+  selling: [{
+    strImage: 'https://i.etsystatic.com/16218713/r/il/db754c/2952250961/il_570xN.2952250961_ndez.jpg',
+    strPrice: '$15',
+    strSize: 'Medium',
+    strType: 'Harvard Crewneck 2',
+  }],
   following: 3,
   followers: 100000000,
   classOf: 2016,
