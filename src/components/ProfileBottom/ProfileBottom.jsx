@@ -5,8 +5,7 @@ import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './ProfileBottom.module.scss';
 
 const ProfileBottom = (props) => {
-  const { clothingItem, user } = props;
-  const { strImage } = clothingItem;
+  const { user } = props;
 
   const [isChecked, setIsChecked] = useState(false);
 
@@ -16,10 +15,15 @@ const ProfileBottom = (props) => {
     <input type="checkbox" />
   );
 
-  const showSelling = isChecked ? styles.displayNone : styles.BuyClothingImage;
+  const showBuying = isChecked ? styles.displayNone : styles.BuyClothingImage;
 
-  const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
-  const likeItems = user.likes.map((item) => (
+  const showSelling = !isChecked ? styles.displayNone : styles.SellClothingImage;
+
+  const likedItems = user.likes.map((item) => (
+    <img src={item.strImage} alt={item.strType} />
+  ));
+
+  const sellingItems = user.selling.map((item) => (
     <img src={item.strImage} alt={item.strType} />
   ));
 
@@ -46,17 +50,11 @@ const ProfileBottom = (props) => {
           </Link>
         </article>
         <div className={showBuying}>
-          {likeItems}
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
+          {likedItems}
         </div>
-
-        <div className={showSelling}>{likeItems}</div>
+        <div className={showSelling}>
+          {sellingItems}
+        </div>
       </section>
     </>
   );

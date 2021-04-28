@@ -7,7 +7,6 @@ import users from '../../resources/data/users';
 
 describe("profile top tests", () => {
   let component;
-  let testForm = "Test form";
 
   beforeEach(() => {
     component = mount(<ProfileTop uni={uniData[0]} user={users[0]}/>)
