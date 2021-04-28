@@ -10,7 +10,11 @@ const ProfileBottom = (props) => {
 
   const [isChecked, setIsChecked] = useState(false);
 
-  const checked = isChecked ? <input type="checkbox" checked /> : <input type="checkbox" />;
+  const checked = isChecked ? (
+    <input type="checkbox" checked />
+  ) : (
+    <input type="checkbox" />
+  );
 
   const showSelling = isChecked ? styles.displayNone : styles.BuyClothingImage;
 
@@ -27,29 +31,23 @@ const ProfileBottom = (props) => {
   return (
     <>
       <section className={styles.profilePage}>
-
         <article className={styles.iconBar}>
-          <a href="google.co.uk">
-            <FontAwesomeIcon icon={faHeart} />
-            <> </>
-            Likes
-          </a>
-          <section className={styles.switch} onClick={() => setIsChecked(!isChecked)} onKeyDown={() => setIsChecked(!isChecked)} role="button" tabIndex="0">
-            {checked}
-            <span className={styles.slider} />
+          <section className={styles.toggleContainer}>
+            <FontAwesomeIcon icon={faHeart} className={styles.icon} />
+            <section
+              className={styles.switch}
+              onClick={() => setIsChecked(!isChecked)}
+              onKeyDown={() => setIsChecked(!isChecked)}
+              role="button"
+              tabIndex="0"
+            >
+              {checked}
+              <span className={styles.slider} />
+            </section>
+            <FontAwesomeIcon icon={faTag} className={styles.icon} />
           </section>
-          <a href="google.co.uk">
-            <FontAwesomeIcon icon={faTag} />
-            <> </>
-            Selling
-          </a>
-          <Link
-            id={styles.settingsButton}
-            to="private-profile"
-          >
-            <FontAwesomeIcon icon={faCog} />
-            <> </>
-            Settings
+          <Link id={styles.settingsButton} to="private-profile">
+            <FontAwesomeIcon icon={faCog} className={styles.cogIcon} />
           </Link>
         </article>
         <div className={showBuying}>
@@ -61,12 +59,9 @@ const ProfileBottom = (props) => {
           <img src={strImage} alt="jumper" />
           <img src={strImage} alt="jumper" />
           <img src={strImage} alt="jumper" />
-
         </div>
 
-        <div className={showSelling}>
-          {likeItems}
-        </div>
+        <div className={showSelling}>{likeItems}</div>
       </section>
     </>
   );

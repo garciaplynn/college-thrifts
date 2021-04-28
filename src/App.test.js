@@ -1,6 +1,15 @@
-import { render, screen } from '@testing-library/react';
 import App from './App';
+import { shallow } from 'enzyme';
 
-test('renders learn react link', () => {
-  expect(render(<App />)).toBeTruthy();
-});
+describe("Navbar test", () => {
+  let component;
+
+  beforeEach(() => {
+    component = shallow(<App />);
+  })
+
+  it('should render', () => {
+    expect(component).toBeTruthy();
+  })
+
+})
