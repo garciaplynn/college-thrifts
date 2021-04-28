@@ -14,6 +14,4 @@ describe("Routes tests", () => {
     expect(component).toBeTruthy();
   })
 
-
-
 });
