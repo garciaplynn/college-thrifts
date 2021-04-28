@@ -88,32 +88,32 @@ const Filter = () => {
               />
               Vintage
             </label>
-            <p className={styles.heading}>Type:</p>
-            <label htmlFor="Type">
+            <p className={styles.heading}>Clothing Type:</p>
+            <label htmlFor="clothing-type">
               <input
                 className={styles.input}
                 type="checkbox"
-                name="Type"
+                name="clothing-type"
                 value="crewneck"
                 id="crewneck"
               />
               Crewneck
             </label>
-            <label htmlFor="Type">
+            <label htmlFor="clothing-type">
               <input
                 className={styles.input}
                 type="checkbox"
-                name="Type"
+                name="clothing-type"
                 value="hoodie"
                 id="hoodie"
               />
               Hoodie
             </label>
-            <label htmlFor="Type">
+            <label htmlFor="clothing-type">
               <input
                 className={styles.input}
                 type="checkbox"
-                name="Type"
+                name="clothing-type"
                 value="jersey"
                 id="jersey"
               />
