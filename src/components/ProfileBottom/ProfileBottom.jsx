@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Link } from '@reach/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
+import ProfileItemButton from '../ProfileItemButton';
 import styles from './ProfileBottom.module.scss';
 
 const ProfileBottom = (props) => {
-  const { clothingItem, user, clickedFunction } = props;
+  const { clothingItem, user, setClickedItemId } = props;
   const { strImage } = clothingItem;
 
   const [isChecked, setIsChecked] = useState(false);
@@ -20,12 +21,10 @@ const ProfileBottom = (props) => {
 
   const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
   const likeItems = user.likes.map((item) => (
-    <button type="button" onClick={() => clickedFunction(item.id)}>
-      <img
-        src={item.strImage}
-        alt={item.strType}
-      />
-    </button>
+    <ProfileItemButton
+      setClickedItemId={setClickedItemId}
+      item={item}
+    />
   ));
 
   return (

@@ -1,17 +1,16 @@
-import React from "react";
-import styles from "./ProfileItemButton.module.scss";
+import React from 'react';
+// import styles from './ProfileItemButton.module.scss';
 
 const ProfileItemButton = (props) => {
-
-  const { clickedFunction, item } = props
+  const { setClickedItemId, item } = props;
 
   return (
     <>
-      <button type="button" onClick={() => clickedFunction(item.id)}>
-      <img
-        src={item.strImage}
-        alt={item.strType}
-      />
+      <button type="button" onClick={() => setClickedItemId(item.id)}>
+        <img
+          src={item.strImage}
+          alt={item.strType}
+        />
       </button>
     </>
   );

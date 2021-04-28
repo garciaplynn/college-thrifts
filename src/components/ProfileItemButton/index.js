@@ -1,3 +1,3 @@
-import ProfileItemButton from "./ProfileItemButton";
+import ProfileItemButton from './ProfileItemButton';
 
 export default ProfileItemButton;

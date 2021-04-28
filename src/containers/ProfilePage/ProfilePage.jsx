@@ -5,14 +5,15 @@ import ProfilePopup from '../../components/ProfilePopup';
 
 const ProfilePage = (props) => {
   const { user, uni, clothingItem } = props;
-  const [clicked, setClicked] = useState(false);
+  const [clickedItemId, setClickedItemId] = useState(false);
 
-  console.log(clicked);
+  console.log(clickedItemId);
 
   return (
     <>
+      <ProfilePopup clickedItemId={clickedItemId} />
       <ProfileTop user={user} uni={uni} />
-      <ProfileBottom user={user} clothingItem={clothingItem} clickedFunction={setClicked} />
+      <ProfileBottom user={user} clothingItem={clothingItem} setClickedItemId={setClickedItemId} />
     </>
   );
 };

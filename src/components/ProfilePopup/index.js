@@ -1,3 +1,3 @@
-import ProfilePopup from "./ProfilePopup";
+import ProfilePopup from './ProfilePopup';
 
 export default ProfilePopup;
