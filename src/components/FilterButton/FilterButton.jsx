@@ -8,7 +8,7 @@ const Filter = () => {
 
   return (
     <section className={styles.container}>
-      <div className={styles.Filter}>
+      <div className={styles.filter}>
         <FontAwesomeIcon
           icon="sort"
           className={styles.icon}
