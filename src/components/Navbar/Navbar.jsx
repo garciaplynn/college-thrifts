@@ -8,7 +8,7 @@ const Navbar = () => (
     <Link
       id={styles.shoppingButton}
       className={styles.navBtn}
-      to="clothing-rail"
+      to="/"
     >
       <FontAwesomeIcon icon="tag" label="shoppingButton" />
     </Link>

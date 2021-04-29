@@ -20,7 +20,7 @@ const firebaseConfig = {
   storageBucket: 'college-thrifts.appspot.com',
   messagingSenderId: '257256089519',
   appId: '1:257256089519:web:194f709f444eed4b6d715a',
-  measurementId: 'G-1VBM4RM6EK'
+  measurementId: 'G-1VBM4RM6EK',
 };
 
 // Initialize Firebase
