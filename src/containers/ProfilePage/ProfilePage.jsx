@@ -11,7 +11,19 @@ const ProfilePage = (props) => {
   return (
     <>
       {!clickedItemId ? null : (
-        <div className={styles.popupContainer}>
+        <div
+          className={styles.popupContainer}
+          role="button"
+          tabIndex="-1"
+          onKeyDown={(event) => {
+            if (event.key === 'Escape') {
+              setClickedItemId(false);
+            }
+          }}
+          onClick={() => {
+            setClickedItemId(false);
+          }}
+        >
           <ProfilePopup clickedItemId={clickedItemId} setClickedItemId={setClickedItemId} />
         </div>
       )}

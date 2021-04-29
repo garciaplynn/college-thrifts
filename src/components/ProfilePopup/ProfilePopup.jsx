@@ -13,11 +13,19 @@ const ProfilePopup = (props) => {
   };
 
   return (
-    <div className={styles.popup}>
-      <button type="button" onClick={() => setClickedItemId(false)}>
-        <FontAwesomeIcon icon="times-circle" className={styles.closeIcon} />
-      </button>
-      <img src={itemToDisplay[0].strImage} alt={itemToDisplay[0].strType} />
+    <div
+      role="button"
+      tabIndex="-1"
+      className={styles.popup}
+      onKeyDown={(e) => e.stopPropagation()}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className={styles.imgContainer}>
+        <button type="button" onClick={() => setClickedItemId(false)}>
+          <FontAwesomeIcon icon="times-circle" className={styles.closeIcon} />
+        </button>
+        <img src={itemToDisplay[0].strImage} alt={itemToDisplay[0].strType} />
+      </div>
       <div>
         <div className={styles.titleContainer}>
           <h3>{itemToDisplay[0].strType}</h3>
