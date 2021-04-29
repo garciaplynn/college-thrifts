@@ -7,7 +7,6 @@ import users from '../../resources/data/users';
 
 describe("profile top tests", () => {
   let component;
-  let testForm = "Test form";
 
   beforeEach(() => {
     component = mount(<ProfileTop uni={uniData[0]} user={users[0]}/>)
@@ -33,6 +32,10 @@ describe("profile top tests", () => {
 
   it('should display the university year', () => {
     component.find('p').at(1).prop('year');
+  })
+
+  it('should display the university logo', () => {
+    expect(component.find('img').at(1)).toBeTruthy();
   })
 
 })

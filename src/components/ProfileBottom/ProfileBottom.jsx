@@ -9,22 +9,18 @@ const ProfileBottom = (props) => {
   const { clothingItem, user, setClickedItemId } = props;
   const { strImage } = clothingItem;
 
-  const [isChecked, setIsChecked] = useState(false);
-
-  const checked = isChecked ? (
-    <input type="checkbox" checked />
-  ) : (
-    <input type="checkbox" />
-  );
-
-  const showSelling = isChecked ? styles.displayNone : styles.BuyClothingImage;
+  const [isChecked, setIsChecked] = useState(user.selling > user.likes);
 
   const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
-  const likeItems = user.likes.map((item) => (
+  const likedItems = user.likes.map((item) => (
     <ProfileItemButton
       setClickedItemId={setClickedItemId}
       item={item}
-    />
+    /> 
+  ));
+
+  const sellingItems = user.selling.map((item) => (
+    <img src={item.strImage} alt={item.strType} />
   ));
 
   return (
@@ -40,7 +36,7 @@ const ProfileBottom = (props) => {
               role="button"
               tabIndex="0"
             >
-              {checked}
+              <input type="checkbox" checked={isChecked} readOnly />
               <span className={styles.slider} />
             </section>
             <FontAwesomeIcon icon={faTag} className={styles.icon} />
@@ -49,18 +45,9 @@ const ProfileBottom = (props) => {
             <FontAwesomeIcon icon={faCog} className={styles.cogIcon} />
           </Link>
         </article>
-        <div className={showBuying}>
-          {likeItems}
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-          <img src={strImage} alt="jumper" />
-        </div>
-
-        <div className={showSelling}>{likeItems}</div>
+        <section className={styles.ClothingImage}>
+          {isChecked ? sellingItems : likedItems}
+        </section>
       </section>
     </>
   );

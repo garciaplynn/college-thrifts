@@ -10,7 +10,7 @@ const Filter = () => {
     <section className={styles.container}>
       <div className={styles.Filter}>
         <FontAwesomeIcon
-          icon="sort-down"
+          icon="sort"
           className={styles.icon}
           isToggled={isToggled}
           onClick={() => setIsToggled(!isToggled)}
