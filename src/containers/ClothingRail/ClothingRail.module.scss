@@ -23,4 +23,8 @@
 	display: flex;
 	width: auto;
 	margin: 8px;
+
+	& > h2 {
+		padding-top: 1.5rem;
+	}
 }
