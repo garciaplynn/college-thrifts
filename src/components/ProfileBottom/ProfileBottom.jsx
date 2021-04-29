@@ -6,17 +6,18 @@ import ProfileItemButton from '../ProfileItemButton';
 import styles from './ProfileBottom.module.scss';
 
 const ProfileBottom = (props) => {
-  const { clothingItem, user, setClickedItemId } = props;
-  const { strImage } = clothingItem;
+  const { user, setClickedItemId } = props;
+  // const { strImage } = clothingItem;
 
   const [isChecked, setIsChecked] = useState(user.selling > user.likes);
 
-  const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
+  // const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
+
   const likedItems = user.likes.map((item) => (
     <ProfileItemButton
       setClickedItemId={setClickedItemId}
       item={item}
-    /> 
+    />
   ));
 
   const sellingItems = user.selling.map((item) => (

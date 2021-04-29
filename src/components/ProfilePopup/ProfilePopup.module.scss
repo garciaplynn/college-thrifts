@@ -9,8 +9,36 @@
   border-radius: 10px;
   box-shadow: $shadow;
 
-  h3, p {
-    margin: 7px;
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .belowContainer {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      background-color: $green-primary;
+      color: $white;
+      border: none;
+      border-radius: 12px;
+      padding: 8px;
+      box-shadow: $shadow;
+    }
+  }
+
+
+
+  h3 {
+    margin: 10px;
+  }
+
+  p {
+    margin: 3px 0 3px 10px;
+    color: $grey-primary;
   }
 
   img {
