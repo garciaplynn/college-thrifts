@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './ProfileBottom.module.scss';
 
-import AddForm from '../AddForm';  
+import AddForm from '../AddForm';
 
 const ProfileBottom = (props) => {
   const { user } = props;
