@@ -11,14 +11,13 @@
 
   .filterContainer {
     display: flex;
-    justify-content: flex-end;
   }
 
   .icon {
     font-size: 30px;
     box-shadow: $shadow;
     color: $grey-secondary;
-    background-color: rgba(211, 211, 211, 0.288);
+    background-color: rgba(211, 211, 211, 0);
     padding: 1px;
   }
 
