@@ -88,6 +88,7 @@ const ClothingRail = (props) => {
     },
     onSwipedUp: () => {
       setWasSwiped('up');
+      handleLike();
       setTimeout(() => setWasSwiped(false), 500);
     },
   });
