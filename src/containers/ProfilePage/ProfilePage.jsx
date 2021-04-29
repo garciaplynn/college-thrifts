@@ -8,8 +8,6 @@ const ProfilePage = (props) => {
   const { user, uni, clothingItem } = props;
   const [clickedItemId, setClickedItemId] = useState(false);
 
-  console.log(clickedItemId);
-
   return (
     <>
       {!clickedItemId ? null : (
