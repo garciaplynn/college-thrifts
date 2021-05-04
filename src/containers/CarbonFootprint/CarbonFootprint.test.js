@@ -1,10 +1,10 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { shallow } from "enzyme";
 import CarbonFootprint from "./CarbonFootprint";
 import users from '../../resources/data/users';
 
 describe("CarbonFootprint tests", () => {
   it("should render", () => {
-    expect(render(<CarbonFootprint user={users[0]}/>)).toBeTruthy();
+    expect(shallow(<CarbonFootprint user={users[0]}/>)).toBeTruthy();
   });
 });
