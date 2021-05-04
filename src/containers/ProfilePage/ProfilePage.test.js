@@ -8,9 +8,6 @@ import { mount } from 'enzyme';
 import ProfilePopup from '../../components/ProfilePopup';
 import fakeData from '../../resources/data/fake-data';
 
-
-
-
 describe('ProfilePage tests', () => {
   it('should render', () => {
     expect(render(<ProfilePage user={users[0]} uni={uniData[2]} clothingItem={data[0]} />)).toBeTruthy();
