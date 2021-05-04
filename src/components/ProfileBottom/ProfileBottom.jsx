@@ -21,7 +21,10 @@ const ProfileBottom = (props) => {
   ));
 
   const sellingItems = user.selling.map((item) => (
-    <img src={item.strImage} alt={item.strType} />
+    <ProfileItemButton
+      setClickedItemId={setClickedItemId}
+      item={item}
+    />
   ));
 
   return (
