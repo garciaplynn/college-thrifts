@@ -8,6 +8,21 @@ import Routes from './containers/Routes';
 const App = () => {
   const [user, setUser] = useState(null);
 
+  const addUniversityData = (uniObject) => {
+    firestore
+      .collection('university')
+      .doc()
+      .set(uniObject)
+      .then(() => {
+        console.log('Document successfully written');
+      })
+      .catch((error) => {
+        console.log('Error when writing document: ', error);
+      });
+  };
+
+data.forEach(uni => console.log(uni));
+
   useEffect(() => {
     console.log('in use effect');
     firestore
