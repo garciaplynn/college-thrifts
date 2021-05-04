@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './ProfileBottom.module.scss';
 
-import AddForm from '../AddForm';
+import ImageUpload from '../ImageUpload';
 
 const ProfileBottom = (props) => {
   const { user } = props;
@@ -43,7 +43,7 @@ const ProfileBottom = (props) => {
         </article>
         <section className={styles.ClothingImage}>
           {isChecked ? sellingItems : likedItems}
-          <AddForm />
+          <ImageUpload />
         </section>
       </section>
     </>

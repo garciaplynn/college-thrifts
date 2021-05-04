@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import ImageUpload from '../../components/ImageUpload';
 
 const UploadPicture = () => (
   <>
-    <p>UploadPicture works</p>
+    <ImageUpload />
   </>
 );
 
