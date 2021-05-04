@@ -2,6 +2,7 @@
 
 .carbonFootprint {
   height: 100vh ;
+  text-align: center;
   h2 {
     color: $grey-secondary;
     padding: 60px;
@@ -16,5 +17,18 @@
     img {
       width: 100px;
     }
+  }
+  h3 {
+    padding-top: 70px;
+    text-align: center;
+  }
+  .smile {
+    font-size: 25px;
+    color: $black;
+  }
+  p {
+    font-size: 15px;
+    padding: 20px;
+    color: $black;
   }
 }
