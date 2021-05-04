@@ -6,7 +6,6 @@ import ClothingCard from '../../components/ClothingCard';
 import FilterButton from '../../components/FilterButton';
 import Button from '../../components/Button';
 import uniData from '../../resources/data/university-data';
-// import ClothingRailCard from '../../components/ClothingRailCard';
 
 import styles from './ClothingRail.module.scss';
 
