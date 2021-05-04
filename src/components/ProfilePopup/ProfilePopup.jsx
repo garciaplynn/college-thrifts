@@ -8,10 +8,6 @@ const ProfilePopup = (props) => {
 
   const itemToDisplay = fakeData.filter((item) => item.id === clickedItemId);
 
-  const handleClick = () => {
-    console.log(`${itemToDisplay[0].strType} has been clicked`);
-  };
-
   return (
     <div
       role="button"
@@ -39,7 +35,7 @@ const ProfilePopup = (props) => {
             {`Condition: ${itemToDisplay[0].strCondition}`}
           </p>
         </div>
-        <button onClick={handleClick} type="button">Message Seller</button>
+        <button type="button">Message Seller</button>
       </div>
     </div>
   );
