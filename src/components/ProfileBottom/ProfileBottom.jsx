@@ -2,22 +2,32 @@ import React, { useState, useEffect } from 'react';
 import { Link } from '@reach/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
+import ProfileItemButton from '../ProfileItemButton';
 import styles from './ProfileBottom.module.scss';
 
 import { firestore } from '../../firebase';
 
 const ProfileBottom = (props) => {
-  const { user } = props;
+  const { user, setClickedItemId } = props;
   const [isChecked, setIsChecked] = useState(false);
   const [likes, setLikes] = useState([]);
   const [selling, setSelling] = useState([]);
+  const [isChecked, setIsChecked] = useState(user.selling > user.likes);
 
   const likedItems = likes.map((item) => (
-    <img key={item.id} src={item.strImage} alt={item.strType} />
+    <ProfileItemButton
+    key={item.id}
+      setClickedItemId={setClickedItemId}
+      item={item}
+    />
   ));
 
   const sellingItems = selling.map((item) => (
-    <img key={item.id} src={item.strImage} alt={item.strType} />
+    <ProfileItemButton
+    key={item.id}
+      setClickedItemId={setClickedItemId}
+      item={item}
+    />
   ));
 
   useEffect(() => {

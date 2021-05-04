@@ -7,34 +7,39 @@
     justify-content: center;
     width: 100%;
     flex-direction: row;
+
     button {
         margin: 15px 5px;
         font-size: 20px;
         height: 45px;
         width: 100px;
         border-radius: 10px;
-        border: $grey-secondary, 0.5px;
+        border: 0.5px solid $grey-secondary;
         background: $white;
 
         &:hover {
             background-color: hsl(122, 39%, 99%);
             border: 1px solid $grey-primary;
         }
+
         &:active {
         background-color: $grey-secondary;
         box-shadow: 0 5px #666;
         transform: translateY(4px);
         } 
+
         &:focus {
             border: 2px solid darkgrey;
             box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
         }
     }
+
     .thumbsUp {
         color: $green-primary;
 
     }
+
     .heart {
         color:  #FF375F; 
-        }
+    }
 }

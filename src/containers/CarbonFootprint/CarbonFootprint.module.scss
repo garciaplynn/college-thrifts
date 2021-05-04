@@ -1,0 +1,56 @@
+@import '../../scss/abstracts/variables';
+
+.carbonFootprint {
+  height: auto;
+  text-align: center;
+  h2 {
+    color: $grey-secondary;
+    padding: 60px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+      width: 100px;
+    }
+  }
+  h3 {
+    padding-top: 70px;
+    text-align: center;
+  }
+  .smile {
+    font-size: 25px;
+    color: $black;
+  }
+  p {
+    font-size: 15px;
+    padding: 15px;
+    color: $black;
+  }
+  .bar {
+    margin: 20px;
+    width: 80vw;
+    border: 1px solid green;
+    border-radius: 5px;
+  }
+  .line {
+    margin: 20px;
+    margin-bottom: 10px;
+    width: 80vw;
+    border: 1px solid #2F80ED;
+    border-radius: 5px;
+  }
+  .button {
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid #9ADA7B;
+    background-color: #9ADA7B;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+  }
+}
