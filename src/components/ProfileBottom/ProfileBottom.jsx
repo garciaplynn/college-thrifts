@@ -12,7 +12,7 @@ const ProfileBottom = (props) => {
   const [isChecked, setIsChecked] = useState(false);
   const [likes, setLikes] = useState([]);
   const [selling, setSelling] = useState([]);
-  const [isChecked, setIsChecked] = useState(user.selling > user.likes);
+  const [isChecked, setIsChecked] = useState(false);
 
   const likedItems = likes.map((item) => (
     <ProfileItemButton
