@@ -1,21 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from '@reach/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './ProfileBottom.module.scss';
 
-const ProfileBottom = (props) => {
-  const { user } = props;
+import { firestore } from '../../firebase';
 
-  const [isChecked, setIsChecked] = useState(user.selling > user.likes);
+const ProfileBottom = () => {
+  // const { user } = props;
+  const [isChecked, setIsChecked] = useState(false);
+  const [likes, setLikes] = useState([]);
+  const [selling, setSelling] = useState([]);
 
-  const likedItems = user.likes.map((item) => (
-    <img src={item.strImage} alt={item.strType} />
+  const likedItems = likes.map((item) => (
+    <img key={item.id} src={item.strImage} alt={item.strType} />
   ));
 
-  const sellingItems = user.selling.map((item) => (
-    <img src={item.strImage} alt={item.strType} />
+  const sellingItems = selling.map((item) => (
+    <img key={item.id} src={item.strImage} alt={item.strType} />
   ));
+
+  useEffect(() => {
+    firestore
+      .collection('users')
+      .doc('test-user')
+      .collection('likes')
+      .get()
+      .then((dbLikes) => {
+        // set likes state array to likes collection on user
+        setLikes(dbLikes.docs.map((doc) => doc.data()));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    firestore
+      .collection('users')
+      .doc('test-user')
+      .collection('selling')
+      .get()
+      .then((dbSelling) => {
+        // set selling state array to selling collection on user
+        setSelling(dbSelling.docs.map((doc) => doc.data()));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <>

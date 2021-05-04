@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './FilterButton.module.scss';
 
 const Filter = () => {
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggled, setIsToggled] = useState(true);
   const showContainer = isToggled ? styles.displayNone : styles.form;
 
   return (
