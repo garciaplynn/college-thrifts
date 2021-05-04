@@ -14,10 +14,21 @@ const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
       <header className={styles.header}>
         <h2>Profile</h2>
         <section className={styles.headerContainer}>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png"
-            alt="a sponge"
-          />
+          <div className={styles.image}>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png"
+              alt="a sponge"
+            />
+            <label htmlFor="avatar">
+              UPLOAD YOUR IMAGE
+              <input
+                type="file"
+                id="avatar"
+                name="avatar"
+                accept="image/png, image/jpeg"
+              />
+            </label>
+          </div>
           <article className={styles.headerInfo}>
             <h3>{name}</h3>
             <p>{`${university.title} (${university.abbreviation}) '${year}`}</p>
