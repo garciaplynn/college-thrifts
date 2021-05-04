@@ -6,8 +6,8 @@ import styles from './ProfileBottom.module.scss';
 
 import { firestore } from '../../firebase';
 
-const ProfileBottom = () => {
-  // const { user } = props;
+const ProfileBottom = (props) => {
+  const { user } = props;
   const [isChecked, setIsChecked] = useState(false);
   const [likes, setLikes] = useState([]);
   const [selling, setSelling] = useState([]);
@@ -23,7 +23,7 @@ const ProfileBottom = () => {
   useEffect(() => {
     firestore
       .collection('users')
-      .doc('test-user')
+      .doc(user.id)
       .collection('likes')
       .get()
       .then((dbLikes) => {
@@ -33,12 +33,13 @@ const ProfileBottom = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+    console.log(user);
+  }, [user]);
 
   useEffect(() => {
     firestore
       .collection('users')
-      .doc('test-user')
+      .doc(user.id)
       .collection('selling')
       .get()
       .then((dbSelling) => {
@@ -48,7 +49,7 @@ const ProfileBottom = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [user]);
 
   return (
     <>

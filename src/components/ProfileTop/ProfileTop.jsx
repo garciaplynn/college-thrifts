@@ -23,6 +23,7 @@ const ProfileTop = ({ uni, user }) => {
           alt="a sponge"
         />
         x
+        console.log(user);
         <img src={user.university.logo} alt="University Logo" />
       </section>
       <section className={styles.info}>

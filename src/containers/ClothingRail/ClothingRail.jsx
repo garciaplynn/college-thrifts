@@ -6,6 +6,7 @@ import ClothingCard from '../../components/ClothingCard';
 import FilterButton from '../../components/FilterButton';
 import Button from '../../components/Button';
 import uniData from '../../resources/data/university-data';
+import { firestore } from '../../firebase';
 
 import styles from './ClothingRail.module.scss';
 
@@ -14,6 +15,19 @@ const ClothingRail = (props) => {
   const [index, updateIndex] = useState(0);
   const [wasSwiped, setWasSwiped] = useState(false);
   const handleLike = () => {
+    firestore
+      .collection('users')
+      .doc(user.id)
+      .collection('likes')
+      .doc()
+      .set(fakeClothingData[index])
+      .then(() => {
+        alert('Document successfully written');
+      })
+      .catch((error) => {
+        console.log('Error when writing document: ', error);
+        alert('Please try again');
+      });
     user.likes.push(fakeClothingData[index]);
   };
 
@@ -106,11 +120,7 @@ const ClothingRail = (props) => {
     </section>
   );
 
-  return (
-    <section>
-      {cardsJSX}
-    </section>
-  );
+  return <section>{cardsJSX}</section>;
 };
 
 export default ClothingRail;

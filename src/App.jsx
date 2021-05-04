@@ -14,16 +14,20 @@ const App = () => {
       .doc('test-user')
       .get()
       .then((newUser) => {
-        setUser(newUser.data());
+        console.log(newUser);
+        setUser({ ...newUser.data(), id: newUser.id });
       })
       .catch((err) => {
         console.log(err);
       });
+    console.log(user);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
-      <Routes user={user} />
+      { user && <Routes user={user} />}
+      {console.log(user)}
       <Navbar />
     </>
   );
