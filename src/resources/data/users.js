@@ -28,7 +28,7 @@ const tim = {
     colour1: '#005030',
     colour2: '#F47321',
     abbreviation: 'UM',
-    mascot: 'Hurricances',
+    mascot: 'Hurricance',
     logo: 'https://cdn.miami.edu/_assets-common/images/system/um-logo-gray-bg.png',
   },
   greek: 'Tri Delta (3 triangles)',
