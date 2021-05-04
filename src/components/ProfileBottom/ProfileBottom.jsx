@@ -2,19 +2,29 @@ import React, { useState } from 'react';
 import { Link } from '@reach/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
+import ProfileItemButton from '../ProfileItemButton';
 import styles from './ProfileBottom.module.scss';
 
 const ProfileBottom = (props) => {
-  const { user } = props;
+  const { user, setClickedItemId } = props;
+  // const { strImage } = clothingItem;
 
   const [isChecked, setIsChecked] = useState(user.selling > user.likes);
 
+  // const showBuying = !isChecked ? styles.displayNone : styles.SellClothingImage;
+
   const likedItems = user.likes.map((item) => (
-    <img src={item.strImage} alt={item.strType} />
+    <ProfileItemButton
+      setClickedItemId={setClickedItemId}
+      item={item}
+    />
   ));
 
   const sellingItems = user.selling.map((item) => (
-    <img src={item.strImage} alt={item.strType} />
+    <ProfileItemButton
+      setClickedItemId={setClickedItemId}
+      item={item}
+    />
   ));
 
   return (
