@@ -23,4 +23,8 @@
 	width: auto;
 	margin: 8px;
 	align-items: baseline;
+
+	& > h2 {
+		padding-top: 1.5rem;
+	}
 }

@@ -2,24 +2,28 @@ import React, { useState, useEffect } from 'react';
 import { Link } from '@reach/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
+import ProfileItemButton from '../ProfileItemButton';
 import styles from './ProfileBottom.module.scss';
-
 import { firestore } from '../../firebase';
-
 const ProfileBottom = (props) => {
-  const { user } = props;
+  const { user, setClickedItemId } = props;
   const [isChecked, setIsChecked] = useState(false);
   const [likes, setLikes] = useState([]);
   const [selling, setSelling] = useState([]);
-
   const likedItems = likes.map((item) => (
-    <img key={item.id} src={item.strImage} alt={item.strType} />
+    <ProfileItemButton
+      key={item.id}
+      setClickedItemId={setClickedItemId}
+      item={item}
+    />
   ));
-
   const sellingItems = selling.map((item) => (
-    <img key={item.id} src={item.strImage} alt={item.strType} />
+    <ProfileItemButton
+      key={item.id}
+      setClickedItemId={setClickedItemId}
+      item={item}
+    />
   ));
-
   useEffect(() => {
     firestore
       .collection('users')
@@ -33,9 +37,7 @@ const ProfileBottom = (props) => {
       .catch((err) => {
         console.log(err);
       });
-    console.log(user);
   }, [user]);
-
   useEffect(() => {
     firestore
       .collection('users')
@@ -50,7 +52,9 @@ const ProfileBottom = (props) => {
         console.log(err);
       });
   }, [user]);
-
+  useEffect(() => {
+    setIsChecked(likes < selling);
+  }, [likes, selling]);
   return (
     <>
       <section className={styles.profilePage}>
@@ -80,5 +84,4 @@ const ProfileBottom = (props) => {
     </>
   );
 };
-
 export default ProfileBottom;
