@@ -15,7 +15,7 @@ const ProfileBottom = (props) => {
 
   const likedItems = likes.map((item) => (
     <ProfileItemButton
-    key={item.id}
+      key={item.id}
       setClickedItemId={setClickedItemId}
       item={item}
     />
@@ -23,7 +23,7 @@ const ProfileBottom = (props) => {
 
   const sellingItems = selling.map((item) => (
     <ProfileItemButton
-    key={item.id}
+      key={item.id}
       setClickedItemId={setClickedItemId}
       item={item}
     />
