@@ -22,9 +22,9 @@ const ClothingRail = (props) => {
       // insert clothing ID in parenthesis below
       .doc()
       .set(fakeClothingData[index])
-      .then(() => {
-        console.log('Document successfully written');
-      })
+      // .then(() => {
+      //   console.log('Document successfully written');
+      // })
       .catch((error) => {
         console.log('Error when writing document: ', error);
       });
