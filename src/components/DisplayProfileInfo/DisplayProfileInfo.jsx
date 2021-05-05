@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './DisplayProfileInfo.module.scss';
 
-const DisplayProfileInfo = ({ user }) => {
+const DisplayProfileInfo = ({ user, toggleIsEditing }) => {
   const {
     name,
     email,
@@ -13,6 +13,12 @@ const DisplayProfileInfo = ({ user }) => {
   return (
     <main className={styles.editProfile}>
       <section className={styles.about}>
+        <div className={styles.aboutWrapper}>
+          <h3 className={styles.aboutTitle}>About</h3>
+          <button type="button" onClick={toggleIsEditing}>
+            Edit profile
+          </button>
+        </div>
         <section className={styles.aboutContainer}>
           <h4 className={styles.aboutSubtitle}>Full Name</h4>
           <p>{name}</p>

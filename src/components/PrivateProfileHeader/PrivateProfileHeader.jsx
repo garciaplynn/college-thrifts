@@ -3,7 +3,7 @@ import styles from './PrivateProfileHeader.module.scss';
 import GradientHeader from '../GradientHeader';
 import uniData from '../../resources/data/university-data';
 
-const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
+const PrivateProfileHeader = ({ user }) => {
   const { name, university, classOf } = user;
 
   const year = String(classOf).slice(2);
@@ -23,12 +23,6 @@ const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
             <p>{`${university.title} (${university.abbreviation}) '${year}`}</p>
           </article>
         </section>
-        <div className={styles.aboutWrapper}>
-          <h3 className={styles.aboutTitle}>About</h3>
-          <button type="button" onClick={toggleIsEditing}>
-            Edit profile
-          </button>
-        </div>
       </header>
     </>
   );

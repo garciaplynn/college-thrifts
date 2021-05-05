@@ -12,10 +12,15 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+<<<<<<< HEAD
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+=======
+    "chart.js": "^3.2.1",
+>>>>>>> bce29b9013d12b5938b78320c32ad0119c92f04f
     "font-awesome": "^4.7.0",
     "react": "^17.0.2",
+    "react-chartjs-2": "^3.0.3",
     "react-dom": "^17.0.2",
     "react-images-uploading": "^3.1.2",
     "react-scripts": "4.0.3",

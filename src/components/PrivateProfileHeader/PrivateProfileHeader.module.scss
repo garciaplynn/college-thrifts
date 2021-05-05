@@ -1,11 +1,6 @@
 @import '../../scss/abstracts/variables';
 @import '../../scss/abstracts/placeholders';
 
-* {
-  font-family: $font;
-  color: inherit;
-}
-
 a {
   text-decoration: none;
 }
@@ -20,7 +15,7 @@ h2 {
 }
 
 h3 {
-  @extend %medium-heading;
+  @extend %big-heading;
 }
 
 h4,
@@ -29,9 +24,8 @@ li {
   @extend %body-font;
 }
 
-.about {
   .aboutTitle {
-    color: $red;
+    color: $black;
     margin-bottom: 1.5rem;
   }
   .aboutContainer {
@@ -51,7 +45,6 @@ li {
       margin-bottom: 0.5rem;
     }
   }
-}
 
 .headerContainer {
   display: flex;
@@ -60,7 +53,7 @@ li {
   height: 81px;
   border-radius: 13px;
   padding: 0.5rem;
-  margin-bottom: 4rem;
+  margin-top: 50px;
 
   .headerInfo {
     flex-grow: 1;
@@ -68,10 +61,11 @@ li {
   }
 
   img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     background-color: white;
     border-radius: 50%;
+    margin-top: 20px;
   }
 
   & > h3 {
