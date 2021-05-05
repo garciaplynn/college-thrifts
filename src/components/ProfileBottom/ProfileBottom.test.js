@@ -6,11 +6,12 @@ import users from '../../resources/data/users';
 describe("profile bottom tests", () => {
   let component;
 
-  beforeEach(async () => {
-    component = await shallow(<ProfileBottom user={users[0]} />);
+  beforeEach(() => {
+    component = shallow(<ProfileBottom user={users[0]} />);
   });
 
-  it("should render selling by default", () => {
-    expect(component.find('.ClothingImage').children().length).toBe(0)
+  it("should render selling by default", async () => {
+    const childrenLength = await component.find('.ClothingImage').children().length;
+    expect(childrenLength).toBe(0)
   });
 });
