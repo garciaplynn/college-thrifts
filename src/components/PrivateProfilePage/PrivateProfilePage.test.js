@@ -27,7 +27,7 @@ describe("PrivateProfilePage tests", () => {
   
   it('should render EditProfileInfo when edit profile button clicked', () => {
     // go into private profile header component and click on edit profile button
-    component.find(PrivateProfileHeader).find('button').simulate('click');
+    component.find(DisplayProfileInfo).find('button').simulate('click');
 
 
     // check edit profile component is being rendered
