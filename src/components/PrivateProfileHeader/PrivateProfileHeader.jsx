@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './PrivateProfileHeader.module.scss';
 import GradientHeader from '../GradientHeader';
 import uniData from '../../resources/data/university-data';
@@ -19,8 +20,9 @@ const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
               src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png"
               alt="a sponge"
             />
-            <label htmlFor="avatar">
-              UPLOAD YOUR IMAGE
+            <label htmlFor="avatar" className={styles.avatarButton}>
+              <FontAwesomeIcon icon="plus-circle" className={styles.avatarIcon} />
+              <span />
               <input
                 type="file"
                 id="avatar"

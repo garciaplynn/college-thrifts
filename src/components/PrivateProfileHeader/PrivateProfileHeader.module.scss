@@ -41,6 +41,7 @@ li {
 
     &.aboutContainerFlex {
       display: flex;
+
       div {
         margin-right: 7rem;
       }
@@ -67,13 +68,6 @@ li {
     text-align: center;
   }
 
-  img {
-    width: 70px;
-    height: 70px;
-    background-color: white;
-    border-radius: 50%;
-  }
-
   & > h3 {
     margin: 0 5rem;
   }
@@ -84,6 +78,42 @@ li {
   justify-content: space-between;
 }
 
-input {
-  display: none;
+.image {
+  position: relative;
+
+  img {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -3;
+  }
+
+  .avatarButton {
+    position: absolute;
+    top: 57%;
+    left: 75%;
+
+    span {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 2px;
+      left: 1px;
+      border-radius: 100%;
+      background-color: white;
+    }
+
+    .avatarIcon {
+      position: absolute;
+      color: $green-primary;
+      font-size: 22px;
+      z-index: 3;
+    }
+
+    input {
+      display: none;
+    }
+  }
+
 }

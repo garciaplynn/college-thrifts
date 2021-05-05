@@ -13,6 +13,7 @@ import {
   faSort,
   faCircle,
   faGrinStars,
+  faPlusCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 export default library.add(
@@ -28,4 +29,5 @@ export default library.add(
   faSort,
   faCircle,
   faGrinStars,
+  faPlusCircle,
 );
