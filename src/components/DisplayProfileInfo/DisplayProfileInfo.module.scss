@@ -5,15 +5,15 @@
   color: inherit;
 }
 
-a {
-  text-decoration: none;
-}
 
 .editProfile {
-  min-height: 90vh;
-  margin-bottom: 10vh;
   padding: 1rem;
   color: $black;
+  margin: 0 2rem;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 h2 {
@@ -23,6 +23,7 @@ h2 {
 h4,
 li {
   @extend %body-font;
+  list-style-type: none;
 }
 
 .about {

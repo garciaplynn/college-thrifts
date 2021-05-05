@@ -11,7 +11,7 @@ const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
 
   return (
     <>
-      <GradientHeader uni={uniData[1]} />
+      <GradientHeader uni={uniData[2]} />
       <header className={styles.header}>
         <h2>Profile</h2>
         <section className={styles.headerContainer}>
@@ -38,7 +38,7 @@ const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
         </section>
         <div className={styles.aboutWrapper}>
           <h3 className={styles.aboutTitle}>About</h3>
-          <button type="button" onClick={toggleIsEditing}>
+          <button type="button" onClick={toggleIsEditing} className={styles.editButton}>
             Edit profile
           </button>
         </div>
