@@ -19,16 +19,15 @@ const ClothingRail = (props) => {
       .collection('users')
       .doc(user.id)
       .collection('likes')
+      // insert clothing ID in parenthesis below
       .doc()
       .set(fakeClothingData[index])
-      .then(() => {
-        alert('Document successfully written');
-      })
+      // .then(() => {
+      //   console.log('Document successfully written');
+      // })
       .catch((error) => {
         console.log('Error when writing document: ', error);
-        alert('Please try again');
       });
-    user.likes.push(fakeClothingData[index]);
   };
 
   const styleSetter = () => {

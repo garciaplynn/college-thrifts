@@ -52,9 +52,11 @@ const ProfileBottom = (props) => {
         console.log(err);
       });
   }, [user]);
+
   useEffect(() => {
     setIsChecked(likes < selling);
   }, [likes, selling]);
+  
   return (
     <>
       <section className={styles.profilePage}>
