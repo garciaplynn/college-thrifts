@@ -3,11 +3,11 @@
 
 .formContainer {
   height: 100%;
-  margin: 0px;
+  margin: 5px;
 }
 
 .formHeading {
-  padding: 3rem;
+  padding: 1.5rem;
   text-align: center;
   background-color: $green-primary;
   width:100%;
@@ -19,6 +19,7 @@
   padding: 0.5rem;
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 20px;
   background-color: $grey-primary-transparent;
   border: $black;
@@ -26,8 +27,9 @@
   font-weight: bold;
   box-shadow: $shadow;
 }
+
 .imageCheckboxes {
-  text-align: right;
+  text-align: center;
   vertical-align: middle;
 }
 .imageCheckboxes label {
@@ -35,37 +37,39 @@
 }
 .imageCheckboxes input {
   margin: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
   justify-content: space-evenly;
   margin-left: 1rem;
 }
 .genderCheckboxes {
   text-align: left;
   vertical-align: middle;
- }
+}
 
- .genderCheckboxes label {
+.genderCheckboxes label {
   display: flex;
   align-items: center;
   padding-bottom: 0.5rem;
   text-align: center;
   vertical-align: middle;
- }
+}
 
- .genderCheckboxes input {
+.genderCheckboxes input {
   justify-content: space-evenly;
   margin-left: 1rem;
   margin: 0.5rem;
   text-align: center;
- }
- label {
-   font-size: 15px;
- }
+}
+
+label {
+font-size: 15px;
+}
 
 input {
 margin-top: 20px;
 font-size: 15px;
 }
+
 .conditionCheckboxes {
   text-align: center;
   vertical-align: middle;
@@ -127,19 +131,24 @@ font-size: 15px;
   vertical-align: middle;
 }
 
-.button {
-  font-size: 20px;
-  height: 45px;
-  width: 100px;
-  border: 0.5px solid $grey-secondary;
-  background: $green-primary;
-  color: $white;
-  box-shadow: $shadow;
-  border: $green-secondary;
+.pricingCheckboxes input {
+  margin-top: 10px;
+  width:40%;
+  margin-left:30%;
+  margin-right:30%;
 }
 
-button {
-  width: 100%;
-  text-align: center;
-  vertical-align: middle;
+.button {
+  width:40%;
+  margin-left:30%;
+  margin-right:30%;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  padding: 10px;
+  border: 1px solid $green-primary;
+  background-color: $green-primary;
+  color: white;
+  font-size: 20px;
+  border-radius: 15px;
+
 }

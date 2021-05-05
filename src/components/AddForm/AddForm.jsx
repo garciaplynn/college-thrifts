@@ -3,7 +3,7 @@ import styles from './AddForm.modules.scss';
 
 const AddForm = () => (
   <div className="formContainer">
-    <h3 className="formHeading">Upload an item</h3>
+    <h3 className="formHeading">Upload an item!</h3>
     <form>
       <div className="imageCheckboxes">
         <p className="categories">Image:</p>
@@ -247,7 +247,7 @@ const AddForm = () => (
       <div className="pricingCheckboxes">
         <p className="categories">Price:</p>
         <label htmlFor="pricing">
-          <input type="text" name="pricing" id="pricing" placeholder="$.00" />
+          <input type="text" name="pricing" id="pricing" placeholder="$0.00" />
         </label>
       </div>
     </form>
