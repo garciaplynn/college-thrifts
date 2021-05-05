@@ -10,33 +10,136 @@
   padding: 3rem;
   text-align: center;
   background-color: $green-primary;
+  width:100%;
+  box-shadow: $shadow;
   color: rgb(255, 255, 255);
 }
 
 .categories {
   padding: 0.5rem;
-  text-align: left;
-  margin: 2px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  background-color: $grey-primary-transparent;
+  border: $black;
+  color: $black;
+  font-weight: bold;
+  box-shadow: $shadow;
 }
-
+.imageCheckboxes {
+  text-align: right;
+  vertical-align: middle;
+}
+.imageCheckboxes label {
+  flex-direction: column;
+}
+.imageCheckboxes input {
+  margin: 5px;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  margin-left: 1rem;
+}
 .genderCheckboxes {
   text-align: left;
+  vertical-align: middle;
  }
 
-.genderCheckboxes input{
-  width: 13px;
-  height: 13px;
-  padding: 0;
-  margin: 0;
-  vertical-align: bottom;
-  position: relative;
-  top: -1px;
+ .genderCheckboxes label {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
  }
 
- .genderCheckboxes label{
-display: block;
-padding-left: 15px;
-text-indent: -15px;
+ .genderCheckboxes input {
+  justify-content: space-evenly;
+  margin-left: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+ }
+ label {
+   font-size: 15px;
  }
 
+input {
+margin-top: 20px;
+font-size: 15px;
+}
+.conditionCheckboxes {
+  text-align: center;
+  vertical-align: middle;
+}
+.conditionCheckboxes label {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.conditionCheckboxes input {
+  justify-content: space-evenly;
+  margin-left: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+}
 
+.clothingCheckboxes {
+  text-align:center;
+  vertical-align: middle;
+}
+
+.clothingCheckboxes label {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.clothingCheckboxes input {
+  justify-content: space-evenly;
+  margin-left: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+.sizingCheckboxes {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sizingCheckboxes label {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sizingCheckboxes input {
+  justify-content: space-evenly;
+  margin-left: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.pricingCheckboxes {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.button {
+  font-size: 20px;
+  height: 45px;
+  width: 100px;
+  border: 0.5px solid $grey-secondary;
+  background: $green-primary;
+  color: $white;
+  box-shadow: $shadow;
+  border: $green-secondary;
+}
+
+button {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
