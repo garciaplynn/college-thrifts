@@ -6,15 +6,16 @@ import users from '../../resources/data/users';
 describe("profile bottom tests", () => {
   let component;
 
-  beforeEach(async () => {
-    component = await shallow(<ProfileBottom user={users[0]} />);
+  beforeEach(() => {
+    component = shallow(<ProfileBottom user={users[0]} />);
   });
 
-  it("should render selling by default", async () => {
-    const asyncComponent = await component;
-    const asyncClothingImg = await asyncComponent.find('.ClothingImage');
-    const asyncChildren = await asyncClothingImg.children();
-    const asyncChildrenLength = await asyncChildren.length;
-    expect(asyncChildrenLength).toBe(0);
+  it("should render selling by default", (done) => {
+    const syncComponent = component;
+    const syncClothingImg = syncComponent.find('.ClothingImage');
+    const syncChildren = syncClothingImg.children();
+    const syncChildrenLength = syncChildren.length;
+    expect(syncChildrenLength).toBe(0);
+    done();
   });
 });
