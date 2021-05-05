@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './PrivateProfileHeader.module.scss';
 import GradientHeader from '../GradientHeader';
 import uniData from '../../resources/data/university-data';
 
 const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
+  const [avatarURL, setAvatarURL] = useState('https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1280px-SpongeBob_SquarePants_character.svg.png');
+  // const [avatarFile, setAvatarFile] = useState('');
+  // const [avatarName, setAvatarName] = useState('');
   const { name, university, classOf } = user;
-
   const year = String(classOf).slice(2);
+
+  const changeAvatar = (e) => {
+    const file = e.target.files[0];
+
+    if (file) {
+      // setAvatarName(file.name);
+      // setAvatarFile(file);
+      setAvatarURL(window.URL.createObjectURL(file));
+    }
+  };
 
   return (
     <>
@@ -17,8 +29,8 @@ const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
         <section className={styles.headerContainer}>
           <div className={styles.image}>
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png"
-              alt="a sponge"
+              src={avatarURL}
+              alt="avatar"
             />
             <label htmlFor="avatar" className={styles.avatarButton}>
               <FontAwesomeIcon icon="plus-circle" className={styles.avatarIcon} />
@@ -28,6 +40,8 @@ const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
                 id="avatar"
                 name="avatar"
                 accept="image/png, image/jpeg"
+                multiple="false"
+                onChange={changeAvatar}
               />
             </label>
           </div>
