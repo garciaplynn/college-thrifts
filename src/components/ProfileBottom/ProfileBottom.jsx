@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
 import ProfileItemButton from '../ProfileItemButton';
 import styles from './ProfileBottom.module.scss';
-import Error from '../Error/Error';
+import Error from '../Error';
 import { firestore } from '../../firebase';
 
 const ProfileBottom = (props) => {
@@ -21,6 +21,7 @@ const ProfileBottom = (props) => {
       item={item}
     />
   ));
+
   const sellingItems = selling.map((item) => (
     <ProfileItemButton
       key={item.id}
@@ -28,6 +29,7 @@ const ProfileBottom = (props) => {
       item={item}
     />
   ));
+
   useEffect(() => {
     firestore
       .collection('users')
@@ -42,6 +44,7 @@ const ProfileBottom = (props) => {
         setError(err);
       });
   }, [user]);
+
   useEffect(() => {
     firestore
       .collection('users')
@@ -63,7 +66,7 @@ const ProfileBottom = (props) => {
 
   return (
     <>
-      {error && <Error message="theres a error" />}
+      {error && <Error message="theres a error" setError={setError} />}
       <section className={styles.profilePage}>
         <article className={styles.iconBar}>
           <section className={styles.toggleContainer}>

@@ -7,6 +7,7 @@ import FilterButton from '../../components/FilterButton';
 import Button from '../../components/Button';
 import uniData from '../../resources/data/university-data';
 import { firestore } from '../../firebase';
+import Error from '../../components/Error';
 
 import styles from './ClothingRail.module.scss';
 
@@ -14,6 +15,8 @@ const ClothingRail = (props) => {
   const { user } = props;
   const [index, updateIndex] = useState(0);
   const [wasSwiped, setWasSwiped] = useState(false);
+  const [error, setError] = useState(null);
+
   const handleLike = () => {
     firestore
       .collection('users')
@@ -25,8 +28,8 @@ const ClothingRail = (props) => {
       // .then(() => {
       //   console.log('Document successfully written');
       // })
-      .catch((error) => {
-        console.log('Error when writing document: ', error);
+      .catch((err) => {
+        setError(err);
       });
   };
 
@@ -119,7 +122,12 @@ const ClothingRail = (props) => {
     </section>
   );
 
-  return <section>{cardsJSX}</section>;
+  return (
+    <>
+      {error && <Error message="Theres an error" setError={setError} />}
+      <section>{cardsJSX}</section>
+    </>
+  );
 };
 
 export default ClothingRail;
