@@ -6,9 +6,13 @@ import users from '../../resources/data/users';
 describe("profile bottom tests", () => {
   let component;
 
-  beforeEach(() => {
+  beforeEach((done) => {
     component = mount(<ProfileBottom user={users[0]} />);
+    done();
   });
+  afterAll((done) => {
+    done();
+  })
 
   it("should render selling by default", (done) => {
     const syncComponent = component;

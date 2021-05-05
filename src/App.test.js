@@ -4,8 +4,12 @@ import { shallow, mount } from 'enzyme';
 describe("Navbar test", () => {
   let component;
 
-  beforeEach(() => {
+  beforeEach((done) => {
     component = mount(<App />);
+    done();
+  })
+  afterAll((done) => {
+    done();
   })
 
   it('should render', (done) => {
