@@ -1,11 +1,11 @@
 import App from './App';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 describe("Navbar test", () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<App />);
+    component = mount(<App />);
   })
 
   it('should render', (done) => {
