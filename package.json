@@ -13,11 +13,15 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
 =======
     "chart.js": "^3.2.1",
 >>>>>>> bce29b9013d12b5938b78320c32ad0119c92f04f
+=======
+    "chart.js": "^3.2.1",
+>>>>>>> 5f8eb2cad2ce770d2d2c403bbb1eb0c7bc85b567
     "font-awesome": "^4.7.0",
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.3",
