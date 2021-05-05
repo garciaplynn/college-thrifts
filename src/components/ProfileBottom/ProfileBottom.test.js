@@ -13,5 +13,4 @@ describe("profile bottom tests", () => {
   it("should render selling by default", () => {
     expect(component.find('.ClothingImage').children().length).toBe(0)
   });
-
 });
