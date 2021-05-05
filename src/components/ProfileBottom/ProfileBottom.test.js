@@ -6,8 +6,8 @@ import users from '../../resources/data/users';
 describe("profile bottom tests", () => {
   let component;
 
-  beforeEach(() => {
-    component = shallow(<ProfileBottom user={users[0]} />);
+  beforeEach(async () => {
+    component = await shallow(<ProfileBottom user={users[0]} />);
   });
 
   it("should render selling by default", () => {
