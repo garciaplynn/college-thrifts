@@ -1,20 +1,20 @@
 import App from './App';
-import { shallow } from 'enzyme';
-import firebase from "firebase";
+import { shallow, mount } from 'enzyme';
+
 describe("Navbar test", () => {
-  const fetchPromise = Promise.resolve([{ id: 1 }]);
-  jest.spyOn(firebase, "app").mockImplementation(() => ({
-    firestore: () => ({
-      collection: () => ({
-        get: () => fetchPromise
-      })
-    })
-  }));
   let component;
-  beforeEach(() => {
-    component = shallow(<App />);
+
+  beforeEach((done) => {
+    component = mount(<App />);
+    done();
   })
-  it('should render', () => {
+  afterAll((done) => {
+    done();
+  })
+
+  it('should render', (done) => {
     expect(component).toBeTruthy();
+    done();
   })
+
 })
