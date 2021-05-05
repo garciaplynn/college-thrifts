@@ -26,8 +26,13 @@ li {
 }
 
 .about {
+  margin-top: 75px;
+  .aboutWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
   .aboutTitle {
-    color: $red;
+    color: $black;
     margin-bottom: 1.5rem;
   }
   .aboutContainer {
