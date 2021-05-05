@@ -30,9 +30,15 @@ li {
   .aboutWrapper {
     display: flex;
     justify-content: space-between;
+
+    button {
+      width: 100px;
+      border-radius: 10px;
+    }
   }
   .aboutTitle {
     color: $black;
+    font-size: 22px;
     margin-bottom: 1.5rem;
   }
   .aboutContainer {
