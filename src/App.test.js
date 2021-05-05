@@ -8,8 +8,9 @@ describe("Navbar test", () => {
     component = shallow(<App />);
   })
 
-  it('should render', () => {
+  it('should render', (done) => {
     expect(component).toBeTruthy();
+    done();
   })
 
 })
