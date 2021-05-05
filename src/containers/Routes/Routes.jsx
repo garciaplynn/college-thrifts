@@ -14,7 +14,7 @@ const Routes = ({ user }) => (
     <ClothingRail path="/" uniArray={uniData} user={user} />
     <MessageInbox path="message-inbox" />
     <UploadPicture path="upload-picture" />
-    <CarbonFootprint path="carbon-footprint" />
+    <CarbonFootprint path="carbon-footprint" user={user} />
     <ProfilePage path="profile" user={user} uni={uniData[2]} clothingItem={data[0]} />
     <PrivateProfilePage path="profile/private-profile" user={user} />
   </Router>

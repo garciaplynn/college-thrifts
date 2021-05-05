@@ -4,12 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTag, faHeart } from '@fortawesome/free-solid-svg-icons';
 import ProfileItemButton from '../ProfileItemButton';
 import styles from './ProfileBottom.module.scss';
+import Error from '../Error/Error';
 import { firestore } from '../../firebase';
+
 const ProfileBottom = (props) => {
   const { user, setClickedItemId } = props;
   const [isChecked, setIsChecked] = useState(false);
   const [likes, setLikes] = useState([]);
   const [selling, setSelling] = useState([]);
+  const [error, setError] = useState(null);
+
   const likedItems = likes.map((item) => (
     <ProfileItemButton
       key={item.id}
@@ -35,7 +39,7 @@ const ProfileBottom = (props) => {
         setLikes(dbLikes.docs.map((doc) => doc.data()));
       })
       .catch((err) => {
-        console.log(err);
+        setError(err);
       });
   }, [user]);
   useEffect(() => {
@@ -49,16 +53,17 @@ const ProfileBottom = (props) => {
         setSelling(dbSelling.docs.map((doc) => doc.data()));
       })
       .catch((err) => {
-        console.log(err);
+        setError(err);
       });
   }, [user]);
 
   useEffect(() => {
     setIsChecked(likes < selling);
   }, [likes, selling]);
-  
+
   return (
     <>
+      {error && <Error message="theres a error" />}
       <section className={styles.profilePage}>
         <article className={styles.iconBar}>
           <section className={styles.toggleContainer}>
