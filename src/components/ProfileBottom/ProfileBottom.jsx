@@ -29,36 +29,36 @@ const ProfileBottom = (props) => {
     />
   ));
 
-  useEffect(() => {
-    firestore
-      .collection('users')
-      .doc(user.id)
-      .collection('likes')
-      .get()
-      .then((dbLikes) => {
-        // set likes state array to likes collection on user
-        setLikes(dbLikes.docs.map((doc) => doc.data()));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    console.log(user);
-  }, [user]);
+  // useEffect(() => {
+  //   firestore
+  //     .collection('users')
+  //     .doc(user.id)
+  //     .collection('likes')
+  //     .get()
+  //     .then((dbLikes) => {
+  //       // set likes state array to likes collection on user
+  //       setLikes(dbLikes.docs.map((doc) => doc.data()));
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  //   console.log(user);
+  // }, [user]);
 
-  useEffect(() => {
-    firestore
-      .collection('users')
-      .doc(user.id)
-      .collection('selling')
-      .get()
-      .then((dbSelling) => {
-        // set selling state array to selling collection on user
-        setSelling(dbSelling.docs.map((doc) => doc.data()));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [user]);
+  // useEffect(() => {
+  //   firestore
+  //     .collection('users')
+  //     .doc(user.id)
+  //     .collection('selling')
+  //     .get()
+  //     .then((dbSelling) => {
+  //       // set selling state array to selling collection on user
+  //       setSelling(dbSelling.docs.map((doc) => doc.data()));
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, [user]);
 
   useEffect(() => {
     setIsChecked(likes < selling);
