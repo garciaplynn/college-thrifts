@@ -14,6 +14,7 @@ import {
   faCircle,
   faGrinStars,
   faPlusCircle,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
 export default library.add(
@@ -30,4 +31,5 @@ export default library.add(
   faCircle,
   faGrinStars,
   faPlusCircle,
+  faTimes,
 );

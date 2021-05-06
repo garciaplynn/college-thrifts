@@ -1,15 +1,20 @@
 import App from './App';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 describe("Navbar test", () => {
   let component;
 
-  beforeEach(() => {
-    component = shallow(<App />);
+  beforeEach((done) => {
+    component = mount(<App />);
+    done();
+  })
+  afterAll((done) => {
+    done();
   })
 
-  it('should render', () => {
+  it('should render', (done) => {
     expect(component).toBeTruthy();
+    done();
   })
 
 })

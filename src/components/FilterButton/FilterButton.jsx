@@ -12,7 +12,6 @@ const Filter = () => {
         <FontAwesomeIcon
           icon="sort"
           className={styles.icon}
-          isToggled={isToggled}
           onClick={() => setIsToggled(!isToggled)}
           onKeyDown={isToggled.handleKeyDown}
           role="button"
