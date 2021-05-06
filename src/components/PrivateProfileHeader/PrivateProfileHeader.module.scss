@@ -1,11 +1,6 @@
 @import '../../scss/abstracts/variables';
 @import '../../scss/abstracts/placeholders';
 
-* {
-  font-family: $font;
-  color: inherit;
-}
-
 a {
   text-decoration: none;
 }
@@ -124,7 +119,6 @@ a {
       margin: 0 5rem;
     }
   }
-}
 
 
 h3 {

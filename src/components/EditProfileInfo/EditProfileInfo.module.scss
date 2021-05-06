@@ -27,8 +27,19 @@ li {
 }
 
 .about {
+  margin-top: 70px;
+  .aboutWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 100px;
+      border-radius: 10px;
+    }
+  }
   .aboutTitle {
-    color: $red;
+    font-size: 22px;
+    color: $black;
     margin-bottom: 1.5rem;
   }
   .aboutContainer {

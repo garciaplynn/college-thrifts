@@ -50,12 +50,6 @@ const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
             <p>{`${university.title} (${university.abbreviation}) '${year}`}</p>
           </article>
         </section>
-        <div className={styles.aboutWrapper}>
-          <h3 className={styles.aboutTitle}>About</h3>
-          <button type="button" onClick={toggleIsEditing} className={styles.editButton}>
-            Edit profile
-          </button>
-        </div>
       </header>
     </>
   );
