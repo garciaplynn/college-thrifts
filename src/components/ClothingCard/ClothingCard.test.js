@@ -7,7 +7,6 @@ describe("Clothing Card tests", () => {
 
   beforeEach(() => {
     component = shallow(<ClothingCard clothingItem={fakeData[0]} />);
-    console.log(fakeData);
   });
 
   it("should render Clothing card", () => {
