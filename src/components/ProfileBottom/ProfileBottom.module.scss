@@ -2,7 +2,7 @@
 @import '../../scss/abstracts/placeholders';
 
 .profilePage {
-  height: 50vh;
+  height: 50%;
   background-color: $white;
   color: $black;
 
@@ -14,7 +14,7 @@
 }
 
 .iconBar {
-  height: 5vh;
+  height: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +39,7 @@
 }
 
 .ClothingImage {
-  height: 45vh;
+  height: 45%;
   display: grid;
   grid-template-columns: repeat(3, 1fr) ;
   grid-template-rows: repeat(3, 1fr);
