@@ -46,6 +46,10 @@ li {
     padding-bottom: 1rem;
     border-bottom: 1px solid $grey-primary-transparent;
 
+    ul {
+      list-style-type: none;
+    }
+
     &.aboutContainerFlex {
       display: flex;
       div {

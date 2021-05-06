@@ -10,7 +10,7 @@ a {
 }
 
 .editProfile {
-  min-height: 90vh;
+  min-height: 90%;
   margin-bottom: 10vh;
   padding: 1rem;
   color: $black;
@@ -46,17 +46,23 @@ li {
     padding-bottom: 1rem;
     border-bottom: 1px solid $grey-primary-transparent;
 
+    ul {
+      list-style-type: none;
+    }
+    
     &.aboutContainerFlex {
       display: flex;
       div {
         margin-right: 7rem;
       }
+      
     }
-
+    
     .aboutSubtitle {
       color: $grey-primary;
       margin-bottom: 0.5rem;
     }
+    
   }
 }
 

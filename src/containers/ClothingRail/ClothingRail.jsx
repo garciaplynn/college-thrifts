@@ -17,7 +17,7 @@ const ClothingRail = (props) => {
   const [wasSwiped, setWasSwiped] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleLike = () => {
+  const addToDB = () => {
     firestore
       .collection('users')
       .doc(user.id)
@@ -103,7 +103,7 @@ const ClothingRail = (props) => {
     },
     onSwipedUp: () => {
       setWasSwiped('up');
-      handleLike();
+      addToDB();
       setTimeout(() => setWasSwiped(false), 500);
     },
   });
@@ -118,7 +118,7 @@ const ClothingRail = (props) => {
       <div style={styleSetter()} ref={handlers.ref}>
         <ClothingCard clothingItem={fakeClothingData[index]} />
       </div>
-      <Button handleLike={handleLike} />
+      <Button handleLike={handlers.onSwipedUp} />
     </section>
   );
 
