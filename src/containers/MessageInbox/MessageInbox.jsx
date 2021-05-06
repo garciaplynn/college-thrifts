@@ -1,8 +1,9 @@
 import React from 'react';
+import MessagePage from '../../components/MessagePage';
 
 const MessageInbox = () => (
   <>
-    <p>MessageInbox works</p>
+    <MessagePage />
   </>
 );
 

@@ -25,10 +25,10 @@ const tim = {
   classOf: 2016,
   university: {
     title: 'University of Miami',
-    colour1: '#005030',
-    colour2: '#F47321',
+    color1: '#005030',
+    color2: '#F47321',
     abbreviation: 'UM',
-    mascot: 'Hurricance',
+    mascot: 'Hurricanes',
     logo: 'https://cdn.miami.edu/_assets-common/images/system/um-logo-gray-bg.png',
   },
   greek: 'Tri Delta (3 triangles)',

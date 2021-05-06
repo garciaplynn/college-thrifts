@@ -26,7 +26,7 @@ const EditProfileInfo = ({ user, toggleIsEditing }) => {
       <section className={styles.about}>
         <div className={styles.aboutWrapper}>
           <h3 className={styles.aboutTitle}>About</h3>
-          <button type="button" onClick={toggleIsEditing}>
+          <button className={styles.editButton} type="button" onClick={toggleIsEditing}>
             Edit profile
           </button>
         </div>

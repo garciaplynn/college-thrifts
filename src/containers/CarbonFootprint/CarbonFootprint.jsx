@@ -8,8 +8,8 @@ import styles from './CarbonFootprint.module.scss';
 const CarbonFootprint = (props) => {
   const { user } = props;
   const uni = {
-    colour1: '#5DB075',
-    colour2: '#FFFFFF',
+    color1: '#5DB075',
+    color2: '#FFFFFF',
   };
   const dataBar = {
     labels: ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
