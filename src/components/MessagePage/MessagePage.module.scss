@@ -2,21 +2,39 @@
 @import '../../scss/abstracts/placeholders';
 
 .MessagePage {
-  height: auto;
-
+  // height: auto;
+  .heading {
+    color: $red;
+    padding: 5px;
+    padding-left: 20px;
+  } 
   .messageBlock {
-    
-    .Sam {
+    padding: 5px;
+    .person {
       display: flex;
-    }
-  img {
-    height: 80px;
-    width: auto;
-    border-radius: 100px;
-  }
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      align-items: center;
+      img {
+        height: 80px;
+        width: auto;
+        border-radius: 100px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        padding: 10px;
+        justify-content: center;
+        justify-items: center;
+        
+      }
+      .message {
+        grid-column: 2 / 6;
+        grid-row: 1 / 3;
+        h3 {
+          font-size: 22px;
+        }
+      }
 
-  h3 {
-    font-size: 30px;
+    }
   }
-}
 }

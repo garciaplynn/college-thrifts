@@ -1,9 +1,9 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { shallow } from "enzyme";
 import MessagePage from "./MessagePage";
 
 describe("MessagePage tests", () => {
   it("should render", () => {
-    expect(render(<MessagePage />)).toBeTruthy();
+    expect(shallow(<MessagePage />)).toBeTruthy();
   });
 });
