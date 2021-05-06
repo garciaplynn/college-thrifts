@@ -30,7 +30,7 @@ const AddForm = () => {
 
   return (
     <div className="formContainer">
-      <h3 className="formHeading">Upload an item!</h3>
+      <h3 className="formHeading">Upload an item to sell !</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="imageCheckboxes">
           <p className="categories">Image:</p>
@@ -46,7 +46,7 @@ const AddForm = () => {
             name={imageName}
             src={imageURL}
             file={imageFile}
-            alt="your listing"
+            alt="Preview"
           />
         </div>
         <div className="checkboxes">
