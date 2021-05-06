@@ -1,4 +1,4 @@
- /* eslint-disable */
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import styles from './AddForm.modules.scss';
