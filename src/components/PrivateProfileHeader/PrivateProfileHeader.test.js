@@ -10,10 +10,14 @@ describe('PrivateProfileHeader tests', () => {
   beforeEach(() => {
     component = shallow(<PrivateProfileHeader user={users[0]} />);
   });
+  
+  it('should render an image', () => {
+    expect(component.find('img')).toBeTruthy();
+  });
 
   it('should display the correct image', () => {
     expect(component.find('img').prop('src')).toBe(
-      'https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png'
+      'https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1280px-SpongeBob_SquarePants_character.svg.png'
     );
   });
 
@@ -30,4 +34,5 @@ describe('PrivateProfileHeader tests', () => {
   it('should render', () => {
     expect(component).toBeTruthy();
   });
+
 });
