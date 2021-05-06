@@ -13,11 +13,11 @@ const EditProfile = ({ user }) => {
   };
 
   return (
-    <>
+    <section>
       <PrivateProfileHeader user={user} />
       {!isEditing && <DisplayProfileInfo user={user} toggleIsEditing={toggleIsEditing} />}
       {isEditing && <EditProfileInfo user={user} toggleIsEditing={toggleIsEditing} />}
-    </>
+    </section>
   );
 };
 
