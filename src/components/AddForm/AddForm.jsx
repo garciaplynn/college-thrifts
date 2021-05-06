@@ -24,7 +24,8 @@ const AddForm = () => {
   }, [register, setValue]);
 
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+    // alert
+    (JSON.stringify(data));
   };
 
   return (

@@ -20,13 +20,13 @@ describe("addform tests", () => {
     expect(component.find('input').at(0)).toBeTruthy();
   });
 
-   it('should display text for gender', () => {
-   expect(component.find('p').at(1).text()).toBe('Gender:')
- });
+  it('should display text for gender', () => {
+  expect(component.find('p').at(1).text()).toBe('Gender:')
+});
 
-   it('should display text for condition', () => {
-     expect(component.find('p').at(2).text()).toBe('Condition:')
-   });
+  it('should display text for condition', () => {
+  expect(component.find('p').at(2).text()).toBe('Condition:')
+  });
 
   it('should display text for clothing type', () => {
     expect(component.find('p').at(3).text()).toBe('Clothing Type:')
