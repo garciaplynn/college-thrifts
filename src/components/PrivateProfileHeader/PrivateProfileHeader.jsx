@@ -4,10 +4,11 @@ import styles from './PrivateProfileHeader.module.scss';
 import GradientHeader from '../GradientHeader';
 import uniData from '../../resources/data/university-data';
 
-const PrivateProfileHeader = ({ user, toggleIsEditing }) => {
+const PrivateProfileHeader = ({ user }) => {
   const [avatarURL, setAvatarURL] = useState('https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1280px-SpongeBob_SquarePants_character.svg.png');
   // const [avatarFile, setAvatarFile] = useState('');
   // const [avatarName, setAvatarName] = useState('');
+
   const { name, university, classOf } = user;
   const year = String(classOf).slice(2);
 

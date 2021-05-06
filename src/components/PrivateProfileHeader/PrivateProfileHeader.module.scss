@@ -11,46 +11,6 @@ a {
   margin-top: 3rem;
   margin-bottom: 0;
 
-  .aboutWrapper {
-    margin-top: 13rem;
-
-    .aboutTitle {
-      color: $black;
-    }
-  
-    .editButton {
-      background-color: $green-primary;
-      color: $white;
-      border: none;
-      border-radius: 12px;
-      padding: 8px;
-      box-shadow: $shadow;
-    }
-    .aboutContainer {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid $grey-primary-transparent;
-  
-      &.aboutContainerFlex {
-        display: flex;
-  
-        div {
-          margin-right: 7rem;
-        }
-      }
-  
-      .aboutSubtitle {
-        color: $grey-primary;
-        margin-bottom: 0.5rem;
-      }
-    }
-  }
-  
-  .aboutWrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
   h2 {
     @extend %big-heading;
     color: $white;
@@ -130,4 +90,5 @@ h4,
 p,
 li {
   @extend %body-font;
+}
 }
