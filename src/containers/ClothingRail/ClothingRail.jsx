@@ -76,36 +76,42 @@ const ClothingRail = (props) => {
     setWasSwiped(false);
   }, [index]);
 
+  const swipeLeftHandler = () => {
+    setWasSwiped('left');
+    if (index === uniData.length - 1) {
+      setTimeout(() => {
+        updateIndex(0);
+      }, 500);
+    } else {
+      setTimeout(() => {
+        updateIndex(index + 1);
+      }, 500);
+    }
+  };
+
+  const swipeRightHandler = () => {
+    setWasSwiped('right');
+    if (index === 0) {
+      setTimeout(() => {
+        updateIndex(uniData.length - 1);
+      }, 500);
+    } else {
+      setTimeout(() => {
+        updateIndex(index - 1);
+      }, 500);
+    }
+  };
+
+  const swipeUpHandler = () => {
+    setWasSwiped('up');
+    addToDB();
+    setTimeout(() => setWasSwiped(false), 500);
+  };
+
   const handlers = useSwipeable({
-    onSwipedLeft: () => {
-      setWasSwiped('left');
-      if (index === uniData.length - 1) {
-        setTimeout(() => {
-          updateIndex(0);
-        }, 500);
-      } else {
-        setTimeout(() => {
-          updateIndex(index + 1);
-        }, 500);
-      }
-    },
-    onSwipedRight: () => {
-      setWasSwiped('right');
-      if (index === 0) {
-        setTimeout(() => {
-          updateIndex(uniData.length - 1);
-        }, 500);
-      } else {
-        setTimeout(() => {
-          updateIndex(index - 1);
-        }, 500);
-      }
-    },
-    onSwipedUp: () => {
-      setWasSwiped('up');
-      addToDB();
-      setTimeout(() => setWasSwiped(false), 500);
-    },
+    onSwipedLeft: swipeLeftHandler,
+    onSwipedRight: swipeRightHandler,
+    onSwipedUp: swipeUpHandler,
   });
 
   const cardsJSX = (
@@ -118,7 +124,11 @@ const ClothingRail = (props) => {
       <div style={styleSetter()} ref={handlers.ref}>
         <ClothingCard clothingItem={fakeClothingData[index]} />
       </div>
-      <Button handleLike={handlers.onSwipedUp} />
+      <Button
+        swipeLeftHandler={swipeLeftHandler}
+        swipeRightHandler={swipeRightHandler}
+        swipeUpHandler={swipeUpHandler}
+      />
     </section>
   );
 
