@@ -1,19 +1,32 @@
-/*eslint-disable */
-import React from 'react';
+/* eslint-disable */
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import styles from './AddForm.modules.scss';
 
 const AddForm = () => {
+  const [imageName, setImageName] = useState('');
+  const [imageFile, setimageFile] = useState('');
+  const [imageURL, setImageURL] = useState('');
+
+  const changeImage = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setImageName(file.name);
+      setimageFile(file);
+      setImageURL(window.URL.createObjectURL(file));
+      console.log(window.URL.createObjectURL(file));
+    }
+  };
   const { register, handleSubmit, setValue } = useForm();
 
   React.useEffect(() => {
-    register("uploads");
-    setValue("uploads", [{ _id: "listing_file" }, { _id: "def_file" }]);
+    register('uploads');
+    setValue('uploads', [{ _id: 'listing_file' }, { _id: 'def_file' }]);
   }, [register, setValue]);
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data));
-    console.log(data)
+    console.log(data);
   };
 
   return (
@@ -22,9 +35,22 @@ const AddForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="imageCheckboxes">
           <p className="categories">Image:</p>
-          <input type="file" {...register("value_name")} />
+          <input
+            type="file"
+            accept="image"
+            onInput={changeImage}
+            {...register('image')}
+          />
+          <img
+            className="item-listing"
+            id="listing"
+            name={imageName}
+            src={imageURL}
+            file={imageFile}
+            alt="your listing"
+          />
         </div>
-        <div className="genderCheckboxes">
+        <div className="checkboxes">
           <p className="categories">Gender:</p>
           <label htmlFor="gender">
             <input
@@ -32,7 +58,7 @@ const AddForm = () => {
               name="gender"
               value="mens"
               id="mens"
-              {...register("value_name")}
+              {...register('gender')}
             />
             Mens
           </label>
@@ -42,12 +68,12 @@ const AddForm = () => {
               name="gender"
               value="womens"
               id="womens"
-              {...register("value_name")}
+              {...register('gender')}
             />
             Womens
           </label>
         </div>
-        <div className="conditionCheckboxes">
+        <div className="checkboxes">
           <p className="categories">Condition:</p>
           <label htmlFor="new-with-tags">
             <input
@@ -55,7 +81,7 @@ const AddForm = () => {
               name="condition"
               value="new-with-tags"
               id="new-with-tags"
-              {...register("value_name")}
+              {...register('condition')}
             />
             New with tags
           </label>
@@ -65,7 +91,7 @@ const AddForm = () => {
               name="condition"
               value="as-new"
               id="as-new"
-              {...register("value_name")}
+              {...register('condition')}
             />
             As new
           </label>
@@ -75,7 +101,7 @@ const AddForm = () => {
               name="condition"
               value="good"
               id="good"
-              {...register("value_name")}
+              {...register('condition')}
             />
             Good
           </label>
@@ -86,7 +112,7 @@ const AddForm = () => {
               name="condition"
               value="used"
               id="used"
-              {...register("value_name")}
+              {...register('condition')}
             />
             Used
           </label>
@@ -96,32 +122,32 @@ const AddForm = () => {
               name="condition"
               value="vintage"
               id="vintage"
-              {...register("value_name")}
+              {...register('condition')}
             />
             Vintage
           </label>
         </div>
-        <div className="clothingCheckboxes">
+        <div className="checkboxes">
           <p className="categories">Clothing Type:</p>
-          <label htmlFor="clothing-type">
+          <label htmlFor="clothing">
             <input
               className={styles.input}
               type="checkbox"
               name="clothing-type"
               value="crewneck"
               id="crewneck"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Crewneck
           </label>
-          <label htmlFor="clothing-type">
+          <label htmlFor="clothing">
             <input
               className={styles.input}
               type="checkbox"
               name="clothing-type"
               value="hoodie"
               id="hoodie"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Hoodie
           </label>
@@ -132,7 +158,7 @@ const AddForm = () => {
               name="clothing-type"
               value="jersey"
               id="jersey"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Jersey
           </label>
@@ -143,7 +169,7 @@ const AddForm = () => {
               name="style"
               value="jacket"
               id="jacket"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Jacket
           </label>
@@ -154,7 +180,7 @@ const AddForm = () => {
               name="style"
               value="flag"
               id="flag"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Flag
           </label>
@@ -165,7 +191,7 @@ const AddForm = () => {
               name="style"
               value="footwear"
               id="footwear"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Footwear
           </label>
@@ -176,7 +202,7 @@ const AddForm = () => {
               name="style"
               value="headgear"
               id="headgear"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Headgear
           </label>
@@ -187,7 +213,7 @@ const AddForm = () => {
               name="style"
               value="longsleeve"
               id="longsleeve"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Longsleeve
           </label>
@@ -198,7 +224,7 @@ const AddForm = () => {
               name="style"
               value="shortsleeve"
               id="shortsleeve"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Shortsleeve
           </label>
@@ -209,7 +235,7 @@ const AddForm = () => {
               name="style"
               value="shorts"
               id="shorts"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Shorts
           </label>
@@ -220,7 +246,7 @@ const AddForm = () => {
               name="style"
               value="sporting-equipment"
               id="sporting-equipment"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Sporting equipment
           </label>
@@ -231,7 +257,7 @@ const AddForm = () => {
               name="style"
               value="tshirt"
               id="tshirt"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             T-Shirt
           </label>
@@ -242,7 +268,7 @@ const AddForm = () => {
               name="style"
               value="tank-top"
               id="tank-top"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Tank top
           </label>
@@ -253,7 +279,7 @@ const AddForm = () => {
               name="style"
               value="zipped"
               id="zipped"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Zipped
           </label>
@@ -264,12 +290,12 @@ const AddForm = () => {
               name="style"
               value="miscallaneous"
               id="miscellaneous"
-              {...register("value_name")}
+              {...register('clothing')}
             />
             Miscellaneous
           </label>
         </div>
-        <div className="sizingCheckboxes">
+        <div className="checkboxes">
           <p className="categories">Sizing:</p>
           <label htmlFor="sizing">
             <input
@@ -277,7 +303,7 @@ const AddForm = () => {
               name="sizing"
               value="x-small"
               id="x-small"
-              {...register("value_name")}
+              {...register('sizing')}
             />
             X-Small
           </label>
@@ -287,7 +313,7 @@ const AddForm = () => {
               name="sizing"
               value="small"
               id="small"
-              {...register("value_name")}
+              {...register('sizing')}
             />
             Small
           </label>
@@ -297,7 +323,7 @@ const AddForm = () => {
               name="sizing"
               value="medium"
               id="medium"
-              {...register("value_name")}
+              {...register('sizing')}
             />
             Medium
           </label>
@@ -307,7 +333,7 @@ const AddForm = () => {
               name="sizing"
               value="large"
               id="large"
-              {...register("value_name")}
+              {...register('sizing')}
             />
             Large
           </label>
@@ -317,7 +343,7 @@ const AddForm = () => {
               name="sizing"
               value="x-large"
               id="x-large"
-              {...register("value_name")}
+              {...register('sizing')}
             />
             X-Large
           </label>
@@ -327,25 +353,24 @@ const AddForm = () => {
               name="sizing"
               value="oversized"
               id="oversized"
-              {...register("value_name")}
+              {...register('sizing')}
             />
             Oversized
           </label>
         </div>
         <div className="pricingCheckboxes">
           <p className="categories">Price:</p>
-          <label htmlFor="pricing">
+          <label htmlFor="sizing">
             <input
               type="text"
               name="pricing"
-              id="pricing"           
-              placeholder="$0.00"             
+              id="pricing"
+              placeholder="$0.00"
             />
           </label>
         </div>
         <input className="button" type="submit" />
       </form>
-      
     </div>
   );
 };
