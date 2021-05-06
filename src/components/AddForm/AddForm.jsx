@@ -14,7 +14,6 @@ const AddForm = () => {
       setImageName(file.name);
       setimageFile(file);
       setImageURL(window.URL.createObjectURL(file));
-      console.log(window.URL.createObjectURL(file));
     }
   };
   const { register, handleSubmit, setValue } = useForm();
@@ -26,7 +25,6 @@ const AddForm = () => {
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data));
-    console.log(data);
   };
 
   return (
