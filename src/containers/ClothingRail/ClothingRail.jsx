@@ -6,7 +6,8 @@ import ClothingCard from '../../components/ClothingCard';
 import FilterButton from '../../components/FilterButton';
 import Button from '../../components/Button';
 import uniData from '../../resources/data/university-data';
-// import ClothingRailCard from '../../components/ClothingRailCard';
+import { firestore } from '../../firebase';
+import Error from '../../components/Error';
 
 import styles from './ClothingRail.module.scss';
 
@@ -14,8 +15,22 @@ const ClothingRail = (props) => {
   const { user } = props;
   const [index, updateIndex] = useState(0);
   const [wasSwiped, setWasSwiped] = useState(false);
+  const [error, setError] = useState(null);
+
   const handleLike = () => {
-    user.likes.push(fakeClothingData[index]);
+    firestore
+      .collection('users')
+      .doc(user.id)
+      .collection('likes')
+      // insert clothing ID in parenthesis below
+      .doc()
+      .set(fakeClothingData[index])
+      // .then(() => {
+      //   console.log('Document successfully written');
+      // })
+      .catch((err) => {
+        setError(err);
+      });
   };
 
   const styleSetter = () => {
@@ -108,9 +123,10 @@ const ClothingRail = (props) => {
   );
 
   return (
-    <section>
-      {cardsJSX}
-    </section>
+    <>
+      {error && <Error message="Theres an error" setError={setError} />}
+      <section>{cardsJSX}</section>
+    </>
   );
 };
 
