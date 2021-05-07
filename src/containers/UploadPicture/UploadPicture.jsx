@@ -1,8 +1,9 @@
 import React from 'react';
+import AddForm from '../../components/AddForm';
 
 const UploadPicture = () => (
   <>
-    <p>UploadPicture works</p>
+    <AddForm />
   </>
 );
 
