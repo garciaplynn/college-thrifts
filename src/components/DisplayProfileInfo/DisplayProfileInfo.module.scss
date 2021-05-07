@@ -5,87 +5,56 @@
   color: inherit;
 }
 
-a {
-  text-decoration: none;
-}
-
-.editProfile {
-  min-height: 90%;
-  margin-bottom: 10vh;
-  padding: 1rem;
-  color: $black;
-}
-
-h2 {
-  margin-bottom: 1rem;
-}
-
 h4,
 li {
   @extend %body-font;
+  list-style-type: none;
 }
 
-.about {
-  margin-top: 75px;
-  .aboutWrapper {
-    display: flex;
-    justify-content: space-between;
+.editProfile {
+  padding: 1rem;
+  color: $black;
+  margin: 0 2rem;
 
-    button {
-      width: 100px;
-      border-radius: 10px;
-    }
-  }
-  .aboutTitle {
-    color: $black;
-    font-size: 22px;
-    margin-bottom: 1.5rem;
-  }
-  .aboutContainer {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $grey-primary-transparent;
+  .about {
+    margin-top: 60px;
 
-    ul {
-      list-style-type: none;
-    }
-
-    &.aboutContainerFlex {
+    .aboutWrapper {
       display: flex;
-      div {
-        margin-right: 7rem;
+      justify-content: space-between;
+
+      .editButton {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background-color: $green-primary;
+        color: $white;
+        border: none;
+        border-radius: 12px;
+        padding: 8px;
+        box-shadow: $shadow;
       }
     }
-
-    .aboutSubtitle {
-      color: $grey-primary;
-      margin-bottom: 0.5rem;
+    .aboutTitle {
+      color: $black;
+      font-size: 22px;
+      margin-bottom: 1.5rem;
     }
-  }
-}
+    .aboutContainer {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $grey-primary-transparent;
 
-.headerContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 81px;
-  border-radius: 13px;
-  padding: 0.5rem;
-  margin-bottom: 4rem;
+      &.aboutContainerFlex {
+        display: flex;
+        div {
+          margin-right: 7rem;
+        }
+      }
 
-  .headerInfo {
-    flex-grow: 1;
-    text-align: center;
-  }
-
-  img {
-    width: 70px;
-    height: 70px;
-    background-color: white;
-    border-radius: 50%;
-  }
-
-  & > h3 {
-    margin: 0 5rem;
+      .aboutSubtitle {
+        color: $grey-primary;
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }

@@ -15,8 +15,12 @@ const EditProfile = ({ user }) => {
   return (
     <article className={styles.container}>
       <PrivateProfileHeader user={user} />
-      {!isEditing && <DisplayProfileInfo user={user} toggleIsEditing={toggleIsEditing} />}
-      {isEditing && <EditProfileInfo user={user} toggleIsEditing={toggleIsEditing} />}
+      {!isEditing && (
+        <DisplayProfileInfo user={user} toggleIsEditing={toggleIsEditing} />
+      )}
+      {isEditing && (
+        <EditProfileInfo user={user} toggleIsEditing={toggleIsEditing} />
+      )}
     </article>
   );
 };
