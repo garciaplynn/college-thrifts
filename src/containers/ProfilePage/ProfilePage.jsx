@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProfileTop from '../../components/ProfileTop';
 import ProfileBottom from '../../components/ProfileBottom';
 import ProfilePopup from '../../components/ProfilePopup';
 import styles from './ProfilePage.module.scss';
 
 const ProfilePage = (props) => {
-  const { user, uni, clothingItem } = props;
+  const {
+    user,
+    uni,
+    clothingItem,
+    setActivePage,
+  } = props;
+
   const [clickedItemId, setClickedItemId] = useState(false);
+
+  useEffect(() => {
+    setActivePage('profile');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
