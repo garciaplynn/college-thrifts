@@ -70,9 +70,12 @@ const ClothingRail = (props) => {
     }
     return swipedStyle;
   };
+
   useEffect(() => {
     setActivePage('clothingRail');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   useEffect(() => {
     setWasSwiped(false);
   }, [index]);

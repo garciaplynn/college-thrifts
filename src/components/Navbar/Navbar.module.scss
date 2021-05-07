@@ -22,8 +22,8 @@
     font-size: 25px;
     line-height: 42px;
 
-    .active {
-      background-color: $grey-secondary;
+    &.active {
+      color: $green-primary;
     }
       
       &:visited {
