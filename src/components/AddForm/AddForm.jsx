@@ -25,7 +25,7 @@ const AddForm = () => {
 
   const onSubmit = (data) => {
     // alert
-    (JSON.stringify(data));
+    JSON.stringify(data);
   };
 
   return (

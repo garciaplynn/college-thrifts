@@ -16,8 +16,7 @@ const ClothingRail = (props) => {
   const [wasSwiped, setWasSwiped] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleLike = () => {
-    // TODO: Don't like this if it's already been liked
+  const addToDB = () => {
     firestore
       .collection('users')
       .doc(user.id)
@@ -81,36 +80,42 @@ const ClothingRail = (props) => {
     setWasSwiped(false);
   }, [index]);
 
+  const swipeLeftHandler = () => {
+    setWasSwiped('left');
+    if (index === uniData.length - 1) {
+      setTimeout(() => {
+        updateIndex(0);
+      }, 500);
+    } else {
+      setTimeout(() => {
+        updateIndex(index + 1);
+      }, 500);
+    }
+  };
+
+  const swipeRightHandler = () => {
+    setWasSwiped('right');
+    if (index === 0) {
+      setTimeout(() => {
+        updateIndex(uniData.length - 1);
+      }, 500);
+    } else {
+      setTimeout(() => {
+        updateIndex(index - 1);
+      }, 500);
+    }
+  };
+
+  const swipeUpHandler = () => {
+    setWasSwiped('up');
+    addToDB();
+    setTimeout(() => setWasSwiped(false), 500);
+  };
+
   const handlers = useSwipeable({
-    onSwipedLeft: () => {
-      setWasSwiped('left');
-      if (index === uniData.length - 1) {
-        setTimeout(() => {
-          updateIndex(0);
-        }, 500);
-      } else {
-        setTimeout(() => {
-          updateIndex(index + 1);
-        }, 500);
-      }
-    },
-    onSwipedRight: () => {
-      setWasSwiped('right');
-      if (index === 0) {
-        setTimeout(() => {
-          updateIndex(uniData.length - 1);
-        }, 500);
-      } else {
-        setTimeout(() => {
-          updateIndex(index - 1);
-        }, 500);
-      }
-    },
-    onSwipedUp: () => {
-      setWasSwiped('up');
-      handleLike();
-      setTimeout(() => setWasSwiped(false), 500);
-    },
+    onSwipedLeft: swipeLeftHandler,
+    onSwipedRight: swipeRightHandler,
+    onSwipedUp: swipeUpHandler,
   });
 
   const cardsJSX = (
@@ -123,7 +128,11 @@ const ClothingRail = (props) => {
       <div style={styleSetter()} ref={handlers.ref}>
         <ClothingCard clothingItem={fakeClothingData[index]} />
       </div>
-      <Button handleLike={handleLike} />
+      <Button
+        swipeLeftHandler={swipeLeftHandler}
+        swipeRightHandler={swipeRightHandler}
+        swipeUpHandler={swipeUpHandler}
+      />
     </section>
   );
 

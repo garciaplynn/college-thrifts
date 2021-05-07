@@ -1,13 +1,12 @@
 @import '../../scss/abstracts/variables';
 @import '../../scss/abstracts/placeholders';
 
-* {
-  color: inherit;
+.container {
+  position: relative;
 }
 
-section {
-  height: 90vh;
-  margin-bottom: 10vh;
+* {
+  color: inherit;
 }
 
 a {

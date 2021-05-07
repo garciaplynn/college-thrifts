@@ -14,7 +14,7 @@ li {
 .editProfile {
   padding: 1rem;
   color: $black;
-  margin: 0 2rem;
+  margin: 2rem;
 
   .about {
     margin-top: 60px;
@@ -22,7 +22,7 @@ li {
     .aboutWrapper {
       display: flex;
       justify-content: space-between;
-  
+
       .editButton {
         margin-right: 10px;
         margin-bottom: 10px;
@@ -43,14 +43,14 @@ li {
       margin-bottom: 1.5rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid $grey-primary-transparent;
-  
+
       &.aboutContainerFlex {
         display: flex;
         div {
           margin-right: 7rem;
         }
       }
-  
+
       .aboutSubtitle {
         color: $grey-primary;
         margin-bottom: 0.5rem;

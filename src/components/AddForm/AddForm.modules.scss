@@ -4,6 +4,7 @@
 .formContainer {
   height: 100%;
   margin: 5px;
+  margin-bottom: 7rem;
 }
 
 .formHeading {
@@ -12,7 +13,7 @@
   text-align: center;
   border: 2px solid $green-secondary;
   background-color: $green-primary;
-  width:100%;
+  width: 100%;
   border-radius: 15px;
   box-shadow: $shadow;
   color: rgb(255, 255, 255);
@@ -68,12 +69,12 @@
 }
 
 label {
-font-size: 15px;
+  font-size: 15px;
 }
 
 input {
-margin-top: 20px;
-font-size: 15px;
+  margin-top: 20px;
+  font-size: 15px;
 }
 
 .pricingCheckboxes {
@@ -82,15 +83,15 @@ font-size: 15px;
 }
 
 .pricingCheckboxes input {
-  width:40%;
-  margin-left:30%;
-  margin-right:30%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 .button {
-  width:40%;
-  margin-left:30%;
-  margin-right:30%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
   margin-top: 40px;
   margin-bottom: 25px;
   padding: 10px;
@@ -101,7 +102,6 @@ font-size: 15px;
   font-weight: bold;
   box-shadow: $shadow;
   border-radius: 15px;
-
 }
 
 .item-listing {
