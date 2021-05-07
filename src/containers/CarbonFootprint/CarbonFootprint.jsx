@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Bar, Line } from 'react-chartjs-2';
 import GradientHeader from '../../components/GradientHeader';
@@ -6,11 +6,18 @@ import recycleimg from '../../resources/recycle world.png';
 import styles from './CarbonFootprint.module.scss';
 // import '../../scss/abstracts/_variables';
 const CarbonFootprint = (props) => {
-  const { user } = props;
+  const { user, setActivePage } = props;
+
+  useEffect(() => {
+    setActivePage('carbonFootprint');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const uni = {
     color1: '#5DB075',
     color2: '#FFFFFF',
   };
+
   const dataBar = {
     labels: ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
     datasets: [
@@ -39,6 +46,7 @@ const CarbonFootprint = (props) => {
       },
     ],
   };
+
   const dataLine = {
     labels: ['March', 'April', 'May', 'June', 'July', 'August'],
     datasets: [
@@ -51,6 +59,7 @@ const CarbonFootprint = (props) => {
       },
     ],
   };
+
   const optionsLine = {
     scales: {
       yAxes: [
@@ -62,6 +71,7 @@ const CarbonFootprint = (props) => {
       ],
     },
   };
+
   const optionsBar = {
     scales: {
       yAxes: [
@@ -73,6 +83,7 @@ const CarbonFootprint = (props) => {
       ],
     },
   };
+
   return (
     <>
       <div className={styles.carbonFootprint}>

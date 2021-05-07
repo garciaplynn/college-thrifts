@@ -8,11 +8,10 @@ import Button from '../../components/Button';
 import uniData from '../../resources/data/university-data';
 import { firestore } from '../../firebase';
 import Error from '../../components/Error';
-
 import styles from './ClothingRail.module.scss';
 
 const ClothingRail = (props) => {
-  const { user } = props;
+  const { user, setActivePage } = props;
   const [index, updateIndex] = useState(0);
   const [wasSwiped, setWasSwiped] = useState(false);
   const [error, setError] = useState(null);
@@ -71,6 +70,11 @@ const ClothingRail = (props) => {
     }
     return swipedStyle;
   };
+
+  useEffect(() => {
+    setActivePage('clothingRail');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     setWasSwiped(false);

@@ -1,9 +1,9 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { shallow } from "enzyme";
 import UploadPicture from "./UploadPicture";
 
 describe("UploadPicture tests", () => {
   it("should render", () => {
-    expect(render(<UploadPicture />)).toBeTruthy();
+    expect(shallow(<UploadPicture />)).toBeTruthy();
   });
 });
