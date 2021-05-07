@@ -9,6 +9,7 @@ import Error from './components/Error';
 const App = () => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
+  const [activePage, setActivePage] = useState('');
 
   useEffect(() => {
     firestore
@@ -27,8 +28,8 @@ const App = () => {
   return (
     <>
       {error && <Error message="There was an error" setError={setError} />}
-      {user && <Routes user={user} />}
-      <Navbar />
+      {user && <Routes user={user} setActivePage={setActivePage} />}
+      <Navbar activePage={activePage} />
     </>
   );
 };
