@@ -23,7 +23,7 @@ const ClothingRail = (props) => {
       .doc(user.id)
       .collection('likes')
       // insert clothing ID in parenthesis below
-      .doc()
+      .doc(fakeClothingData[index].id.toString())
       .set(fakeClothingData[index])
       // .then(() => {
       //   console.log('Document successfully written');
