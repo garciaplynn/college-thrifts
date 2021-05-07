@@ -38,8 +38,6 @@ const ProfileBottom = (props) => {
       .get()
       .then((dbLikes) => {
         // set likes state array to likes collection on user
-        console.log('The likes are ....');
-        console.log(dbLikes.docs.map((doc) => doc.data()));
         setLikes(dbLikes.docs.map((doc) => doc.data()));
       })
       .catch((err) => {

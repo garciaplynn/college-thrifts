@@ -19,7 +19,6 @@ const ClothingRail = (props) => {
 
   const handleLike = () => {
     // TODO: Don't like this if it's already been liked
-    console.log(`THE ID IS ${fakeClothingData[index].id}`);
     firestore
       .collection('users')
       .doc(user.id)
