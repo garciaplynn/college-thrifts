@@ -2,12 +2,12 @@
 @import '../../scss/abstracts/placeholders';
 
 .MessagePage {
-  // height: auto;
+  margin-bottom: 7rem;
   .heading {
     color: $red;
     padding: 5px;
     padding-left: 20px;
-  } 
+  }
   .messageBlock {
     padding: 5px;
     .person {
@@ -25,7 +25,6 @@
         padding: 10px;
         justify-content: center;
         justify-items: center;
-        
       }
       .message {
         grid-column: 2 / 6;
@@ -34,7 +33,6 @@
           font-size: 22px;
         }
       }
-
     }
   }
 }
