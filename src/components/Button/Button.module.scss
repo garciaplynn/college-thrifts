@@ -1,57 +1,70 @@
-@import "../../scss/abstracts/placeholders";
-@import "../../scss/abstracts/variables";
+@import '../../scss/abstracts/placeholders';
+@import '../../scss/abstracts/variables';
 
 .faButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
 
-    button {
-        position: relative;
-        margin: 15px 5px;
-        font-size: 20px;
-        height: 45px;
-        width: 100px;
-        border-radius: 10px;
-        border: 0.5px solid $grey-secondary;
-        background: $white;
+  button {
+    position: relative;
+    margin: 15px 5px;
+    font-size: 20px;
+    height: 45px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0.5px solid $grey-secondary;
+    background: $white;
 
-        &:hover {
-            top: 1.5px;
-            background-color: hsl(122, 39%, 99%);
-            border: 1px solid $grey-primary;
-            box-shadow: 0px 1.5px 8px rgba(0, 0, 0, 0.12), 0px 1.5px 1px rgba(0, 0, 0, 0.04);;
-        }
-
-        &:active {
-            background-color: $grey-secondary;
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        } 
-
-        &:focus {
-            border: 2px solid darkgrey;
-            box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
-        }
-
-        &.chevron:first-of-type {
-            border-radius: 30px 10px 10px 30px;
-        }
-
-        &.chevron:last-of-type {
-            border-radius: 10px 30px 30px 10px;
-        }
+    &:hover {
+      top: 1.5px;
+      background-color: hsl(122, 39%, 99%);
+      border: 1px solid $grey-primary;
+      box-shadow: 0px 1.5px 8px rgba(0, 0, 0, 0.12),
+        0px 1.5px 1px rgba(0, 0, 0, 0.04);
     }
 
-
-    .thumbsUp {
-        color: $green-primary;
-
+    &:active {
+      background-color: $grey-secondary;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
     }
 
-    .heart {
-        color:  #FF375F; 
+    &:focus {
+      border: 2px solid darkgrey;
+      box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.12),
+        0px 3px 1px rgba(0, 0, 0, 0.04);
     }
+
+    &.chevron:first-of-type {
+      border-radius: 30px 10px 10px 30px;
+    }
+
+    &.chevron:last-of-type {
+      border-radius: 10px 30px 30px 10px;
+    }
+  }
+
+  .thumbsUp {
+    color: $green-primary;
+  }
+
+  .heart {
+    color: #ff375f;
+  }
+}
+
+@media screen and (min-width: 667px) {
+  .faButton {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .chevron {
+    display: none;
+  }
 }
