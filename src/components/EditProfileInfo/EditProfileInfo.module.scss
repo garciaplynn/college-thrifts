@@ -13,7 +13,7 @@ li {
 .editProfile {
   padding: 1rem;
   color: $black;
-  margin: 0 2rem 2rem;
+  margin: 2rem;
 
   .about {
     margin-top: 60px;
@@ -45,8 +45,17 @@ li {
       padding-bottom: 1rem;
       border-bottom: 1px solid $grey-primary-transparent;
 
+      input {
+        margin-top: 0;
+      }
+
+      p {
+        font-size: 16px
+      }
+
       &.aboutContainerFlex {
         display: flex;
+
         div {
           margin-right: 7rem;
         }
