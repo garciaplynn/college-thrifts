@@ -8,7 +8,7 @@ describe("ProfilePopup tests", () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<ProfilePopup fakeData={fakeData[0]} />);
+    component = shallow(<ProfilePopup fakeData={fakeData} clickedItemId={1} />);
   })
 
   it("should render", () => {
