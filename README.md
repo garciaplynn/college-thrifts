@@ -35,7 +35,7 @@ The Settings link directs you to a private profile page allowing you to edit you
 
 The CO2 Tracker page was completed solely stylistically, usimg Chart.js to show how it would display.
 
-5. Messageing:
+5. Messaging:
 
 It was agreed that Messaging page had a lower priority than the previous Epics. Therefore, it was agreed to only display the how the messaging page would look.
 
@@ -43,15 +43,34 @@ It was agreed that Messaging page had a lower priority than the previous Epics. 
 
 The Sign Up page was given the lowest priority and due to time constraints it was not completed.
 
+## Testing
 
+To test this project, we used 'Enzyme'. For each component, we created a number of tests that displayed its functionality and whether it rendered in the App. This was important, because it ensured that the project worked and it was easy to fix any bugs. Within Enzyme, we used 'shallow' and 'mount' depending on the component and its functionality. 
 
+To test this project, one needs to enter `npm test` into the terminal and this  present the tests that were passed. 
 
+## Important Links
 
+1. This is a link to the design of the app, created by Patricia Garcia. We used this to develop the web app.
+https://www.figma.com/file/jGFyQxpMiHKEs8WQXMqAZU/College-Thrifts-UI?node-id=0%3A1
 
+2. This is the link to the live demo of the app.
+https://college-thrifts.web.app
 
+3. This is a link to the trello board, it shows how we organised the tickets and the different pages that were completed.
+https://trello.com/b/iyI63b78/college-thrifts
 
+## Coding Standards:
 
-### `npm start`
+To ensure that everyone used the same coding standards, we used AirBnB's 'es-lint' standards. 
+
+## Backend functionality
+
+We used Firebase as our backend as a service. This provided hosting and a NoSQL database as well as future functionality as needed.
+
+## How to use
+
+## `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
