@@ -1,10 +1,55 @@
-# Getting Started with Create React App
+# College Thrifts MVP
+This project was created in React in collaboration with Patricia Garcia and the \_Nology Borneo intake.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We were given 4 weeks to complete this product using paired progamming and working in an Agile environment.
 
-## Available Scripts
 
-In the project directory, you can run:
+The 6 Epics for this project were prioratised as follow:
+
+1. Clothing Rail
+2. Profile 
+3. Settings 
+4. CO2 Tracker
+5. Messaging
+6. Sign Up
+
+## Completion
+
+Navbar:
+
+On each page there is a fully functioning Navbar.
+
+1. Clothing rail: 
+
+The Clothing rail was the first section to be completed including swipe functionality.
+
+2. Profile:
+
+The Profile page was completed including a toggle function that displays items that you have liked. It also included a link to the settings page.
+
+3. Settings:
+
+The Settings link directs you to a private profile page allowing you to edit your visible profile.
+
+4. CO2 Tracker:
+
+The CO2 Tracker page was completed solely stylistically, usimg Chart.js to show how it would display.
+
+5. Messageing:
+
+It was agreed that Messaging page had a lower priority than the previous Epics. Therefore, it was agreed to only display the how the messaging page would look.
+
+6. Sign Up:
+
+The Sign Up page was given the lowest priority and due to time constraints it was not completed.
+
+
+
+
+
+
+
+
 
 ### `npm start`
 
