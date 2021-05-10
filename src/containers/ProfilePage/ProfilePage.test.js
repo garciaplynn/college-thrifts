@@ -17,7 +17,7 @@ describe('Profile Item Popup test', () => {
   let component;
 
   beforeEach(() => {
-    component = mount( <ProfilePopup fakeData={fakeData[0]}/>)
+    component = mount( <ProfilePopup fakeData={fakeData} clickedItemId={1} />)
   })
 
   it("should render", () => {
