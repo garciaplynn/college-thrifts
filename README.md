@@ -55,7 +55,7 @@ To test this project, one needs to enter `npm test` into the terminal and this  
 https://www.figma.com/file/jGFyQxpMiHKEs8WQXMqAZU/College-Thrifts-UI?node-id=0%3A1
 
 2. This is the link to the live demo of the app.
-https://college-thrifts.web.app
+https://unicycle-70bb6.web.app/
 
 3. This is a link to the trello board, it shows how we organised the tickets and the different pages that were completed.
 https://trello.com/b/iyI63b78/college-thrifts

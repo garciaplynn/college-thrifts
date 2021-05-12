@@ -2,7 +2,7 @@
 import firebase from 'firebase/app';
 // If you are using v7 or any earlier
 // version of the JS SDK, you should import firebase using namespace import
-// import * as firebase from "firebase/app"
+// import * as firebase from 'firebase/app'
 
 // If you enabled Analytics in your project, add the Firebase SDK for Analytics
 import 'firebase/analytics';
@@ -13,14 +13,13 @@ import 'firebase/firestore';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyD2-HqvkCbPUkGLPcZOrpyBKJg4E1mIqs4',
-  authDomain: 'college-thrifts.firebaseapp.com',
-  databaseURL: 'https://college-thrifts-default-rtdb.firebaseio.com',
-  projectId: 'college-thrifts',
-  storageBucket: 'college-thrifts.appspot.com',
-  messagingSenderId: '257256089519',
-  appId: '1:257256089519:web:194f709f444eed4b6d715a',
-  measurementId: 'G-1VBM4RM6EK',
+  apiKey: 'AIzaSyAv6n9hx8aB8mo86wHUn3WkwYLVzSKbaSo',
+  authDomain: 'unicycle-70bb6.firebaseapp.com',
+  projectId: 'unicycle-70bb6',
+  storageBucket: 'unicycle-70bb6.appspot.com',
+  messagingSenderId: '739570222761',
+  appId: '1:739570222761:web:28f6a9e5a6956c725e4bb8',
+  measurementId: 'G-QQ2F0JB3ZJ',
 };
 
 // Initialize Firebase
